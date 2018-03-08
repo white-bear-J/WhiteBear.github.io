@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 声明文档使用的字符编码 -->
     <meta charset="UTF-8">
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!--IE以最高级别的可用模式显示内容， 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--width-viewport的宽度  height-viewport的高度  initial-scale-初始的缩放比例
+    minimum-scale-允许用户缩放到的最小比例  maximum-scale-允许用户缩放到的最大比例  user-scalable-用户是否可以手动缩放-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1，user-scalable=no">-->
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边-->
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-title" content="标题">
+    <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 页面描述 -->
+    <meta name="description" content="白熊童子的个人网站">
+    <!-- 网页作者 -->
+    <meta name="author" content="white-bear, 172149075@qq.com"/>
+    <!--标题栏icon-->
+    <link rel="icon" href="assets/img/icon/favicon.ico" type="image/x-icon">
+    <!--收藏夹icon-->
+    <link rel="shortcut icon" href="assets/img/icon/favicon.ico" type="image/x-icon">
     <title>白熊的宠物收容所</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-<a href="html/index.html">欢迎来到白熊的宠物收容所!</a>
+<header>
+    <div class="nav"></div>
+</header>
+<div class="body-left"></div>
+<div class="body-right"></div>
 </body>
 </html>
