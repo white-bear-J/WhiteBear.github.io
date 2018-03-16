@@ -1,0 +1,24 @@
+.login-btn{
+    margin-right: 20px;
+}
+
+.logo .photo{
+    width: 244px;
+    height: 306px;
+    display: block;
+    margin: 0 auto;
+}
+
+.panel-cover-content .title{
+    font-size: 32px;
+    color: #2a6d63;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.panel-cover-content .motto{
+    margin-top: 30px;
+    line-height: 46px;
+    font-size: 28px;
+    color: #73c7a7;
+}

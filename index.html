@@ -9,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--width-viewport的宽度  height-viewport的高度  initial-scale-初始的缩放比例
     minimum-scale-允许用户缩放到的最小比例  maximum-scale-允许用户缩放到的最大比例  user-scalable-用户是否可以手动缩放-->
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1，user-scalable=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1，user-scalable=no">
     <!-- 为移动设备添加 viewport -->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <!--<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">-->
     <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边-->
     <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
     <meta name="HandheldFriendly" content="true">
@@ -44,15 +44,49 @@
     <!--收藏夹icon-->
     <link rel="shortcut icon" href="assets/img/icon/favicon.ico" type="image/x-icon">
     <title>白熊的宠物收容所</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
     <link rel="stylesheet" type="text/css" href="assets/css/components.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--在线字体-->
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <script type="text/javascript">
+        $youziku.load(".motto", "4a238b730ab9479f8ab8fd8057449a27", "cyjianxk");
+        /*$youziku.load("#id1,.class1,h1", "4a238b730ab9479f8ab8fd8057449a27", "cyjianxk");*/
+        $youziku.draw();
+    </script>
 </head>
 <body>
-<header>
-    <div class="nav"></div>
-</header>
-<div class="body-left"></div>
-<div class="body-right"></div>
+<div class="container">
+    <div class="panel-cover">
+        <div class="banner">
+            <a class="btn login-btn right">登录</a>
+        </div>
+        <div class="panel-cover-content-box">
+            <div class="panel-cover-content">
+                <div class="logo">
+                    <img class="photo" src="assets/img/599642b2bbcca.png">
+                </div>
+                <div class="title">白熊的宠物收容所</div>
+                <div class="title">White Bear's personal site</div>
+                <div>
+                    <button>我的作品</button>
+                    <button>我的朋友</button>
+                    <button>我的家园</button>
+                    <button>关于我</button>
+                </div>
+                <div class="motto">
+                    <p>愿你我既可以朝九晚五，</p>
+                    <p>又能够浪迹天涯。</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div class="content-wrapper-left"></div>
+    <div class="content-wrapper-right"></div>
+</div>
 </body>
 </html>
