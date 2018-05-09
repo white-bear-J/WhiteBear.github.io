@@ -49,6 +49,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/components.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/js/getUrlParam.js"></script>
     <!--在线字体-->
     <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
     <script type="text/javascript">
@@ -94,7 +95,7 @@
                     <a href="#" class="main-btn btn-4"><span>我的作品</span></a>
                     <a href="#" class="main-btn btn-4"><span>我的朋友</span></a>
                     <a href="#" class="main-btn btn-4"><span>我的家园</span></a>
-                    <a href="#" class="main-btn btn-4"><span>关于我</span></a>
+                    <a href="index.html?functionId=./html/about_me.html"   target="rightCont" class="main-btn btn-4"><span>关于我</span></a>
                 </div>
                 <div class="motto">
                     <p>愿你我既可以朝九晚五，</br>
@@ -105,7 +106,11 @@
         </div>
     </div>
 <div class="content-wrapper">
-    <div class="content-wrapper-right"></div>
+    <div class="content-wrapper-right">
+        <iframe class="mainFrame" allowtransparency="true"  frameborder="0" id="mainFrame" scrolling="no" name="rightCont">
+
+        </iframe>
+    </div>
 </div>
 <div style="clear: both"></div>
 </body>
@@ -130,6 +135,15 @@
                 $(".title_ch,.title_en,.motto").css("display","block");
             }
             $(".content-wrapper").css("display","block");
+            $(window).resize(function () {
+                if(window.innerWidth>468){
+                    $(".panel-cover").css({"width":468,"float":"left"});
+                    $(".title_ch,.title_en,.motto,.button,.banner,.login-btn").css("display","none");
+                }else {
+                    $(".panel-cover").css({"width":340,"float":"left"});
+                    $(".title_ch,.title_en,.motto").css("display","block");
+                }
+            });
         })
         $(".photo").click(function () {
             $(".content-wrapper").css("display","none");
@@ -140,6 +154,13 @@
             }
         })
     });
+
+    //    子页跳转
+    $(function () {
+        var functionId = UrlParm.parm("functionId");
+        window.open(functionId, "rightCont");
+    })
+
 
 </script>
 </html>
