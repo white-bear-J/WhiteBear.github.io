@@ -1,28 +1,217 @@
-.login-btn{
-    margin-right: 20px;
+.panel-cover{
+    position: relative;
+    background: url("../../assets/img/backgroundIMG.png") top left no-repeat #666666;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
 }
 
+.banner{
+    display: none;
+}
+
+.panel-cover-content-box{
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+.panel-cover-content{
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    padding: 0 0.2rem;
+    max-width: 2rem;
+    margin: 0 auto;
+}
+
+
 .logo{
-    margin-top: 30px;
+    margin-top: 0.26rem;
 }
 
 .logo .photo{
-    width: 244px;
-    height: 306px;
+    width: 1rem;
     display: block;
     margin: 0 auto;
 }
 
-.panel-cover-content .title{
-    font-size: 32px;
+.panel-cover-content .title_ch{
+    font-size: 0.22rem;
     color: #2a6d63;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 0.2rem;
+    margin-bottom:0.2rem;
+    text-shadow: 0.01rem 0.01rem 0.04rem #2a6d63;
+}
+.panel-cover-content .title_en{
+    font-family: 'Arial';
+    font-size: 0.14rem;
+    color: #369079;
+    margin-top: 0.18rem;
+    margin-bottom:0.2rem;
+    text-shadow: 0.01rem 0.01rem 0.04rem #369079;
 }
 
 .panel-cover-content .motto{
-    margin-top: 30px;
-    line-height: 46px;
-    font-size: 28px;
+    margin-top: 0.2rem;
+    line-height: 0.3rem;
+    font-size: 0.2rem;
     color: #73c7a7;
 }
+.login-btn{
+    display: none;
+}
+.panel-nav{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    display: block;
+    /*height: 0.5rem;*/
+    background-color: rgba(95, 95, 95, 0.7);
+    box-shadow: 0 2px 9px 0 #369079;
+}
+
+.panel-nav .nav-btn{
+    text-align: center;
+    height: 0.4rem;
+}
+
+.panel-nav .nav-btn .icon{
+    margin-top: 0.05rem;
+    height: 0.3rem;
+    width: 0.3rem;
+}
+
+.panel-nav .nav-content{
+    padding: 0.1rem 0;
+    display: none;
+}
+
+.panel-nav .nav-content .btn-box{
+    width: 50%;
+}
+.panel-nav .nav-content .btn-box.left .title-btn{
+    float: right;
+    margin-right: 0.2rem;
+}
+.panel-nav .nav-content .btn-box.right .title-btn{
+    float: left;
+    margin-left: 0.2rem;
+}
+
+.content-wrapper{
+    width: 100%;
+    height: 100%;
+    min-width: 768px;
+    display: none;
+}
+
+.content-wrapper .content-wrapper-right{
+    margin-left: 340px;
+    height: 100%;
+    background-color: #369079;
+    min-width: 768px;
+}
+
+@media (max-height: 1000px)and (min-width:768px ){
+    .main-btn{
+        display: none!important;
+    }
+}
+
+@media (max-height: 720px)and (min-width:768px ){
+    .banner{
+        display: none!important;
+    }
+    .login-btn{
+        display: none!important;
+    }
+    .panel-cover-content .title_en{
+        display: none!important;
+    }
+}
+
+@media (max-height: 600px)and (min-width:470px ){
+    .logo{
+        display: none!important;
+    }
+}
+@media (max-height: 300px){
+    .logo{
+        display: none!important;
+    }
+}
+
+@media (min-width:768px ){
+    .logo{
+        margin-top: 30px;
+    }
+    .logo .photo{
+        width: 230px;
+    }
+
+    .panel-cover-content{
+        max-width: 1200px;
+        padding: 60px 0;
+    }
+
+    .banner{
+        display: block;
+        width: 100%;
+        padding-top:40px;
+        position: absolute;
+    }
+    .login-btn{
+        display: block;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 45px;
+        background-color: #8adbba;
+        box-shadow: 0 9px 09px 0 #369079;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 18px;
+        float: right;
+        margin-right: 40px;
+    }
+    .login-btn:hover{
+        background-color: #369079;
+    }
+
+    .panel-cover-content .title_ch{
+        font-size: 48px;
+        margin-top: 28px;
+        margin-bottom: 0;
+        text-shadow: 1px 1px 13px #2a6d63;
+    }
+
+    .panel-cover-content .title_en{
+        font-size: 32px;
+        margin-bottom: 0;
+        margin-top: 22px;
+        text-shadow: 1px 1px 9px #369079;
+    }
+    .panel-cover-content .motto{
+        margin-top: 50px;
+    }
+    .panel-cover-content .motto p{
+        margin-top: 50px;
+        line-height: 48px;
+        font-size: 28px;
+    }
+
+    .panel-nav{
+        display: none;
+    }
+    .content-wrapper .content-wrapper-right{
+        margin-left: 468px;
+    }
+
+}
+
+
+
+

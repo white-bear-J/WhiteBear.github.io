@@ -48,6 +48,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
     <link rel="stylesheet" type="text/css" href="assets/css/components.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <!--在线字体-->
     <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
     <script type="text/javascript">
@@ -57,37 +58,88 @@
     </script>
 </head>
 <body>
-<div class="container">
-    <div class="panel-cover">
+<div class="panel-nav">
+    <div class="nav-content">
+        <div>
+            <div class="btn-box left">
+                <a href="#" class="title-btn btn-3"><span>我的作品</span></a>
+                <a href="#" class="title-btn btn-3"><span>我的朋友</span></a>
+            </div>
+            <div  class="btn-box right">
+                <a href="#" class="title-btn btn-3"><span>我的家园</span></a>
+                <a href="#" class="title-btn btn-3"><span>关于我</span></a>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div>
+            <div class="btn-box" style="width: 100%">
+                <a class="title-btn btn-3" style="margin: 0.1rem auto"><span>登录</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="nav-btn"><i class="icon point_icon"></i></div>
+</div>
+<div class="panel-cover">
         <div class="banner">
             <a class="btn login-btn right">登录</a>
         </div>
         <div class="panel-cover-content-box">
             <div class="panel-cover-content">
                 <div class="logo">
-                    <img class="photo" src="assets/img/599642b2bbcca.png">
+                    <img class="photo" src="assets/img/head.png">
                 </div>
-                <div class="title">白熊的宠物收容所</div>
-                <div class="title">White Bear's personal site</div>
-                <div>
+                <div class="title_ch">白熊的宠物收容所</div>
+                <div class="title_en">White Bear's personal site</div>
+                <div class="button">
                     <a href="#" class="main-btn btn-4"><span>我的作品</span></a>
                     <a href="#" class="main-btn btn-4"><span>我的朋友</span></a>
                     <a href="#" class="main-btn btn-4"><span>我的家园</span></a>
                     <a href="#" class="main-btn btn-4"><span>关于我</span></a>
                 </div>
                 <div class="motto">
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;愿你我既可以朝九晚五，</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;又能够浪迹天涯。</p>
+                    <p>愿你我既可以朝九晚五，</br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        又能够浪迹天涯。</p>
                 </div>
-
             </div>
         </div>
     </div>
-</div>
 <div class="content-wrapper">
-    <div class="content-wrapper-left"></div>
     <div class="content-wrapper-right"></div>
 </div>
+<div style="clear: both"></div>
 </body>
+<script>
+    $(function () {
+        $(".nav-btn").click(function () {
+            if($(this).hasClass('active')){
+                $(this).removeClass("active");
+                $(".nav-content").hide(500);
+            }else{
+                $(this).addClass("active");
+                $(".nav-content").show(200);
+            }
+        });
+
+        $(".main-btn,.title-btn").click(function () {
+            if(window.innerWidth>468){
+                $(".panel-cover").css({"width":468,"float":"left"});
+                $(".title_ch,.title_en,.motto,.button,.banner,.login-btn").css("display","none");
+            }else {
+                $(".panel-cover").css({"width":340,"float":"left"});
+                $(".title_ch,.title_en,.motto").css("display","block");
+            }
+            $(".content-wrapper").css("display","block");
+        })
+        $(".photo").click(function () {
+            $(".content-wrapper").css("display","none");
+            $(".panel-cover").css({"width":"100%","float":"none"});
+            $(".title_ch,.title_en,.motto,.button").css("display","block");
+            if(window.innerWidth>768){
+                $(".banner,.login-btn").css("display","block");
+            }
+        })
+    });
+
+</script>
 </html>
