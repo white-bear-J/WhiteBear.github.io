@@ -1,0 +1,184 @@
+html {-webkit-text-size-adjust: none;-ms-text-size-adjust: none;font-size: 26.66666667vw;font-family: "冬青黑体",helvetica,arial,sans-serif;background-color: #ffffff}
+body,h1,h2,h3,h4,h5,h6,hr,p,menu,dl,dt,dd,ul,ol,li,form,button,input,textarea,select,th,td {margin: 0;padding: 0;-webkit-tap-highlight-color: rgba(0,0,0,0);font-size: .14rem;}
+a {background-color: transparent;-webkit-tap-highlight-color: rgba(0,0,0,0);text-decoration: none;color: #333;outline: 0;}
+a:active {outline: 0;text-decoration: none}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;font-size: 100%;}
+ul,ol {list-style: none;}
+body{background-color: #ffffff;font-family: "Helvetica Neue",helvetica,arial,sans-serif;position: relative;width: 100%}
+div:after ,ul:after,div::after ,ul::after { content:"."; display:block; height:0; visibility:hidden; clear:both; }
+input{border: none;outline: none;text-decoration: none;}
+button{outline: none;border: none;text-decoration: none;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent;}
+video{width: 100%}
+a.block{display: block;width: 100%;height: 100%}
+
+/*背景色*/
+
+.bg-gray{
+    background-color: #f0f0f0!important;
+}
+.bg-white{
+    background-color: #fff!important;
+}
+
+
+/*图标*/
+.icon{display: inline-block;}
+
+.block-icon{display: block;}
+
+.search-icon{background: url("../../assets/img/index/sousuo.png") no-repeat center;background-size: 100%;}
+
+.tj-icon{background: url("../../assets/img/index/tuijian.png") no-repeat center;background-size: 100%;}
+.tj-icon.active{background: url("../../assets/img/index/tuijian-xuanzhong.png") no-repeat center;background-size: 100%;}
+
+.sp-icon{background: url("../../assets/img/index/shipin.png") no-repeat center;background-size: 100%;}
+.sp-icon.active{background: url("../../assets/img/index/shipin-xuanzhong.png") no-repeat center;background-size: 100%;}
+
+.wz-icon{background: url("../../assets/img/index/wenzhang.png") no-repeat center;background-size: 100%;}
+.wz-icon.active{background: url("../../assets/img/index/wenzhang-xuanzhong.png") no-repeat center;background-size: 100%;}
+
+.wd-icon{background: url("../../assets/img/index/wode.png") no-repeat center;background-size: 100%;}
+.wd-icon.active{background: url("../../assets/img/index/wode-xuanzhong.png") no-repeat center;background-size: 100%;}
+
+.point-left-icon{background: url("../../assets/img/index/bofangliang.png") no-repeat center;background-size: 100%;}
+
+.dz-icon{background: url("../../assets/img/index/dianzan.png") no-repeat center;background-size: 100%;}
+.dz-icon.active{background: url("../../assets/img/index/dianzan-dianji.png") no-repeat center;background-size: 100%;}
+
+.dz-white-icon{background: url("../../assets/img/video-detail/dianzan.png") no-repeat center;background-size: 100%;}
+.dz-white-icon.active{background: url("../../assets/img/video-detail/dianzan-xuanzhong.png") no-repeat center;background-size: 100%;}
+
+.ds-icon{background: url("../../assets/img/index/dashuang.png") no-repeat center;background-size: 100%;}
+.ds-icon.active{background: url("../../assets/img/index/dashuang-dianji.png") no-repeat center;background-size: 100%;}
+
+.ds-white-icon{background: url("../../assets/img/video-detail/dashang.png") no-repeat center;background-size: 100%;}
+.ds-white-icon.active{background: url("../../assets/img/index/dashuang-dianji.png") no-repeat center;background-size: 100%;}
+
+.hb-icon{background: url("../../assets/img/index/hongbao-dianji.png") no-repeat center;background-size: 100%;}
+
+.hb-white-icon{background: url("../../assets/img/video-detail/hongbao.png") no-repeat center;background-size: 100%;}
+
+.index-close-icon{background: url("../../assets/img/index/guanbi.png") no-repeat center;background-size: 100%;}
+
+.ck-icon{background: url("../../assets/img/index/liulan.png") no-repeat center;background-size: 100%;}
+
+.ck-white-icon{background: url("../../assets/img/index/liulan-white.png") no-repeat center;background-size: 100%;}
+
+.pl-icon{background: url("../../assets/img/video-detail/pinglun.png") no-repeat center;background-size: 100%;}
+
+.return-icon{background: url("../../assets/img/video-detail/fanhui.png") no-repeat center;background-size: 100%;}
+
+.show-more-icon{background: url("../../assets/img/video-detail/xiangxia.png") no-repeat center;background-size: 100%;}
+
+.show-more-icon.active{background: url("../../assets/img/video-detail/xiangshang.png") no-repeat center;background-size: 100%;}
+
+.bfl-black-icon{background: url("../../assets/img/video-detail/play.png") no-repeat center;background-size: 100%;}
+
+.zf-icon{background: url("../../assets/img/video-detail/share.png") no-repeat center;background-size: 100%;}
+
+.time-icon{background: url("../../assets/img/video-detail/day.png") no-repeat center;background-size: 100%;}
+
+.share-icon{background: url("../../assets/img/video-detail/fenxiang.png") no-repeat center;background-size: 100%;}
+
+.jubao-black-icon{background: url("../../assets/img/video-detail/jubao.png") no-repeat center;background-size: 100%;}
+
+.jubao-white-icon{background: url("../../assets/img/video-detail/jb.png") no-repeat center;background-size: 100%;}
+
+.collect-icon{background: url("../../assets/img/video-detail/shoucang.png") no-repeat center;background-size: 100%;}
+.collect-icon.active{background: url("../../assets/img/video-detail/shoucang-xuanzhong.png") no-repeat center;background-size: 100%;}
+
+.add-icon{background: url("../../assets/img/video-detail/guanzhu.png") no-repeat center;background-size: 100%}
+.add-icon.active{background: url("../../assets/img/video-detail/yiguanzhu.png") no-repeat center;background-size: 100%}
+
+.renzheng-icon{background: url("../../assets/img/video-detail/renzheng.png") no-repeat center;background-size: 100%}
+
+.hf-icon{background: url("../../assets/img/video-detail/huifu.png") no-repeat center;background-size: 100%}
+
+
+/*头部*/
+.nav{
+    height: .5rem;
+    width: 100%;
+    line-height: .5rem;
+    background-color: #ffffff;
+}
+.nav-logo{
+    height: .5rem;
+}
+
+.logo{
+    width: .33rem;
+    height: .5rem;
+    margin-left: .1rem;
+    background: url("../../assets/img/index/LOGO.png") no-repeat center;
+    background-size: 100%;
+}
+.search-input{
+    height: .5rem;
+}
+.search-input .search{
+    margin: 0 auto;
+    height: .33rem;
+    margin-top: .09rem;
+    background-color: #f0f0f0;
+    border-radius: .2rem;
+    line-height: .33rem;
+}
+
+.nav-search{
+    display: block;
+    height: .33rem;
+    float: right;
+    margin-right: .2rem;
+    background-color: #f0f0f0;
+}
+
+.search-input .search .search-icon{
+    width: .182rem;
+    height: .33rem;
+    margin-left: .12rem;
+}
+
+/*底部*/
+
+.bottom-wrapper .bottom{
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    height: .545rem;
+    width: 100%;
+    line-height: .545rem;
+    box-shadow: -1px 0 3px #c1c1c1 ;
+    background-color: #ffffff;
+}
+
+.bottom-wrapper .bottom .tab{
+    height: .545rem;
+    text-align: center;
+}
+.bottom .tab .block{
+    padding-top: .1rem;;
+}
+
+.bottom .tab .block-icon{
+    margin: 0 auto;
+    width: .24rem;
+    height: .24rem;
+}
+
+.bottom .tab p{
+    font-size: .114rem;
+    color: #666;
+    height: .2rem;
+    line-height: .22rem;
+}
+
+.bottom .tab.active p{
+    color: #d43b33;
+}
+/*内容区域*/
+.container{
+    /*padding-top: .628rem;*/
+    padding-bottom: .686rem;
+    background-color: #ffffff;
+}
