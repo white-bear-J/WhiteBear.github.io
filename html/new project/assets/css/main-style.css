@@ -827,6 +827,7 @@ a.block{display: block;width: 100%;height: 100%;cursor: pointer}
 }
 .user-defined{
     position: relative;
+    overflow: hidden;
 }
 
 .defined_num{
