@@ -182,12 +182,14 @@
     width: .185rem;
     /*float: left;*/
     height: .114rem;
+    margin-top: .03rem;
 }
 
 .index-data .bottom-icon-group .group-li.last .index-close-icon{
     width: .114rem;
     height: .114rem;
     margin-left: .1rem;
+    margin-top: .03rem;
 }
 
 .index-data .left-content{
