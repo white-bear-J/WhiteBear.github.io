@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main-style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main-style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/main-style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="340" column="19" lean-forward="true" selection-start-line="340" selection-start-column="19" selection-end-line="340" selection-end-column="19" />
+            <state relative-caret-position="599">
+              <caret line="831" column="23" selection-start-line="831" selection-start-column="23" selection-end-line="831" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -48,10 +48,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="-975">
               <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
               <folding>
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -87,35 +87,35 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>jubao-black-icon</find>
-      <find>.pl-first-list .data</find>
+      <find />
       <find>pl-text-input</find>
-      <find>.b-gift-box .gift</find>
+      <find />
       <find>b-gift-box</find>
       <find>tj-tab</find>
       <find>.tj-tab</find>
       <find>return-icon</find>
-      <find>.video-btn-box .pull-left .icon</find>
+      <find />
       <find>.nav-pl-top</find>
-      <find>.ts-type-box .ds-type</find>
-      <find>.ts-type-box .ds-type .type</find>
-      <find>.pl-first-list .pl .name</find>
+      <find />
+      <find />
+      <find />
       <find>dz-white-icon</find>
       <find>dz</find>
       <find>ds-type</find>
-      <find>.pl-second-list .cz .name a</find>
+      <find />
       <find>.right-shadow</find>
       <find>.dz</find>
       <find>.index-data</find>
-      <find>.name .quanwei .icon</find>
-      <find>.pl-second-list .btn-group label</find>
+      <find />
+      <find />
       <find>.pl-bottom-wrapper</find>
       <find>.video-btn-box</find>
       <find>.dz-w</find>
       <find>.gift-box</find>
-      <find>.index-data .bottom-icon-group .group-li.last .ck-icon</find>
-      <find>.pic-box .article-pic</find>
+      <find />
+      <find />
       <find>video-box</find>
-      <find>.index-data .video-box</find>
+      <find />
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -126,11 +126,11 @@
         <option value="$PROJECT_DIR$/video_detail.html" />
         <option value="$PROJECT_DIR$/more_pl.html" />
         <option value="$PROJECT_DIR$/article_detail.html" />
-        <option value="$PROJECT_DIR$/assets/css/main-style.css" />
         <option value="$PROJECT_DIR$/video-list.html" />
         <option value="$PROJECT_DIR$/assets/css/index.css" />
         <option value="$PROJECT_DIR$/assets/js/common.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/assets/css/main-style.css" />
       </list>
     </option>
   </component>
@@ -143,7 +143,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="458" />
     <option name="y" value="288" />
     <option name="width" value="1924" />
@@ -291,12 +291,12 @@
       <workItem from="1526261236484" duration="1895000" />
       <workItem from="1526263215704" duration="24825000" />
       <workItem from="1526345911319" duration="29573000" />
-      <workItem from="1526432668810" duration="12887000" />
+      <workItem from="1526432668810" duration="13497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106260000" />
+    <option name="totallyTimeSpent" value="106870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -712,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/main-style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="340" column="19" lean-forward="true" selection-start-line="340" selection-start-column="19" selection-end-line="340" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/video-list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="903">
@@ -752,7 +745,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
+        <state relative-caret-position="-975">
           <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
           <folding>
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
@@ -761,6 +754,13 @@
             <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/main-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="831" column="23" selection-start-line="831" selection-start-column="23" selection-end-line="831" selection-end-column="23" />
         </state>
       </provider>
     </entry>
