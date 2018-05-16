@@ -797,8 +797,11 @@ a.block{display: block;width: 100%;height: 100%;cursor: pointer}
     font-size: .125rem;
     color: #333;
 }
-.dashang-box .input-number .number>div{
+.dashang-box .input-number .number>div,
+.dashang-box .input-number .number>div>a
+{
     height: .545rem;
+    line-height: .545rem;
 }
 
 .input-number .number .choose.active a{
