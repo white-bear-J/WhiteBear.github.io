@@ -48,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="591" column="15" lean-forward="true" selection-start-line="591" selection-start-column="8" selection-end-line="591" selection-end-column="15" />
+            <state relative-caret-position="525">
+              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
               <folding>
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
@@ -64,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="878">
+            <state relative-caret-position="2378">
               <caret line="194" column="40" selection-start-line="194" selection-start-column="40" selection-end-line="194" selection-end-column="40" />
             </state>
           </provider>
@@ -87,35 +87,35 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>jubao-black-icon</find>
-      <find />
+      <find>.pl-first-list .data</find>
       <find>pl-text-input</find>
-      <find />
+      <find>.b-gift-box .gift</find>
       <find>b-gift-box</find>
       <find>tj-tab</find>
       <find>.tj-tab</find>
       <find>return-icon</find>
-      <find />
+      <find>.video-btn-box .pull-left .icon</find>
       <find>.nav-pl-top</find>
-      <find />
-      <find />
-      <find />
+      <find>.ts-type-box .ds-type</find>
+      <find>.ts-type-box .ds-type .type</find>
+      <find>.pl-first-list .pl .name</find>
       <find>dz-white-icon</find>
       <find>dz</find>
       <find>ds-type</find>
-      <find />
+      <find>.pl-second-list .cz .name a</find>
       <find>.right-shadow</find>
       <find>.dz</find>
       <find>.index-data</find>
-      <find />
-      <find />
+      <find>.name .quanwei .icon</find>
+      <find>.pl-second-list .btn-group label</find>
       <find>.pl-bottom-wrapper</find>
       <find>.video-btn-box</find>
       <find>.dz-w</find>
       <find>.gift-box</find>
-      <find />
-      <find />
+      <find>.index-data .bottom-icon-group .group-li.last .ck-icon</find>
+      <find>.pic-box .article-pic</find>
       <find>video-box</find>
-      <find />
+      <find>.index-data .video-box</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -129,8 +129,8 @@
         <option value="$PROJECT_DIR$/assets/css/main-style.css" />
         <option value="$PROJECT_DIR$/video-list.html" />
         <option value="$PROJECT_DIR$/assets/css/index.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/js/common.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -143,7 +143,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="458" />
     <option name="y" value="288" />
     <option name="width" value="1924" />
@@ -291,12 +291,12 @@
       <workItem from="1526261236484" duration="1895000" />
       <workItem from="1526263215704" duration="24825000" />
       <workItem from="1526345911319" duration="29573000" />
-      <workItem from="1526432668810" duration="12747000" />
+      <workItem from="1526432668810" duration="12887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106120000" />
+    <option name="totallyTimeSpent" value="106260000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -743,10 +743,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2378">
+          <caret line="194" column="40" selection-start-line="194" selection-start-column="40" selection-end-line="194" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="591" column="15" lean-forward="true" selection-start-line="591" selection-start-column="8" selection-end-line="591" selection-end-column="15" />
+        <state relative-caret-position="525">
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
           <folding>
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
@@ -754,13 +761,6 @@
             <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
             <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="878">
-          <caret line="194" column="40" selection-start-line="194" selection-start-column="40" selection-end-line="194" selection-end-column="40" />
         </state>
       </provider>
     </entry>
