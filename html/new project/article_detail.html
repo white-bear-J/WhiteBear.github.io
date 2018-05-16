@@ -495,8 +495,11 @@
 </div>
 <script>
     var index = 0;
-    var count= 0;
+    var count= 3;
     var flag=0;
+
+    $(".page-box").css("width",(count*100)+"%");
+    $(".gift-page").css("width",(100/count)+"%");
 
     count = $(".gift-page-index ").children("a").length;
 
@@ -532,7 +535,7 @@
     });
 
     function move(index){
-        $(".gift-page").eq(index).show().siblings().hide();
+        $(".page-box").stop().animate({left:-(index*100)+'%'},500);
         $(".gift-page-index a").eq(index).addClass("active").siblings().removeClass("active");
     }
 

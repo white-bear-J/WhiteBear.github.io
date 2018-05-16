@@ -354,7 +354,7 @@
                             <div class="ds-cost">50M币</div>
                         </div>
                     </div>
-                    <div class="gift-page pull-left" style="display: none">
+                    <div class="gift-page pull-left">
                         <div class="gift pull-left">
                             <div class="ds-img">
                                 <img class="gift-img" src="assets/img/pop/gift.png">
@@ -426,7 +426,7 @@
                             <div class="ds-cost">50M币</div>
                         </div>
                     </div>
-                    <div class="gift-page pull-left" style="display: none">
+                    <div class="gift-page pull-left" >
                         <div class="gift pull-left">
                             <div class="ds-img">
                                 <img class="gift-img" src="assets/img/pop/gift.png">
@@ -519,8 +519,11 @@
 </div>
 <script>
     var index = 0;
-    var count= 0;
+    var count= 3;
     var flag=0;
+
+    $(".page-box").css("width",(count*100)+"%");
+    $(".gift-page").css("width",(100/count)+"%");
 
     count = $(".gift-page-index ").children("a").length;
 
@@ -556,7 +559,7 @@
     });
 
     function move(index){
-        $(".gift-page").eq(index).show(300,"linear").siblings().hide(300,"linear");
+        $(".page-box").stop().animate({left:-(index*100)+'%'},500);
         $(".gift-page-index a").eq(index).addClass("active").siblings().removeClass("active");
     }
 
