@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <script src="assets/js/common.js"></script>
 </head>
 <body class="">
 <div class="nav-pl-top">
@@ -313,19 +314,19 @@
         $(this).hide();
         $(".pl-text-input").show();
         $("#pl").focus();
-        $(".mask").show();
+        fixedTop();
     });
 
     $(".hf-icon").click(function () {
         $(".pl-input").hide();
         $(".pl-text-input").show();
         $("#pl").focus();
-        $(".mask").show();
+        fixedTop();
     });
 
     $(".show-num").click(function () {
         $(".pl-input").show().siblings(".pop-box").hide();
-        $(".mask").hide();
+        fixedBottom();
     });
 
     $(".to-ts").click(function () {

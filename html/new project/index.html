@@ -609,7 +609,7 @@
 
     $(".user-defined").click(function () {
         $(".choose").removeClass("active");
-        $(this).empty().append('<input class="defined_num" type="text">');
+        $(this).empty().append('<input class="defined_num" type="text" onkeyup="value=value.replace(/[^\\d]/g,\'\')">');
         $(".defined_num").focus();
     })
 

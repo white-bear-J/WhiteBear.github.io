@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <script src="assets/js/common.js"></script>
 </head>
 <body class="bg-gray">
 <div class="nav-video">
@@ -572,22 +573,22 @@
         $(this).hide();
         $(".pl-text-input").show();
         $("#pl").focus();
-        $(".mask").show();
+        fixedTop();
     });
     $(".show-num").click(function () {
         $(".pl-input").show().siblings(".pop-box").hide();
-        $(".mask").hide();
+        fixedBottom();
     });
 
     $(".to-share").click(function () {
         $(".pl-bottom-wrapper .share-box").show().siblings(".pop-box").hide();
-        $(".mask").show();
+        fixedTop();
     });
     $(".to-ds").click(function () {
         $(".pl-bottom-wrapper .dashang-box").show().siblings(".pop-box").hide();
         $(".dashang-box .choose-gift").show();
         $(".dashang-box .ds-input").hide();
-        $(".mask").show();
+        fixedTop();
     });
 
     $(".number .choose").click(function () {
@@ -604,7 +605,7 @@
         $(".choose").removeClass("active");
         $(this).empty().append('<input class="defined_num" type="text">');
         $(".defined_num").focus();
-    })
+    });
     
     $(".to-ts").click(function () {
         $(".ts-mask").show();
@@ -634,7 +635,7 @@
         $(".pl-input").hide();
         $(".pl-text-input").show();
         $("#pl").focus();
-        $(".mask").show();
+        fixedTop();
     });
 
     $(".dz-icon,.dz-gray-icon,.dz-white-icon").click(function () {
