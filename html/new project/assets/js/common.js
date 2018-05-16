@@ -209,14 +209,14 @@ function move(){
 
 function fixedTop() {
     $(".mask").show();
-    $(".pl-bottom-wrapper").css("top","50%");
-    $(".pl-bottom-wrapper").css("transform","translateY(-50%)");
+    $(".pl-bottom-wrapper").css("top","0");
+    // $(".pl-bottom-wrapper").css("transform","translateY(-50%)");
     $(".pl-bottom-wrapper").css("bottom","");
 }
 
 function fixedBottom() {
     $(".mask").hide();
     $(".pl-bottom-wrapper").css("top","");
-    $(".pl-bottom-wrapper").css(" transform","");
+    // $(".pl-bottom-wrapper").css(" transform","");
     $(".pl-bottom-wrapper").css("bottom",0);
 }
