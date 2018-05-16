@@ -5,7 +5,7 @@ a:active {outline: 0;text-decoration: none}
 h1,h2,h3,h4,h5,h6 {font-weight: normal;font-size: 100%;}
 ul,ol {list-style: none;}
 body{background-color: #ffffff;font-family: "Helvetica Neue",helvetica,arial,sans-serif;position: relative;width: 100%}
-div:after ,ul:after,div::after ,ul::after { content:"."; display:block; height:0; visibility:hidden; clear:both; }
+div:after ,ul:after,div::after ,ul::after { content:""; display:block; height:0; visibility:hidden; clear:both; }
 input,textarea{border: none;outline: none;text-decoration: none;}
 button{outline: none;border: none;text-decoration: none;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent;}
 video{width: 100%}
