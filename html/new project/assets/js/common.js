@@ -149,3 +149,46 @@ function isIE() {
     }
 }
 
+//打赏
+
+var index = 0;
+var count= 0;
+var flag=0;
+
+count = $(".gift-page-index ").children("a").length;
+
+$(".gift-page").on("touchstart", function(e) {
+    startX = e.originalEvent.changedTouches[0].pageX;
+    startY = e.originalEvent.changedTouches[0].pageY;
+});
+
+$(".gift-page").on("touchend", function(e) {
+
+    moveEndX = e.originalEvent.changedTouches[0].pageX;
+    moveEndY = e.originalEvent.changedTouches[0].pageY;
+    X = moveEndX - startX;
+    Y = moveEndY - startY;
+    //左滑
+    if ( X < 0 ) {
+        e.preventDefault();
+        index++;
+        if(index>count-1){
+            index = 0;
+        }
+        move(index);
+    }
+    //右滑
+    else if ( X > 0 ) {
+        e.preventDefault();
+        index--;
+        if(index<0){
+            index = count-1;
+        }
+        move(index);
+    }
+});
+
+function move(index){
+    $(".gift-page").eq(index).show().siblings().hide();
+    $(".gift-page-index a").eq(index).addClass("active").siblings().removeClass("active");
+}

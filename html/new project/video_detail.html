@@ -25,7 +25,7 @@
 </head>
 <body class="bg-gray">
 <div class="nav-video">
-    <a class="return block" href="javascript :;" onClick="javascript :history.back(-1);"><i class="icon return-icon"></i></a>
+    <a class="return block" href="javascript:;" onClick="history.back(-1);"><i class="icon return-icon"></i></a>
     <div class="video">
         <video></video>
     </div>
@@ -49,7 +49,7 @@
                 <div class="pull-left"><i class="icon bfl-black-icon pull-left"></i>1536万</div>
                 <div class="pull-left"><i class="icon zf-icon pull-left"></i>1536万</div>
                 <div class="pull-left"><i class="icon time-icon pull-left"></i>2018-02-03</div>
-                <div class="pull-right"><i class="icon jubao-black-icon pull-left"></i><i class="icon share-icon pull-left"></i></div>
+                <div class="pull-right"><i class="icon jubao-black-icon pull-left to-ts"></i><i class="icon share-icon pull-left to-share"></i></div>
             </div>
             <div class="video-introduce">
                 2018年《头号玩家》依然强势霸榜，科幻片《湮灭》在上映后热度一2018年《头号玩家》依然强势霸榜，科幻片《湮灭》在上映后热度一2018年《头号玩家》依然强势霸榜，科幻片《湮灭》在上映后热度一
@@ -57,7 +57,7 @@
             <div class="video-icon-box row">
                 <div class="pull-left col-xs-3"><i class="icon dz-white-icon pull-left cl"></i>1536万</div>
                 <div class="pull-left col-xs-3"><i class="icon collect-icon pull-left cl"></i>1536万</div>
-                <div class="pull-left col-xs-3"><i class="icon ds-white-icon pull-left"></i>1526万</div>
+                <div class="pull-left col-xs-3"><i class="icon ds-white-icon pull-left to-ds"></i>1526万</div>
                 <div class="pull-left col-xs-3"><i class="icon hb-white-icon pull-left"></i>1526万</div>
             </div>
         </div>
@@ -145,7 +145,7 @@
                             弄成纯比赛模式也不好看，你去看看铁甲雄心就知道，那边综艺感很差，在介绍战队时显得节目很拖很乏味，很容易审美疲劳。
                         </div>
                         <div class="btn-group">
-                            <div class="pull-left"><i class="icon jubao-white-icon pull-left"></i>举报</div>
+                            <div class="pull-left"><i class="icon jubao-white-icon pull-left to-ts"></i>举报</div>
                             <div class="pull-left"><i class="icon hf-icon pull-left"></i>回复</div>
                             <div class="pull-left"><i class="icon dz-white-icon pull-left"></i>562万</div>
                         </div>
@@ -162,23 +162,23 @@
                             弄成纯比赛模式也不好看，你去看看铁甲雄心就知道，那边综艺感很差，在介绍战队时显得节目很拖很乏味，很容易审美疲劳。
                         </div>
                         <div class="btn-group">
-                            <div class="pull-left"><i class="icon jubao-white-icon pull-left"></i>举报</div>
+                            <div class="pull-left"><i class="icon jubao-white-icon pull-left to-ts"></i>举报</div>
                             <div class="pull-left"><i class="icon hf-icon pull-left"></i>回复</div>
                             <div class="pull-left"><i class="icon dz-white-icon pull-left"></i>562万</div>
                         </div>
                         <div class="son-pl-list bg-gray">
                             <div class="son-list">
                                 <div class="son-data">
-                                <a class="name">阿狸</a>：你去看看铁甲雄心就知道,那边综艺感很差,在介
+                                    <a class="name">阿狸</a>：你去看看铁甲雄心就知道,那边综艺感很差,在介
                                     绍战队时显得节目很拖很乏味。
                                 </div>
                                 <div class="son-data">
-                                    <a class="name poster">小白</a>回复<a class="name to-post">阿狸</a>：你去看看铁甲雄心就知道,那边综艺感很差,在介
+                                    回复<a class="name to-post">@阿狸</a>：你去看看铁甲雄心就知道,那边综艺感很差,在介
                                     绍战队时显得节目很拖很乏味。
                                 </div>
                             </div>
                             <div class="add-more">
-                                <a>查看全部评论 &nbsp; > </a>
+                                <a href="more_pl.html">查看全部评论 &nbsp; > </a>
                             </div>
                         </div>
                     </div>
@@ -198,8 +198,8 @@
             $(".video-introduce").addClass("active");
         }
     });
-    
-    $(".cl").click(function () {
+
+    $(".collect-icon").click(function () {
         if($(this).hasClass("active")){
             $(this).removeClass("active");
         }else {
@@ -225,11 +225,426 @@
     });
 
 </script>
+<!--底部浮动-->
 <div class="pl-bottom-wrapper">
-    <div class="pl-input">
+    <div class="pl-input pop-box">
         <i class="icon pl-icon pull-left"></i>
-        <input  class="input pull-left" type="text" value="" placeholder="说点什么吧......">
+        <div  class="input pull-left">说点什么吧......</div>
+    </div>
+    <!--发表评论-->
+    <div class="pl-text-input pop-box" style="display: none">
+        <div class="textarea">
+            <textarea id="pl" placeholder="请文明发言，遵守互联网上七条公约"></textarea>
+        </div>
+        <div class="submit">
+            <i class="icon bq-icon pull-left"></i>
+            <button class="submit-btn pull-right show-num">发表</button>
+        </div>
+    </div>
+    <!--分享-->
+    <div class="share-box pop-box bg-gray" style="display: none">
+        <div class="share-list-outsaide-box">
+            <div class="share-list-box">
+                <div class="share-list">
+                    <div class="icon weibo-icon pull-left"><a class="block"></a></div>
+                    <div class="icon pengyouquan-icon pull-left"><a class="block"></a></div>
+                    <div class="icon qq-icon pull-left"><a class="block"></a></div>
+                    <div class="icon wechat-icon pull-left"><a class="block"></a></div>
+                    <div class="icon qqzone-icon pull-left"><a class="block"></a></div>
+                    <div class="icon qqzone-icon pull-left"><a class="block"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="qx-btn bg-white show-num">取消</div>
+    </div>
+    <!--打赏-->
+    <div class="dashang-box pop-box bg-gray" style="display: none">
+        <div class="choose-gift">
+            <div class="title">打赏<i class="icon index-close-icon show-num"></i></div>
+            <div class="b-gift-box bg-white">
+                <div class="page-box">
+                    <div class="gift-page pull-left">
+                        <div class="gift pull-left active">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                    </div>
+                    <div class="gift-page pull-left" style="display: none">
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left active">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                    </div>
+                    <div class="gift-page pull-left" style="display: none">
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left active">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gift-page-index"><a class="active"></a><a></a><a></a></div>
+            </div>
+            <div class="input-number">
+                <div class="number row">
+                    <div class="col-xs-2">数量:</div>
+                    <div class="col-xs-2 choose"><a class="block">1</a></div>
+                    <div class="col-xs-2 choose"><a class="block">20</a></div>
+                    <div class="col-xs-2 choose"><a class="block">50</a></div>
+                    <div class="col-xs-2 choose active"><a class="block">100</a></div>
+                    <div class="col-xs-2 user-defined">自定义</div>
+                </div>
+                <div class="submit">
+                    <button class="submit-btn show-num">发表</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<script>
+    var index = 0;
+    var count= 0;
+    var flag=0;
+
+    count = $(".gift-page-index ").children("a").length;
+
+    $(".gift-page").on("touchstart", function(e) {
+        startX = e.originalEvent.changedTouches[0].pageX;
+        startY = e.originalEvent.changedTouches[0].pageY;
+    });
+
+    $(".gift-page").on("touchend", function(e) {
+
+        moveEndX = e.originalEvent.changedTouches[0].pageX;
+        moveEndY = e.originalEvent.changedTouches[0].pageY;
+        X = moveEndX - startX;
+        Y = moveEndY - startY;
+        //左滑
+        if ( X < 0 ) {
+            e.preventDefault();
+            index++;
+            if(index>count-1){
+                index = 0;
+            }
+            move(index);
+        }
+        //右滑
+        else if ( X > 0 ) {
+            e.preventDefault();
+            index--;
+            if(index<0){
+                index = count-1;
+            }
+            move(index);
+        }
+    });
+
+    function move(index){
+        $(".gift-page").eq(index).show().siblings().hide();
+        $(".gift-page-index a").eq(index).addClass("active").siblings().removeClass("active");
+    }
+
+</script>
+<!--投诉-->
+<div class="ts-mask" style="display: none">
+    <div class="ts-box">
+        <div class="close-title bg-gray"><i class="icon index-close-icon pull-right colse-pop"></i></div>
+        <div class="ts-type-box">
+            <div class="title">举报类型<i class="icon show-more-icon pull-right show-type active"></i></div>
+            <div class="ts-type">
+                <div class="type"><i class="icon choose-icon active"></i>政治谣言</div>
+                <div class="type"><i class="icon choose-icon"></i>垃圾广告</div>
+                <div class="type"><i class="icon choose-icon"></i>人身攻击</div>
+            </div>
+        </div>
+        <div class="ts-description">
+            <div class="title">举报描述</div>
+            <div class="ts-textarea">
+                <textarea></textarea>
+            </div>
+        </div>
+        <div class="submit-btn">
+            <button class="ts-submit">发表</button>
+        </div>
+    </div>
+</div>
+<!--遮罩层-->
+<div class="mask show-num"></div>
+<script>
+    $(".pl-input").click(function () {
+        $(this).hide();
+        $(".pl-text-input").show();
+        $("#pl").focus();
+        $(".mask").show();
+    });
+    $(".show-num").click(function () {
+        $(".pl-input").show().siblings(".pop-box").hide();
+        $(".mask").hide();
+    });
+
+    $(".to-share").click(function () {
+        $(".pl-bottom-wrapper .share-box").show().siblings(".pop-box").hide();
+        $(".mask").show();
+    });
+    $(".to-ds").click(function () {
+        $(".pl-bottom-wrapper .dashang-box").show().siblings(".pop-box").hide();
+        $(".dashang-box .choose-gift").show();
+        $(".dashang-box .ds-input").hide();
+        $(".mask").show();
+    });
+
+    $(".number .choose").click(function () {
+        $(this).addClass("active").siblings(".choose").removeClass("active");
+        $(".user-defined").empty().append('自定义');
+    });
+
+    $(".gift").unbind().bind("click",function () {
+        $(".gift").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $(".user-defined").click(function () {
+        $(".choose").removeClass("active");
+        $(this).empty().append('<input class="defined_num" type="text">');
+        $(".defined_num").focus();
+    })
+    
+    $(".to-ts").click(function () {
+        $(".ts-mask").show();
+        }
+    );
+    $(".colse-pop").click(function () {
+        $(".ts-mask").hide();
+        $(".show-type").addClass("active");
+        $(".ts-type").show();
+    });
+    
+    $(".show-type").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+            $(".ts-type").hide();
+        }else {
+            $(this).addClass("active");
+            $(".ts-type").show(500);
+        }
+    });
+    $(".ts-type .type").click(function () {
+        $(this).children(".icon").addClass("active");
+        $(this).siblings().children(".icon").removeClass("active");
+    });
+
+    $(".hf-icon").click(function () {
+        $(".pl-input").hide();
+        $(".pl-text-input").show();
+        $("#pl").focus();
+        $(".mask").show();
+    });
+
+    $(".dz-icon,.dz-gray-icon,.dz-white-icon").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+        }else {
+            $(this).addClass("active");
+        }
+    });
+
+</script>
 </body>
 </html>

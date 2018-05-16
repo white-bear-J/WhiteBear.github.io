@@ -14,9 +14,9 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="x5-orientation" content="portrait">
     <meta name="format-detection" content="telephone=no" />
-    <meta name="keywords" content="首页">
-    <meta name="description" content="首页">
-    <title>首页</title>
+    <meta name="keywords" content="视频">
+    <meta name="description" content="视频">
+    <title>视频</title>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
@@ -39,20 +39,27 @@
         </div>
     </div>
 </div>
-<div class="tj-tab row">
-    <div class="control-tab tab col-xs-3 col-md-3 active"><a class="block">推荐</a></div>
-    <div class="control-tab tab col-xs-3 col-md-3"><a class="block">视频</a></div>
-    <div class="control-tab tab col-xs-3 col-md-3"><a class="block">文章</a></div>
-    <div class="control-tab tab col-xs-3 col-md-3"><a class="block">关注</a></div>
+<div class="tj-tab">
+    <div class="video-tab-box">
+        <div class="video-tab">
+            <div class="control-tab v-tab pull-left active"><a class="block">推荐</a></div>
+            <div class="control-tab v-tab pull-left"><a class="block">地区</a></div>
+            <div class="control-tab v-tab pull-left"><a class="block">搞笑</a></div>
+            <div class="control-tab v-tab pull-left"><a class="block">娱乐</a></div>
+            <div class="control-tab v-tab pull-left"><a class="block">娱乐</a></div>
+            <div class="control-tab v-tab pull-left"><a class="block">娱乐</a></div>
+            <div class="control-tab v-tab pull-left"><a class="block">娱乐</a></div>
+        </div>
+    </div>
+    <div class="white-shadow"></div>
 </div>
 <script>
     var scollTop = 0;
     var navHeight = $(".header").height();
-    var padHeight = $(".tj-tab").height();
+    var padHeight = $(".tj-tab").height()+navHeight;
     $(function () {
 
         $(window).scroll(function () {
-            // alert(navHeight);
             scollTop = $(window).scrollTop();
             getTopData(scollTop);
         });
@@ -86,6 +93,34 @@
     <div class="index-container">
         <!--列表-->
         <div class="index-data">
+            <div class="data-list" data-type="1" data-id="1">
+                <div class="title">
+                    <div class="pic pull-left">
+                        <a href="#"><img class="head-img" src="assets/img/index/touxiang.png"></a>
+                    </div>
+                    <div class="poster pull-left">
+                        <p class="poster-name"><a>离离原上草</a></p>
+                        <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                    </div>
+                    <div class="right-btn pull-right">
+                        <button class="index-gz-btn">关注</button>
+                    </div>
+                </div>
+                <div class="content row">
+                    <div class="words"><a href="video_detail.html">一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                    <div class="video-box">
+                        <video></video>
+                        <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                        <div class="pop"></div>
+                    </div>
+                    <div class="bottom-icon-group">
+                        <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon hb-icon"></i>1526</div>
+                        <div class="group-li last pull-right"><i class="icon ck-icon"></i>125万<i class="icon index-close-icon" data-id="1"></i></div>
+                    </div>
+                </div>
+            </div>
             <div class="data-list" data-type="1">
                 <div class="title">
                     <div class="pic pull-left">
@@ -100,7 +135,7 @@
                     </div>
                 </div>
                 <div class="content row">
-                    <div class="words"><a href="video_detail.html">一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                    <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
                     <div class="video-box">
                         <video></video>
                         <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
@@ -114,7 +149,7 @@
                     </div>
                 </div>
             </div>
-            <div class="data-list" data-type="2">
+            <div class="data-list" data-type="1">
                 <div class="title">
                     <div class="pic pull-left">
                         <a href="#"><img class="head-img" src="assets/img/index/touxiang.png"></a>
@@ -128,53 +163,21 @@
                     </div>
                 </div>
                 <div class="content row">
-                    <div class="left-content pull-left col-xs-8 col-md-8">
-                        <div class="words"><a href="video_detail.html">一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
-                        <div class="bottom-icon-group">
-                            <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
-                            <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
-                            <div class="group-li pull-left"><i class="icon hb-icon"></i>1526</div>
-                            <div class="group-li last pull-right"><i class="icon index-close-icon"></i></div>
-                        </div>
-                    </div>
-                    <div class="video-box pull-right col-xs-4 col-md-4">
+                    <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                    <div class="video-box">
                         <video></video>
-                        <div class="num"><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                        <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
                         <div class="pop"></div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="data-list" data-type="3" data-id="1">
-                <div class="title">
-                    <div class="pic pull-left">
-                        <a href="#"><img class="head-img" src="assets/img/index/touxiang.png"></a>
-                    </div>
-                    <div class="poster pull-left">
-                        <p class="poster-name"><a>离离原上草</a></p>
-                        <p class="posting-time">2018-04-11&nbsp;12:33</p>
-                    </div>
-                    <div class="right-btn pull-right">
-                        <button class="index-gz-btn active">关注</button>
-                    </div>
-                </div>
-                <div class="content row">
-                    <div class="words">
-                        <div class="word-title"><a href="article_detail.html">欧洲是沉睡的美人，一觉睡出了遍地vintage欧洲是沉睡的美人，一觉睡出了遍地vintage</a></div>
-                        <div class="word-contet">
-                            一月初离开欧洲前，我当了一回伯尔尼纳快车的乘客。
-                            伯尔尼纳快车并不快，这趟南北走向的高山窄轨火...
-                        </div>
                     </div>
                     <div class="bottom-icon-group">
                         <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
-                        <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon ds-icon"></i>1526</div>
                         <div class="group-li pull-left"><i class="icon hb-icon"></i>1526</div>
-                        <div class="group-li last pull-right"><i class="icon ck-icon"></i>125万<i class="icon index-close-icon" data-id="1"></i></div>
+                        <div class="group-li last pull-right"><i class="icon ck-icon"></i>125万<i class="icon index-close-icon"></i></div>
                     </div>
                 </div>
             </div>
-            <div class="data-list" data-type="4">
+            <div class="data-list" data-type="1">
                 <div class="title">
                     <div class="pic pull-left">
                         <a href="#"><img class="head-img" src="assets/img/index/touxiang.png"></a>
@@ -188,23 +191,11 @@
                     </div>
                 </div>
                 <div class="content row">
-                    <div class="words">
-                        <div class="word-title"><a href="article_detail.html">欧洲是沉睡的美人，一觉睡出了遍地vintage欧洲是沉睡的美人，一觉睡出了遍地vintage</a></div>
-                        <div class="word-contet">
-                            一月初离开欧洲前，我当了一回伯尔尼纳快车的乘客。
-                            伯尔尼纳快车并不快，这趟南北走向的高山窄轨火...
-                        </div>
-                        <div class="pic-box row">
-                            <div class="article-pic pull-left">
-                                <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
-                            </div>
-                            <div class="article-pic pull-left">
-                                <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
-                            </div>
-                            <div class="article-pic pull-left">
-                                <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
-                            </div>
-                        </div>
+                    <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                    <div class="video-box">
+                        <video></video>
+                        <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                        <div class="pop"></div>
                     </div>
                     <div class="bottom-icon-group">
                         <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
@@ -214,7 +205,7 @@
                     </div>
                 </div>
             </div>
-            <div class="data-list" data-type="5">
+            <div class="data-list" data-type="1">
                 <div class="title">
                     <div class="pic pull-left">
                         <a href="#"><img class="head-img" src="assets/img/index/touxiang.png"></a>
@@ -224,24 +215,162 @@
                         <p class="posting-time">2018-04-11&nbsp;12:33</p>
                     </div>
                     <div class="right-btn pull-right">
-                        <button class="index-gz-btn">关注</button>
+                        <button class="index-gz-btn active">关注</button>
                     </div>
                 </div>
                 <div class="content row">
-                    <div class="left-content pull-left col-xs-8 col-md-8">
-                        <div class="words"><a href="article_detail.html">欧洲是沉睡的美人。</a></div>
-                        <div class="bottom-icon-group">
-                            <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
-                            <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
-                            <div class="group-li pull-left"><i class="icon hb-icon"></i>1526</div>
-                            <div class="group-li last pull-right"><i class="icon index-close-icon"></i></div>
-                        </div>
+                    <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                    <div class="video-box">
+                        <video></video>
+                        <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                        <div class="pop"></div>
                     </div>
-                    <div class="video-box pull-right col-xs-4 col-md-4">
-                        <img class="v-pic" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
-                        <div class="num"><div class="pull-right"><i class="icon ck-white-icon pull-left"></i><span>153万</span></div></div>
+                    <div class="bottom-icon-group">
+                        <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon ds-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon hb-icon"></i>1526</div>
+                        <div class="group-li last pull-right"><i class="icon ck-icon"></i>125万<i class="icon index-close-icon"></i></div>
                     </div>
-
+                </div>
+            </div>
+            <div class="data-list" data-type="1">
+                <div class="title">
+                    <div class="pic pull-left">
+                        <a href="#"><img class="head-img" src="assets/img/index/touxiang.png"></a>
+                    </div>
+                    <div class="poster pull-left">
+                        <p class="poster-name"><a>离离原上草</a></p>
+                        <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                    </div>
+                    <div class="right-btn pull-right">
+                        <button class="index-gz-btn active">关注</button>
+                    </div>
+                </div>
+                <div class="content row">
+                    <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                    <div class="video-box">
+                        <video></video>
+                        <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                        <div class="pop"></div>
+                    </div>
+                    <div class="bottom-icon-group">
+                        <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon ds-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon hb-icon"></i>1526</div>
+                        <div class="group-li last pull-right"><i class="icon ck-icon"></i>125万<i class="icon index-close-icon"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="data-list" data-type="1">
+                <div class="title">
+                    <div class="pic pull-left">
+                        <a href="#"><img class="head-img" src="assets/img/index/touxiang.png"></a>
+                    </div>
+                    <div class="poster pull-left">
+                        <p class="poster-name"><a>离离原上草</a></p>
+                        <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                    </div>
+                    <div class="right-btn pull-right">
+                        <button class="index-gz-btn active">关注</button>
+                    </div>
+                </div>
+                <div class="content row">
+                    <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                    <div class="video-box">
+                        <video></video>
+                        <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                        <div class="pop"></div>
+                    </div>
+                    <div class="bottom-icon-group">
+                        <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon ds-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon hb-icon"></i>1526</div>
+                        <div class="group-li last pull-right"><i class="icon ck-icon"></i>125万<i class="icon index-close-icon"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="data-list" data-type="1">
+                <div class="title">
+                    <div class="pic pull-left">
+                        <a href="#"><img class="head-img" src="assets/img/index/touxiang.png"></a>
+                    </div>
+                    <div class="poster pull-left">
+                        <p class="poster-name"><a>离离原上草</a></p>
+                        <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                    </div>
+                    <div class="right-btn pull-right">
+                        <button class="index-gz-btn active">关注</button>
+                    </div>
+                </div>
+                <div class="content row">
+                    <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                    <div class="video-box">
+                        <video></video>
+                        <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                        <div class="pop"></div>
+                    </div>
+                    <div class="bottom-icon-group">
+                        <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon ds-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon hb-icon"></i>1526</div>
+                        <div class="group-li last pull-right"><i class="icon ck-icon"></i>125万<i class="icon index-close-icon"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="data-list" data-type="1">
+                <div class="title">
+                    <div class="pic pull-left">
+                        <a href="#"><img class="head-img" src="assets/img/index/touxiang.png"></a>
+                    </div>
+                    <div class="poster pull-left">
+                        <p class="poster-name"><a>离离原上草</a></p>
+                        <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                    </div>
+                    <div class="right-btn pull-right">
+                        <button class="index-gz-btn active">关注</button>
+                    </div>
+                </div>
+                <div class="content row">
+                    <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                    <div class="video-box">
+                        <video></video>
+                        <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                        <div class="pop"></div>
+                    </div>
+                    <div class="bottom-icon-group">
+                        <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon ds-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon hb-icon"></i>1526</div>
+                        <div class="group-li last pull-right"><i class="icon ck-icon"></i>125万<i class="icon index-close-icon"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="data-list" data-type="1">
+                <div class="title">
+                    <div class="pic pull-left">
+                        <a href="#"><img class="head-img" src="assets/img/index/touxiang.png"></a>
+                    </div>
+                    <div class="poster pull-left">
+                        <p class="poster-name"><a>离离原上草</a></p>
+                        <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                    </div>
+                    <div class="right-btn pull-right">
+                        <button class="index-gz-btn active">关注</button>
+                    </div>
+                </div>
+                <div class="content row">
+                    <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                    <div class="video-box">
+                        <video></video>
+                        <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                        <div class="pop"></div>
+                    </div>
+                    <div class="bottom-icon-group">
+                        <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon ds-icon"></i>1526</div>
+                        <div class="group-li pull-left"><i class="icon hb-icon"></i>1526</div>
+                        <div class="group-li last pull-right"><i class="icon ck-icon"></i>125万<i class="icon index-close-icon"></i></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -249,15 +378,15 @@
 </div>
 <div class="bottom-wrapper">
     <div class="bottom row">
-        <div class="tab col-xs-3 col-md-3 active">
+        <div class="tab col-xs-3 col-md-3">
             <a class="block" href="index.html">
-                <i class="block-icon tj-icon active"></i>
+                <i class="block-icon tj-icon"></i>
                 <p>推荐</p>
             </a>
         </div>
-        <div class="tab col-xs-3 col-md-3 ">
+        <div class="tab col-xs-3 col-md-3  active">
             <a class="block" href="video-list.html">
-                <i class="block-icon sp-icon"></i>
+                <i class="block-icon sp-icon active"></i>
                 <p>视频</p>
             </a>
         </div>
