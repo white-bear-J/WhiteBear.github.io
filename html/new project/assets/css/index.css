@@ -113,7 +113,7 @@
     position: relative;
     background: url("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg") no-repeat center;
     background-size: 100%;
-    border-radius: .028rem;
+    border-radius: .05rem;
     margin-top: .06rem;
 }
 
@@ -201,9 +201,9 @@
     overflow: hidden;
 }
 
-.index-data .left-content .bottom-icon-group{
-    padding: 0;
-}
+/*.index-data .left-content .bottom-icon-group{*/
+    /*padding: 0;*/
+/*}*/
 
 
 .video-box.pull-right .num{
@@ -247,6 +247,13 @@
     width: 100%;
     height: .9rem;
     border-radius: .028rem;
+}
+.big-video{
+    height: 2rem;
+}
+
+.small-video{
+    height: .8rem;
 }
 
 .video-box .v-pic{

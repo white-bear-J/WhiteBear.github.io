@@ -19,6 +19,7 @@
     <title>首页</title>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
@@ -101,8 +102,7 @@
                 </div>
                 <div class="content row">
                     <div class="words"><a href="video_detail.html">一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
-                    <div class="video-box">
-                        <video></video>
+                    <div class="video-box big-video">
                         <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
                         <div class="pop"></div>
                     </div>
@@ -137,8 +137,7 @@
                             <div class="group-li last pull-right"><i class="icon index-close-icon pull-left"></i></div>
                         </div>
                     </div>
-                    <div class="video-box pull-right col-xs-4 col-md-4">
-                        <video></video>
+                    <div class="video-box pull-right col-xs-4 col-md-4 small-video">
                         <div class="num"><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
                         <div class="pop"></div>
                     </div>
@@ -590,11 +589,13 @@
         $(".bottom-wrapper").hide();
         $(".pl-bottom-wrapper").show();
         $(".mask").show();
+        stop();
     });
     $(".show-num").click(function () {
         $(".bottom-wrapper").show();
         $(".pl-bottom-wrapper").hide();
         $(".mask").hide();
+        move();
     });
     $(".number .choose").click(function () {
         $(this).addClass("active").siblings(".choose").removeClass("active");
