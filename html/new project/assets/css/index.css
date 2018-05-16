@@ -106,7 +106,7 @@
 
 
 .index-data .words{
-    font-size: .164rem;
+    font-size: .17rem;
 }
 
 .index-data .video-box{
@@ -229,6 +229,7 @@
     line-height: .2rem;
     color: #666;
     margin-top: .04rem;
+    font-size: .16rem;
 }
 .pic-box .article-pic{
     max-height: .8rem;
@@ -236,7 +237,7 @@
     width: 32%;
     margin-right: 2%;
     margin-top: .044rem;
-    border-radius: .057rem;
+    border-radius: .028rem;
 }
 .pic-box .article-pic:nth-last-child(1){
     margin-right: 0;
@@ -245,7 +246,7 @@
 .pic-box .article-pic .pic{
     width: 100%;
     height: .9rem;
-    border-radius: .057rem;
+    border-radius: .028rem;
 }
 
 .video-box .v-pic{
