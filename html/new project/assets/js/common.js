@@ -205,3 +205,18 @@ function move(){
     document.body.style.overflow='';//出现滚动条
     document.removeEventListener("touchmove",mo,false);
 }
+
+
+function fixedTop() {
+    $(".mask").show();
+    $(".pl-bottom-wrapper").css("top","50%");
+    $(".pl-bottom-wrapper").css("transform","translateY(-50%)");
+    $(".pl-bottom-wrapper").css("bottom","");
+}
+
+function fixedBottom() {
+    $(".mask").hide();
+    $(".pl-bottom-wrapper").css("top","");
+    $(".pl-bottom-wrapper").css(" transform","");
+    $(".pl-bottom-wrapper").css("bottom",0);
+}

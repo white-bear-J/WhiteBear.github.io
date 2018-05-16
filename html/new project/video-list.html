@@ -19,6 +19,7 @@
     <title>视频</title>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
@@ -627,12 +628,12 @@
     $(".to-ds").click(function () {
         $(".bottom-wrapper").hide();
         $(".pl-bottom-wrapper").show();
-        $(".mask").show();
+        fixedTop();
     });
     $(".show-num").click(function () {
         $(".bottom-wrapper").show();
         $(".pl-bottom-wrapper").hide();
-        $(".mask").hide();
+        fixedBottom();
     });
     $(".number .choose").click(function () {
         $(this).addClass("active").siblings(".choose").removeClass("active");

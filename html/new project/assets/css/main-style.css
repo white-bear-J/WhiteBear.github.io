@@ -209,7 +209,6 @@ a.block{display: block;width: 100%;height: 100%;cursor: pointer}
 /*评论详情*/
 .pl-bottom-wrapper{
     position: fixed;
-    bottom: 0;
     width: 100%;
     background-color: #ffffff;
     /*padding: .097rem;*/
