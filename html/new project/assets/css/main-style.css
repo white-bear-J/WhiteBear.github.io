@@ -825,12 +825,17 @@ a.block{display: block;width: 100%;height: 100%;cursor: pointer}
     border-radius: .029rem;
     line-height: .26rem;
 }
+.user-defined{
+    position: relative;
+}
 
 .defined_num{
+    position: absolute;
     display: inline-block;
+    left: .05rem;
     height: .26rem;
     width: 80%;
-    margin-top: 0.14rem;
+    top: 0.14rem;
     border: .006rem solid #d43b33;
     border-radius: .029rem;
     padding: 0 .05rem;
