@@ -192,7 +192,7 @@ function move(index){
     $(".gift-page").eq(index).show().siblings().hide();
     $(".gift-page-index a").eq(index).addClass("active").siblings().removeClass("active");
 }
-
+var mo=function(e){e.preventDefault();};
 
 // /***禁止滑动***/
 function stop(){
