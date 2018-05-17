@@ -205,7 +205,85 @@
     /*padding: 0;*/
 /*}*/
 
+.nav-video .bg-img img{
+    width: 100%;
+}
+.video-title-box{
+    padding: 0 15px;
+    border-bottom: .006rem solid #f0f0f0;
+}
 
+
+.video-title-box .title{
+    font-size: .159rem;
+    line-height: .24rem;
+    color: #333333;
+    padding-top: .06rem;
+}
+
+.video-title-box .title .show-more-icon{
+    width: .1625rem;
+    height: .24rem;
+}
+.video-btn-box{
+    padding-top: .04rem;
+    padding-bottom: .12rem;
+}
+.video-btn-box .pull-left{
+    margin-right: .1625rem;
+}
+
+.video-btn-box div.pull-left{
+    height: .15rem;
+    line-height: .15rem;
+    font-size: .1136rem;
+    color: #999;
+    margin-top: .04rem;
+}
+
+.video-btn-box div.pull-left .icon{
+    width: .125rem;
+    height: .14rem;
+    margin-right: .034rem;
+}
+
+.video-icon-box div.pull-left label{
+    margin-top: .05rem;
+    line-height: .14rem;
+}
+
+.video-btn-box .pull-right .icon{
+    height: .18rem;
+    width: .193rem;
+    margin-right: 0;
+    margin-left: .36rem;
+}
+.video-btn-box .pull-right .icon:nth-child(1){
+    margin-left: 0;
+}
+
+.video-introduce{
+    font-size: .125rem;
+    color: #666666;
+    line-height: .2rem;
+    height: .2rem;
+    overflow: hidden;
+}
+
+.video-introduce.active{
+    height: auto;
+}
+
+.video-icon-box{
+    margin-top: .1rem;
+    padding-bottom: .1rem;
+    color: #999999;
+}
+.video-icon-box .icon{
+    height: .18rem;
+    width: .193rem;
+    margin-right: .034rem;
+}
 .video-box.pull-right .num{
     position: absolute;
     bottom: .068rem;
@@ -508,6 +586,68 @@
 .article-pl-out .jubao-black-icon{
     margin-left: 0;
 }
+
+/*个人中心*/
+.personal-msg{
+    padding: .1rem 15px .16rem 15px;
+    background: url("../../assets/img/me/bg.png") no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.personal-msg-header{
+    height: .35rem;
+    padding-top: .045rem;
+}
+
+.personal-msg-header .icon{
+    width: .216rem;
+    height: .216rem;
+}
+
+.personal-msg-header label{
+    font-size: .1136rem;
+    line-height: .1136rem;
+    margin-top: .11rem;
+    margin-left: .045rem;
+}
+
+.personal-msg-header .qd{
+    margin-left: .4rem;
+    color: #ffbb36;
+}
+
+.personal-msg-header .qd.active{
+    color: #999;
+}
+
+.personal-msg-header .zy{
+    color: #fff;
+}
+
+.personal-msg-content{
+    position: relative;
+}
+.personal-msg-content .head-pic{
+    position: absolute;
+    width: .66rem;
+    top: 0;
+    left: 0;
+}
+
+.personal-msg-content .head-pic .pic{
+    width: .66rem;
+    height: .66rem;
+    border-radius: 50%;
+}
+
+.personal-msg-content .msg-detail{
+    margin-left: .76rem;
+    margin-right: .125rem;
+    font-size: .1136rem;
+}
+
+
 
 
 
