@@ -226,6 +226,15 @@ function fixedTop() {
 
 function fixedBottom() {
     $(".mask").hide();
+    $("body").css({
+        overflow: "",
+        position: "relative",
+        bottom: "",
+        right: "",
+        left: "",
+        top: "",
+        height: ""
+    });
     $(".pl-bottom-wrapper").css("top","");
     // $(".pl-bottom-wrapper").css(" transform","");
     $(".pl-bottom-wrapper").css("bottom",0);
