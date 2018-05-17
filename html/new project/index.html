@@ -47,13 +47,13 @@
     <div class="control-tab tab col-xs-3 col-md-3"><a class="block">关注</a></div>
 </div>
 <script>
+
     var scollTop = 0;
     var navHeight = $(".header").height();
     var padHeight = $(".tj-tab").height();
     $(function () {
 
         $(window).scroll(function () {
-            // alert(navHeight);
             scollTop = $(window).scrollTop();
             getTopData(scollTop);
         });
@@ -282,7 +282,7 @@
             <div class="title">打赏<i class="icon index-close-icon show-num"></i></div>
             <div class="b-gift-box bg-white">
                 <div class="page-box">
-                    <div class="gift-page pull-left">
+                    <div class="gift-page">
                         <div class="gift pull-left active">
                             <div class="ds-img">
                                 <img class="gift-img" src="assets/img/pop/gift.png">
@@ -340,115 +340,6 @@
                             <div class="ds-cost">50M币</div>
                         </div>
                         <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                    </div>
-                    <div class="gift-page pull-left">
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left active">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                    </div>
-                    <div class="gift-page pull-left" >
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left active">
                             <div class="ds-img">
                                 <img class="gift-img" src="assets/img/pop/gift.png">
                             </div>
@@ -499,7 +390,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="gift-page-index"><a class="active"></a><a></a><a></a></div>
             </div>
             <div class="input-number">
                 <div class="number row">
@@ -517,53 +407,6 @@
         </div>
     </div>
 </div>
-<script>
-    var index = 0;
-    var count= 3;
-    var flag=0;
-
-    $(".page-box").css("width",(count*100)+"%");
-    $(".gift-page").css("width",(100/count)+"%");
-
-    count = $(".gift-page-index ").children("a").length;
-
-    $(".gift-page").on("touchstart", function(e) {
-        startX = e.originalEvent.changedTouches[0].pageX;
-        startY = e.originalEvent.changedTouches[0].pageY;
-    });
-
-    $(".gift-page").on("touchend", function(e) {
-
-        moveEndX = e.originalEvent.changedTouches[0].pageX;
-        moveEndY = e.originalEvent.changedTouches[0].pageY;
-        X = moveEndX - startX;
-        Y = moveEndY - startY;
-        //左滑
-        if ( X < 0 ) {
-            e.preventDefault();
-            index++;
-            if(index>count-1){
-                index = 0;
-            }
-            move(index);
-        }
-        //右滑
-        else if ( X > 0 ) {
-            e.preventDefault();
-            index--;
-            if(index<0){
-                index = count-1;
-            }
-            move(index);
-        }
-    });
-
-    function move(index){
-        $(".page-box").stop().animate({left:-(index*100)+'%'},500);
-        $(".gift-page-index a").eq(index).addClass("active").siblings().removeClass("active");
-    }
-
-</script>
 <!--遮罩层-->
 <!--<div class="mask show-num"></div>-->
 <script>
@@ -589,16 +432,12 @@
         }
     });
     $(".to-ds").click(function () {
-        $(".bottom-wrapper").hide();
         $(".pl-bottom-wrapper").show();
         fixedTop();
-        // stop();
     });
     $(".show-num").click(function () {
-        $(".bottom-wrapper").show();
         $(".pl-bottom-wrapper").hide();
         fixedBottom();
-        // move();
     });
     $(".number .choose").click(function () {
         $(this).addClass("active").siblings(".choose").removeClass("active");
