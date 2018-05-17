@@ -208,6 +208,7 @@ function move(){
 
 
 function fixedTop() {
+    var bodtH = $("body").height()+60;
     $(".mask").show();
     $("body").css({
         overflow: "hidden",
@@ -216,11 +217,10 @@ function fixedTop() {
         right: 0,
         left: 0,
         top: 0,
-        height: "100%"
+        height: bodtH+"px"
     });
 
     $(".pl-bottom-wrapper").css("top","0");
-    // $(".pl-bottom-wrapper").css("transform","translateY(-50%)");
     $(".pl-bottom-wrapper").css("bottom","");
 }
 
