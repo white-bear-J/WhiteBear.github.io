@@ -305,6 +305,7 @@ a.block{display: block;width: 100%;height: 100%;cursor: pointer}
     line-height: .15rem;
     font-size: .1136rem;
     color: #999;
+    margin-top: .04rem;
 }
 
 .video-btn-box div.pull-left .icon{

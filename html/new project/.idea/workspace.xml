@@ -11,20 +11,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main-style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main-style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/main-style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="315" column="20" selection-start-line="315" selection-start-column="20" selection-end-line="315" selection-end-column="20" />
+            <state relative-caret-position="524">
+              <caret line="307" column="23" selection-start-line="307" selection-start-column="23" selection-end-line="307" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="511" selection-start-line="511" selection-end-line="511" />
+            <state relative-caret-position="449">
+              <caret line="347" column="1" lean-forward="true" selection-start-line="347" selection-start-column="1" selection-end-line="347" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -162,7 +162,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.nav-pl-top</find>
       <find>.ts-type-box .ds-type</find>
       <find>.ts-type-box .ds-type .type</find>
       <find>.pl-first-list .pl .name</find>
@@ -192,6 +191,7 @@
       <find>fixedTop()</find>
       <find>b-gift-box</find>
       <find>video-btn-box</find>
+      <find>.video-btn-box div.pull-left</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -199,7 +199,6 @@
       <list>
         <option value="$PROJECT_DIR$/ixdex.html" />
         <option value="$PROJECT_DIR$/assets/bootstrap.min/bootstrap.min.css" />
-        <option value="$PROJECT_DIR$/assets/css/index.css" />
         <option value="$PROJECT_DIR$/assets/js/common.js" />
         <option value="$PROJECT_DIR$/more_pl.html" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -207,6 +206,7 @@
         <option value="$PROJECT_DIR$/article_detail.html" />
         <option value="$PROJECT_DIR$/video_detail.html" />
         <option value="$PROJECT_DIR$/assets/css/main-style.css" />
+        <option value="$PROJECT_DIR$/assets/css/index.css" />
       </list>
     </option>
   </component>
@@ -363,12 +363,12 @@
       <workItem from="1526345911319" duration="29573000" />
       <workItem from="1526432668810" duration="17077000" />
       <workItem from="1526457758029" duration="7045000" />
-      <workItem from="1526518782818" duration="2137000" />
+      <workItem from="1526518782818" duration="2460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119632000" />
+    <option name="totallyTimeSpent" value="119955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -844,17 +844,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/index.css">
+    <entry file="file://$PROJECT_DIR$/assets/css/main-style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="511" selection-start-line="511" selection-end-line="511" />
+        <state relative-caret-position="524">
+          <caret line="307" column="23" selection-start-line="307" selection-start-column="23" selection-end-line="307" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/main-style.css">
+    <entry file="file://$PROJECT_DIR$/assets/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="315" column="20" selection-start-line="315" selection-start-column="20" selection-end-line="315" selection-end-column="20" />
+        <state relative-caret-position="449">
+          <caret line="347" column="1" lean-forward="true" selection-start-line="347" selection-start-column="1" selection-end-line="347" selection-end-column="1" />
         </state>
       </provider>
     </entry>
