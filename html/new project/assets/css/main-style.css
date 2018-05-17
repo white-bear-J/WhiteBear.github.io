@@ -307,10 +307,15 @@ a.block{display: block;width: 100%;height: 100%;cursor: pointer}
     color: #999;
 }
 
-.video-btn-box .pull-left .icon{
+.video-btn-box div.pull-left .icon{
     width: .125rem;
     height: .14rem;
     margin-right: .034rem;
+}
+
+.video-icon-box div.pull-left label{
+    margin-top: .05rem;
+    line-height: .14rem;
 }
 
 .video-btn-box .pull-right .icon{
