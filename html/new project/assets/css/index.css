@@ -589,39 +589,39 @@
 
 /*个人中心*/
 .personal-msg{
-    padding: .1rem 15px .16rem 15px;
+    padding: .1rem .17rem .16rem .17rem;
     background: url("../../assets/img/me/bg.png") no-repeat;
     background-size: cover;
     color: #fff;
 }
 
 .personal-msg-header{
-    height: .35rem;
+    height: .29rem;
     padding-top: .045rem;
 }
 
 .personal-msg-header .icon{
-    width: .216rem;
-    height: .216rem;
+    width: .16rem;
+    height: .16rem;
 }
 
 .personal-msg-header label{
     font-size: .1136rem;
     line-height: .1136rem;
-    margin-top: .11rem;
+    /*margin-top: .11rem;*/
     margin-left: .045rem;
 }
 
-.personal-msg-header .qd{
+.personal-msg-header .qd a{
     margin-left: .4rem;
     color: #ffbb36;
 }
 
-.personal-msg-header .qd.active{
+.personal-msg-header .qd.active a{
     color: #999;
 }
 
-.personal-msg-header .zy{
+.personal-msg-header .zy a{
     color: #fff;
 }
 
@@ -645,9 +645,48 @@
     margin-left: .76rem;
     margin-right: .125rem;
     font-size: .1136rem;
+    padding-top: .06rem;
 }
 
+.personal-msg-content .msg-detail span{
+    padding: 0 .054rem;
+}
 
+.personal-msg-content .msg-detail .name{
+    font-size: .16rem;
+    line-height: .16rem;
+}
+
+.personal-msg-content .msg-detail .data{
+    margin-top: .08rem;
+    line-height: .1136rem;
+}
+
+.personal-msg-content .msg-detail .motto{
+    margin-top: .08rem;
+    line-height: .18rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.personal-msg-content .to-update{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: .08rem;
+    height: .19rem;
+}
+.personal-msg-content .to-update .icon{
+    width: .08rem;
+    height: .19rem;
+}
+
+.personal-msg-bottom{
+    text-align: center;
+    margin-top: .19rem;
+    font-size: .136rem;
+}
 
 
 

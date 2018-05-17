@@ -209,6 +209,16 @@ function move(){
 
 function fixedTop() {
     $(".mask").show();
+    $("body").css({
+        overflow: "hidden",
+        position: "fixed",
+        bottom: 0,
+        right: 0,
+        left: 0,
+        top: 0,
+        height: "100%"
+    });
+
     $(".pl-bottom-wrapper").css("top","0");
     // $(".pl-bottom-wrapper").css("transform","translateY(-50%)");
     $(".pl-bottom-wrapper").css("bottom","");
