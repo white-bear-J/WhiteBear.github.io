@@ -1,10 +1,10 @@
-html {-webkit-text-size-adjust: none;-ms-text-size-adjust: none;font-size: 26.66666667vw;font-family: "冬青黑体",helvetica,arial,sans-serif;background-color: #ffffff}
+html {-webkit-text-size-adjust: none;-ms-text-size-adjust: none;font-size: 26.66666667vw;font-family: "冬青黑体",helvetica,arial,sans-serif;background-color: #ffffff;height: 100%}
 body,h1,h2,h3,h4,h5,h6,hr,p,menu,dl,dt,dd,ul,ol,li,form,button,input,textarea,select,th,td {margin: 0;padding: 0;-webkit-tap-highlight-color: rgba(0,0,0,0);font-size: .14rem;}
 a {background-color: transparent;-webkit-tap-highlight-color: rgba(0,0,0,0);text-decoration: none;color: #333;outline: 0;}
 a:active {outline: 0;text-decoration: none}
 h1,h2,h3,h4,h5,h6 {font-weight: normal;font-size: 100%;}
 ul,ol {list-style: none;}
-body{background-color: #ffffff;font-family: "Helvetica Neue",helvetica,arial,sans-serif;position: relative;width: 100%}
+body{background-color: #ffffff;font-family: "Helvetica Neue",helvetica,arial,sans-serif;position: relative;width: 100%;height: 100%}
 div:after ,ul:after,div::after ,ul::after { content:""; display:block; height:0; visibility:hidden; clear:both; }
 input,textarea{border: none;outline: none;text-decoration: none;}
 button{outline: none;border: none;text-decoration: none;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent;}
@@ -47,6 +47,15 @@ a.block{display: block;width: 100%;height: 100%;cursor: pointer}
     color: #c8cef9!important;
 }
 
+.text-gray{
+    color: #999!important;
+}
+.text-gray-b{
+    color: #666!important;
+}
+.text-black{
+    color: #333!important;
+}
 
 /*图标*/
 .icon{display: inline-block;}
@@ -167,6 +176,14 @@ a.block{display: block;width: 100%;height: 100%;cursor: pointer}
 .top-right-icon{background: url("../../assets/img/me/xiangyou.png") no-repeat center; background-size: 100%}
 
 .vip-icon{background: url("../../assets/img/me/VIP.png") no-repeat center; background-size: 100%}
+
+.clear-icon{background: url("../../assets/img/update-data/guanbi.png") no-repeat center; background-size: 100%}
+
+.phone-icon{background: url("../../assets/img/update-data/zhanghao.png") no-repeat center; background-size: 100%}
+
+.yzm-icon{background: url("../../assets/img/update-data/yanzhengma.png") no-repeat center; background-size: 100%}
+
+.pw-icon{background: url("../../assets/img/update-data/mima.png") no-repeat center; background-size: 100%}
 
 /*头部*/
 .nav{

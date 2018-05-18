@@ -35,10 +35,10 @@
     </div>
 </div>
 <div class="tj-tab row">
-    <div class="control-tab tab col-xs-3 col-md-3 active"><a class="block">推荐</a></div>
-    <div class="control-tab tab col-xs-3 col-md-3"><a class="block">视频</a></div>
-    <div class="control-tab tab col-xs-3 col-md-3"><a class="block">文章</a></div>
-    <div class="control-tab tab col-xs-3 col-md-3"><a class="block">关注</a></div>
+    <div class="control-tab tab col-xs-3 col-md-3 active"><a class="block">推荐</a><div class="bottom-line" style="display: block"></div></div>
+    <div class="control-tab tab col-xs-3 col-md-3"><a class="block">视频</a><div class="bottom-line"></div></div>
+    <div class="control-tab tab col-xs-3 col-md-3"><a class="block">文章</a><div class="bottom-line"></div></div>
+    <div class="control-tab tab col-xs-3 col-md-3"><a class="block">关注</a><div class="bottom-line"></div></div>
 </div>
 <script>
 
@@ -55,8 +55,8 @@
 
         $(function () {
             $(".control-tab").click(function () {
-                $(this).addClass("active");
-                $(this).siblings().removeClass("active");
+                $(this).addClass("active").children(".bottom-line").show();
+                $(this).siblings().removeClass("active").children(".bottom-line").hide();
             });
         })
 

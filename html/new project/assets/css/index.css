@@ -18,13 +18,23 @@
     color: #333333!important;
 }
 
+.tj-tab .bottom-line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: .35rem;
+    height: 0;
+    border-top: .02rem solid #d43b33;
+    display: none;
+}
 
 .tj-tab .tab{
     height: .39rem;
 }
 
 .tj-tab .tab.active{
-    border-bottom: .02rem solid #d43b33;
     color: #333333!important;
 }
 
@@ -754,5 +764,171 @@
 }
 
 
+/*修改资料*/
+.update-msg-box{
+    border-top: .006rem solid #dfdfdf;
+    border-bottom: .006rem solid #dfdfdf;
+    font-size: .1477rem;
+    line-height: .568rem;
+    margin-top: .068rem;
+}
+
+.update-msg-box.f-box{
+    border-top: none;
+    margin-top: 0;
+}
+
+.update-msg-box .img-box{
+    padding: .125rem .17rem;
+    line-height: .568rem;
+}
+
+.update-msg-box .img-box .head-pic{
+    width: .5rem;
+    height: .5rem;
+}
+
+.update-msg-box .pull-right.icon{
+    height: .568rem;
+    width: .08rem;
+    margin-left: .16rem;
+}
+
+.update-msg-box .label-box{
+    padding: 0 .17rem;
+    height: .568rem;
+}
+
+.update-msg-box .label-box .update{
+    border-bottom: .006rem solid #f0f0f0;
+    height: .568rem;
+}
+
+.update-msg-box .label-box .update label{
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.update-msg-box .label-box:nth-last-child(1) .update{
+    border-bottom: none;
+}
+
+/*修改详细页*/
+.nav-pl-top .over{
+    position: absolute;
+    right: .17rem;
+    top: 0;
+    color: #666;
+}
+
+.update-input-box{
+    margin-top: .125rem;
+    height: .48rem;
+    position: relative;
+}
+.update-input-box .input{
+/*display: block;*/
+    height: .48rem;
+    padding: 0 .17rem;
+    line-height: .48rem;
+    margin-right: .34rem;
+    width: 90%;
+    color: #333;
+    font-size: .1477rem;
+}
+
+.update-input-box .clear-icon,
+.pw-input-box .clear-icon{
+    position: absolute;
+    width: .16rem;
+    height: .16rem;
+    right: .17rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.countNum{
+    padding: 0 .17rem;
+    font-size: .1136rem;
+    color: #b7b7b7;
+    margin-top: .1rem;
+}
 
 
+.update-textarea-box .textarea{
+    height: 1.08rem;
+    padding: .17rem;
+    width: 100%;
+    color: #333;
+    font-size: .1477rem;
+}
+
+.update-textarea-box{
+    margin-top: .125rem;
+}
+
+.pw-input-box{
+    margin: .16rem .17rem 0 .17rem;
+    height: .454rem;
+    position: relative;
+    color: #999;
+    font-size: .1477rem;
+}
+
+.pw-input-box .phone-icon,
+.pw-input-box .yzm-icon,
+.pw-input-box .pw-icon
+{
+    position: absolute;
+    width: .16rem;
+    height: .18rem;
+    left: .17rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.pw-input-box .pw-input{
+    margin: 0 .33rem;
+    height: 100%;
+    color: #999;
+    font-size: .1477rem;
+    line-height: .454rem;
+    padding: 0 .17rem;
+}
+.pw-input-box .get-code{
+    position: absolute;
+    top: 50%;
+    right: .17rem;
+    transform: translateY(-50%);
+    color: #6c8dd5;
+}
+
+.pw-tip{
+    font-size: .1136rem;
+    padding: 0 .34rem;
+    margin-top: .057rem;
+    color: #999;
+}
+
+.top-qx .top-qx-box{
+    height: .4rem;
+    padding: 0 .17rem;
+    line-height: .4rem;
+    font-size: .16rem;
+}
+
+.select-sex-box .select-option{
+    text-align: center;
+    font-size: .16rem;
+}
+
+.select-sex-box .select-option .data{
+    height: .48rem;
+    line-height: .48rem;
+    border-bottom: .006rem solid #f0f0f0;
+}
+
+.select-sex-box .select-option .data.active{
+    color: #6c8dd5;
+}
