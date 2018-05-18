@@ -31,17 +31,20 @@ a.block{display: block;width: 100%;height: 100%;cursor: pointer}
 
 /*字体色*/
 .text-green{
-    color: #21fdcc;
+    color: #21fdcc!important;
 }
 .text-red{
-    color: #fd7f7f;
+    color: #fd7f7f!important;
+}
+.text-red-b{
+    color: #d43b33!important;
 }
 .text-yellow{
-    color: #ffbb36;
+    color: #ffbb36!important;
 }
 
 .text-white-purple{
-    color: #c8cef9;
+    color: #c8cef9!important;
 }
 
 
@@ -139,12 +142,31 @@ a.block{display: block;width: 100%;height: 100%;cursor: pointer}
 .choose-icon{background: url("../../assets/img/pop/weixuan.png") no-repeat center;background-size: 100%}
 .choose-icon.active{background: url("../../assets/img/pop/xuanzhong.png") no-repeat center;background-size: 100%}
 
+/*个人中心*/
 .home-icon{background: url("../../assets/img/me/home.png") no-repeat center; background-size: 100%}
 
 .day-icon{background: url("../../assets/img/me/qiandao-weiqian.png") no-repeat center; background-size: 100%}
 .day-icon.active{background: url("../../assets/img/me/qiandao-yiqian.png") no-repeat center; background-size: 100%}
 
 .turn-right-icon{background: url("../../assets/img/me/you.png") no-repeat center; background-size: 100%}
+
+.fans-icon{background: url("../../assets/img/me/fs.png") no-repeat center; background-size: 100%}
+.gz-icon{background: url("../../assets/img/me/gz.png") no-repeat center; background-size: 100%}
+.sx-icon{background: url("../../assets/img/me/sx.png") no-repeat center; background-size: 100%}
+.hmd-icon{background: url("../../assets/img/me/hmd.png") no-repeat center; background-size: 100%}
+
+.article-icon{background: url("../../assets/img/me/wz.png") no-repeat center; background-size: 100%}
+.video-icon{background: url("../../assets/img/me/sp.png") no-repeat center; background-size: 100%}
+
+.czsj-icon{background: url("../../assets/img/me/cz.png") no-repeat center; background-size: 100%}
+.wdsr-icon{background: url("../../assets/img/me/sr.png") no-repeat center; background-size: 100%}
+.lqhb-icon{background: url("../../assets/img/me/hb.png") no-repeat center; background-size: 100%}
+.wdxx-icon{background: url("../../assets/img/me/xx.png") no-repeat center; background-size: 100%}
+.sclw-icon{background: url("../../assets/img/me/lw.png") no-repeat center; background-size: 100%}
+
+.top-right-icon{background: url("../../assets/img/me/xiangyou.png") no-repeat center; background-size: 100%}
+
+.vip-icon{background: url("../../assets/img/me/VIP.png") no-repeat center; background-size: 100%}
 
 /*头部*/
 .nav{

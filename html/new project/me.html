@@ -19,12 +19,12 @@
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 </head>
 <body>
-<div class="container">
+<div class="container bg-gray">
     <div class="personal-msg">
         <div class="personal-msg-header">
             <div class="pull-right">
                 <div class="zy pull-left"><a class="block"><i class="icon home-icon pull-left"></i><label>主页</label></a></div>
-                <div class="qd pull-left"><a class="block"><i class="icon day-icon pull-left"></i><label>365天</label></a></div>
+                <div class="qd pull-left"><a class="block" href="javascript:;" onclick="addIconActive(this);"><i class="icon day-icon pull-left"></i><label>365天</label></a></div>
             </div>
         </div>
         <div class="personal-msg-content">
@@ -32,7 +32,7 @@
                 <a><img class="pic" src="assets/img/index/touxiang.png"></a>
             </div>
             <div class="msg-detail">
-                <div class="name"><label class="p-name pull-left">离离原上草</label><span class="quanwei pull-left"><i class="icon renzheng-icon"></i>权威媒体</span><i class="icon vip-icon"></i></div>
+                <div class="name"><label class="p-name pull-left">离离原上草</label><span class="quanwei pull-left"><i class="icon renzheng-icon"></i></span><i class="icon vip-icon pull-left"></i></div>
                 <div class="data">成长：<label class="text-green">56</label><span>|</span>魅力：<label class="text-red">45</label><span>|</span>财富：<label class="text-yellow">45</label></div>
                 <div class="motto">在这里输入个性签名</div>
             </div>
@@ -52,6 +52,23 @@
                 <p class="text-white-purple">访问量</p>
             </div>
         </div>
+    </div>
+    <div class="personal-list-box">
+        <a class="personal-list block"><div class="left-icon"><i class="icon fans-icon pull-left"></i></div><div class="auto"><p class="tit pull-left">我的粉丝</p><div class="pull-right"><span class="pull-left">5456<label class="text-red-b">+99</label></span><i class="icon top-right-icon pull-left"></i></div></div></a>
+        <a class="personal-list block"><div class="left-icon"><i class="icon gz-icon pull-left"></i></div><div class="auto"><p class="tit pull-left">我的关注</p><div class="pull-right"><span class="pull-left">5456</span><i class="icon top-right-icon pull-left"></i></div></div></a>
+        <a class="personal-list block"><div class="left-icon"><i class="icon sx-icon pull-left"></i></div><div class="auto"><p class="tit pull-left">私信</p><div class="pull-right"><span class="pull-left">5456</span><i class="icon top-right-icon pull-left"></i></div></div></a>
+        <a class="personal-list block"><div class="left-icon"><i class="icon hmd-icon pull-left"></i></div><div class="auto"><p class="tit pull-left">黑名单</p><div class="pull-right"><span class="pull-left">5456</span><i class="icon top-right-icon pull-left"></i></div></div></a>
+    </div>
+    <div class="personal-list-box">
+        <a class="personal-list block"><div class="left-icon"><i class="icon article-icon pull-left"></i></div><div class="auto"><p class="tit pull-left">我的文章</p><div class="pull-right"><span class="pull-left">5456</span><i class="icon top-right-icon pull-left"></i></div></div></a>
+        <a class="personal-list block"><div class="left-icon"><i class="icon video-icon pull-left"></i></div><div class="auto"><p class="tit pull-left">我的视频</p><div class="pull-right"><span class="pull-left">5456</span><i class="icon top-right-icon pull-left"></i></div></div></a>
+    </div>
+    <div class="personal-list-box">
+        <a class="personal-list block"><div class="left-icon"><i class="icon czsj-icon pull-left"></i></div><div class="auto"><p class="tit pull-left">充值升级</p><div class="pull-right"><span class="text-red-b pull-left">充值优惠</span><i class="icon top-right-icon pull-left"></i></div></div></a>
+        <a class="personal-list block"><div class="left-icon"><i class="icon wdsr-icon pull-left"></i></div><div class="auto"><p class="tit pull-left">我的收入</p><div class="pull-right"><span class="pull-left">5456</span><i class="icon top-right-icon pull-left"></i></div></div></a>
+        <a class="personal-list block"><div class="left-icon"><i class="icon lqhb-icon pull-left"></i></div><div class="auto"><p class="tit pull-left">领取的红包</p><div class="pull-right"><span class="pull-left">5456</span><i class="icon top-right-icon pull-left"></i></div></div></a>
+        <a class="personal-list block"><div class="left-icon"><i class="icon wdxx-icon pull-left"></i></div><div class="auto"><p class="tit pull-left">我的下线</p><div class="pull-right"><span class="pull-left">5456</span><i class="icon top-right-icon pull-left"></i></div></div></a>
+        <a class="personal-list block"><div class="left-icon"><i class="icon sclw-icon pull-left"></i></div><div class="auto"><p class="tit pull-left">送出的礼物</p><div class="pull-right"><span class="pull-left">5456</span><i class="icon top-right-icon pull-left"></i></div></div></a>
     </div>
 </div>
 <div class="bottom-wrapper">
@@ -82,5 +99,16 @@
         </div>
     </div>
 </div>
+<script>
+    function addIconActive(t) {
+        if($(t).hasClass("active")){
+            $(t).parents(".qd").removeClass("active");
+            $(t).removeClass("active").children(".icon").removeClass("active");
+        }else {
+            $(t).parents(".qd").addClass("active");
+            $(t).addClass("active").children(".icon").addClass("active");
+        }
+    }
+</script>
 </body>
 </html>

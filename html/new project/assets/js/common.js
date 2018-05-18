@@ -192,19 +192,6 @@ function move(index){
     $(".gift-page").eq(index).show().siblings().hide();
     $(".gift-page-index a").eq(index).addClass("active").siblings().removeClass("active");
 }
-var mo=function(e){e.preventDefault();};
-
-// /***禁止滑动***/
-function stop(){
-    document.body.style.overflow='hidden';
-    document.addEventListener("touchmove",mo,false);//禁止页面滑动
-}
-
-// /***取消滑动限制***/
-function move(){
-    document.body.style.overflow='';//出现滚动条
-    document.removeEventListener("touchmove",mo,false);
-}
 
 
 function fixedTop() {
@@ -219,8 +206,10 @@ function fixedTop() {
         height: "100%"
     });
 
-    $(".pl-bottom-wrapper").css("top","0");
-    $(".pl-bottom-wrapper").css("bottom","");
+    $(".pl-bottom-wrapper").css({
+        top:0,
+        bottom:""
+    });
 }
 
 function fixedBottom() {
@@ -234,7 +223,9 @@ function fixedBottom() {
         top: "",
         height: ""
     });
-    $(".pl-bottom-wrapper").css("top","");
-    // $(".pl-bottom-wrapper").css(" transform","");
-    $(".pl-bottom-wrapper").css("bottom",0);
+
+    $(".pl-bottom-wrapper").css({
+        top:"",
+        bottom:0
+    });
 }

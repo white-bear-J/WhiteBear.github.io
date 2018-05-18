@@ -660,6 +660,7 @@
 .personal-msg-content .msg-detail .data{
     margin-top: .08rem;
     line-height: .1136rem;
+    color: #c8cef9;
 }
 
 .personal-msg-content .msg-detail .motto{
@@ -668,6 +669,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #c8cef9;
 }
 .personal-msg-content .to-update{
     position: absolute;
@@ -686,6 +688,69 @@
     text-align: center;
     margin-top: .19rem;
     font-size: .136rem;
+}
+
+.personal-list-box{
+    border-top: .006rem solid #dfdfdf;
+    border-bottom: .006rem solid #dfdfdf;
+    margin-top: .068rem;
+    background-color: #fff;
+}
+
+.personal-list-box .personal-list{
+    height: .568rem;
+    line-height: .568rem;
+    /*overflow: hidden;*/
+    padding: 0 .17rem;
+    position: relative;
+}
+.personal-list-box .personal-list .left-icon{
+    position: absolute;
+    left: .17rem;
+    top: 0;
+}
+
+.personal-list-box .personal-list .auto{
+    margin-left: 0.38rem;
+    border-bottom: .006rem solid #f0f0f0;
+    height: 0.562rem;
+    line-height: 0.562rem;
+}
+
+.personal-list-box .personal-list .auto .tit{
+    font-size: .16rem;
+    color: #333;
+}
+
+.personal-list-box .personal-list:nth-last-child(1) .auto{
+    border-bottom: none;
+}
+
+.personal-list-box .personal-list .left-icon .icon{
+    height: .568rem;
+    width: .227rem;
+    margin-right: .16rem;
+}
+
+.personal-list-box .personal-list .pull-right span{
+    font-size: .136rem;
+    color: #999;
+}
+
+.personal-list-box .personal-list .pull-right .icon{
+    height: .568rem;
+    width: .08rem;
+    margin-left: .16rem;
+}
+
+.msg-detail .vip-icon{
+    width: .2386rem;
+    height: .1136rem;
+    margin-top: .02rem;
+}
+
+.msg-detail .name .quanwei{
+    margin-left: 0;
 }
 
 
