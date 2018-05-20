@@ -13553,5 +13553,20 @@ var city = [{
             }]
     }];
 
+$(function () {
+    var i=0;
+    for (i in city){
+        city[i].childs = city[i].city;
+        delete city[i].city;
+        var j = 0;
+        for(j in city[i].childs){
+            city[i].childs[j].childs = city[i].childs[j].county;
+            delete city[i].childs[j].county
+        }
+    }
+    console.log(city);
+})
 
-var cityData=[]
+
+
+
