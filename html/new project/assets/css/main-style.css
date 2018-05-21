@@ -77,6 +77,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     color: #333!important;
 }
 
+.text-blue{
+    color: #6c8dd5!important;
+}
+
 /*图标*/
 .icon{display: inline-block;}
 
@@ -204,6 +208,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .yzm-icon{background: url("../../assets/img/update-data/yanzhengma.png") no-repeat center; background-size: 100%}
 
 .pw-icon{background: url("../../assets/img/update-data/mima.png") no-repeat center; background-size: 100%}
+
+.nc-icon{background: url("../../assets/img/update-data/nicheng.png") no-repeat center; background-size: 100%}
 
 /*头部*/
 .nav{

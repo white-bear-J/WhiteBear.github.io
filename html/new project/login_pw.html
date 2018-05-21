@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="密码登录">
+    <meta name="description" content="密码登录">
+    <title>密码登录</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body class="bg-white">
+<div class="login-title-box">
+    <div class="title">登陆</div>
+    <div class="introduce">登录XX精彩即刻呈现</div>
+    <i class="icon index-close-icon" onclick="window.close();"></i>
+</div>
+<div class="container bg-white">
+    <div class="pw-input-box bg-gray">
+        <i class="icon phone-icon"></i>
+        <div class="pw-input"><input class="input phone bg-gray" id="phone" type="text" maxlength="11" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="手机号码"></div>
+        <i class="icon clear-icon"></i>
+    </div>
+    <div>
+        <div class="pw-input-box bg-gray">
+            <i class="icon pw-icon"></i>
+            <div class="pw-input"><input id="newPw" class="input phone bg-gray" type="password" minlength="6" maxlength="16" value=""  placeholder="请输入密码"></div>
+            <i class="icon clear-icon"></i>
+        </div>
+    </div>
+    <div class="login-btn">
+        <button class="login-submit">登录</button>
+    </div>
+    <div class="login-other">
+        <a class="block pull-left type">忘记密码</a>
+        <a class="block pull-right type" href="login_code.html">验证码登录</a>
+    </div>
+</div>
+
+<div class="toRegister"><a class="hrefRegister" href="register.html">注册 > </a></div>
+
+<script>
+
+    var time=60;
+    var interval;
+
+    $("#phone,#newPw").bind("input propertychange",function () {
+        var i = $(this).val().length;
+        if(i>0){
+            $(this).parents(".pw-input").siblings(".clear-icon").css("display","inline-block")
+        }else {
+            $(this).parents(".pw-input").siblings(".clear-icon").hide();
+        }
+    });
+    $(".clear-icon").click(function () {
+        $(this).parents(".pw-input-box").children(".pw-input").find(".phone").val("").focus();
+        $(this).hide();
+    });
+
+    $(".get-code").bind("click",intval);
+
+
+
+    function intval() {
+        getTime();
+        interval = setInterval(getTime,1000);
+    }
+
+
+    function getTime() {
+        if(time==60){
+            $(".get-code").unbind("click");
+        }
+        time--;
+        $(".get-code").addClass("text-gray").html(time+"S后重发");
+        if(time==0){
+            clearInterval(interval);
+            $(".get-code").removeClass("text-gray").html("获取验证码").bind("click",intval);
+            time=60;
+        }
+    }
+
+</script>
+</body>
+</html>

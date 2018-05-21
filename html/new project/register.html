@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="注册">
+    <meta name="description" content="注册">
+    <title>注册</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body class="bg-white">
+<div class="login-title-box">
+    <div class="title">注册</div>
+    <div class="introduce">COME ON,只有会员才能看到的精彩</div>
+    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+</div>
+<div class="container bg-white">
+    <div class="pw-input-box bg-gray">
+        <i class="icon phone-icon"></i>
+        <div class="pw-input"><input class="input phone bg-gray" id="phone" type="text" maxlength="11" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="手机号码"></div>
+        <i class="icon clear-icon"></i>
+    </div>
+    <div class="pw-input-box bg-gray">
+        <i class="icon yzm-icon"></i>
+        <div class="pw-input">获取验证码</div>
+        <a class="get-code pull-right">获取验证码</a>
+    </div>
+    <div>
+        <div class="pw-input-box bg-gray">
+            <i class="icon pw-icon"></i>
+            <div class="pw-input"><input id="newPw" class="input phone bg-gray" type="password" minlength="6" maxlength="16" value=""  placeholder="请输入密码"></div>
+            <i class="icon clear-icon"></i>
+        </div>
+    </div>
+    <div>
+        <div class="pw-input-box bg-gray">
+            <i class="icon nc-icon"></i>
+            <div class="pw-input"><input id="name" class="input phone bg-gray" type="text" maxlength="10" value=""  placeholder="请输入昵称"></div>
+            <i class="icon clear-icon"></i>
+        </div>
+    </div>
+    <div class="login-btn">
+        <button class="login-submit">注册</button>
+    </div>
+    <div class="register-tip">
+        温馨提示：点击注册代表您已阅读并同意<a class="text-blue">用户协议</a>。
+    </div>
+</div>
+
+<script>
+
+    var time=60;
+    var interval;
+
+    $("#phone,#newPw,#name").bind("input propertychange",function () {
+        var i = $(this).val().length;
+        if(i>0){
+            $(this).parents(".pw-input").siblings(".clear-icon").css("display","inline-block")
+        }else {
+            $(this).parents(".pw-input").siblings(".clear-icon").hide();
+        }
+    });
+    $(".clear-icon").click(function () {
+        $(this).parents(".pw-input-box").children(".pw-input").find(".phone").val("").focus();
+        $(this).hide();
+    });
+
+
+    $(".get-code").bind("click",intval);
+
+
+
+    function intval() {
+        getTime();
+        interval = setInterval(getTime,1000);
+    }
+
+
+    function getTime() {
+        if(time==60){
+            $(".get-code").unbind("click");
+        }
+        time--;
+        $(".get-code").addClass("text-gray").html(time+"S后重发");
+        if(time==0){
+            clearInterval(interval);
+            $(".get-code").removeClass("text-gray").html("获取验证码").bind("click",intval);
+            time=60;
+        }
+    }
+
+</script>
+</body>
+</html>
