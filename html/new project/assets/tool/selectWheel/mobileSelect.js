@@ -3,6 +3,7 @@
  * (c) 2017-present onlyhom
  * Released under the MIT License.
  */
+var year =getDay();
 
 (function() {
 	function getClass(dom,string) {
@@ -11,7 +12,25 @@
 	//构造器
 	function MobileSelect(config) {
 		this.mobileSelect;
-		this.wheelsData = config.wheels;
+
+        if(config.wheels == "city"){
+            //城市联级
+            for (var i=0 in city){
+                city[i].childs = city[i].city;
+                delete city[i].city;
+                for( var j = 0 in city[i].childs){
+                    city[i].childs[j].childs = city[i].childs[j].county;
+                    delete city[i].childs[j].county;
+                }
+            }
+            this.wheelsData =  [{data : city}];
+        }else if(config.wheels == "date"){
+            //日期联级
+            this.wheelsData =  [{data : year}];
+        }else {
+            this.wheelsData = config.wheels;
+        }
+
 		this.jsonType =  false;
 		this.cascadeJsonData = [];
 		this.displayJson = []; 
@@ -27,12 +46,15 @@
 		this.clickStatus = false;
 		this.isPC = true;
 		this.init(config);
+
+
+
 	}
 	MobileSelect.prototype = {
 		constructor: MobileSelect,
 		init: function(config){
 			var _this = this; 
-			_this.keyMap = config.keyMap ? config.keyMap : {id:'id', value:'value', childs:'childs'};
+			_this.keyMap = config.keyMap ? config.keyMap : {id:"id", value:"name", childs:"childs"};
 			_this.checkDataType();
 			_this.renderWheels(_this.wheelsData, config.cancelBtnText, config.ensureBtnText);
 			_this.trigger = document.querySelector(config.trigger);
@@ -83,7 +105,7 @@
 		    	for(var i=0; i<_this.wheel.length; i++){
 		    		i==_this.wheel.length-1 ? tempValue += _this.getInnerHtml(i) : tempValue += _this.getInnerHtml(i) + _this.connector;
 		    	}
-		    	_this.trigger.innerHTML = tempValue;
+		    	// _this.trigger.innerHTML = tempValue;
 		    	_this.callback(_this.getIndexArr(),_this.getValue());
 		    });
 
@@ -387,7 +409,7 @@
 						for(var j=0; j<_this.displayJson[i].length; j++){ 
 						//行
 							tempHTML += '<li data-id="'+_this.displayJson[i][j][_this.keyMap.id]+'">'+_this.displayJson[i][j][_this.keyMap.value]+'</li>';
-						}
+                        }
 						_this.slider[i].innerHTML = tempHTML;
 
 					}else{

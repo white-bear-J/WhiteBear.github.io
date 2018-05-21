@@ -19,7 +19,7 @@
   bottom: 0;
   right: 0;
   background: #eee;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 888;
   display: block;
 }
@@ -48,8 +48,8 @@
   visibility: hidden;
 }
 .mobileSelect .content .btnBar {
-  border-bottom: 1px solid #DCDCDC;
-  font-size: 15px;
+  background-color: #f4f4f4;
+  font-size: .16rem;
   height: 45px;
   position: relative;
   text-align: center;
@@ -57,22 +57,21 @@
 }
 .mobileSelect .content .btnBar .cancel,
 .mobileSelect .content .btnBar .ensure {
-  height: 45px;
-  width: 55px;
+  height: .17rem;
   cursor: pointer;
   position: absolute;
   top: 0;
 }
 .mobileSelect .content .btnBar .cancel {
   left: 0;
-  color: #666;
+  color: #333;
 }
 .mobileSelect .content .btnBar .ensure {
   right: 0;
-  color: #1e83d3;
+  color: #666;
 }
 .mobileSelect .content .btnBar .title {
-  font-size: 15px;
+  font-size: .4rem;
   padding: 0 15%;
   overflow: hidden;
   white-space: nowrap;
@@ -109,7 +108,7 @@
   transition: transform 0.18s ease-out, -webkit-transform 0.18s ease-out;
 }
 .mobileSelect .content .panel .wheel .selectContainer li {
-  font-size: 15px;
+  font-size: .14rem;
   display: block;
   height: 40px;
   line-height: 40px;
@@ -147,4 +146,14 @@
 }
 .mobileSelect-show .content {
   bottom: 0;
+}
+
+@media screen and (min-width:720px) {
+  .mobileSelect .content .btnBar .cancel, .mobileSelect .content .btnBar .ensure{
+    font-size: 16px;
+  }
+
+  .mobileSelect .content .panel .wheel .selectContainer li{
+    font-size: 16px;
+  }
 }

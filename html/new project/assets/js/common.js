@@ -211,6 +211,18 @@ function fixedTop() {
         bottom:""
     });
 }
+function showMask() {
+    $(".mask").show();
+    $("body").css({
+        overflow: "hidden",
+        position: "fixed",
+        bottom: 0,
+        right: 0,
+        left: 0,
+        top: 0,
+        height: "100%"
+    });
+}
 
 function fixedBottom() {
     $(".mask").hide();
