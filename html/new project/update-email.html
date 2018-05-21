@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 </head>
 <body class="bg-gray">
-<div class="nav-pl-top" style="border-bottom: none">
+<div class="nav-pl-top update-data" style="border-bottom: none">
     修改邮箱
     <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
     <a class="over">完成</a>
@@ -27,13 +27,23 @@
 <div style="height: .5rem"></div>
 <div class="container bg-gray">
     <div class="update-input-box bg-white">
-        <input class="input e-mail" type="text"  value="">
+        <input class="input e-mail" type="text" id="e-mail"  value="">
         <i class="icon clear-icon"></i>
     </div>
 </div>
 <script>
+    $("#e-mail").bind("input propertychange",function () {
+        var i = $(this).val().length;
+        if(i>0){
+            $(this).siblings(".clear-icon").css("display","inline-block")
+        }else {
+            $(this).siblings(".clear-icon").hide();
+        }
+    })
+
     $(".clear-icon").click(function () {
         $(this).parents(".update-input-box").children(".input").val("").focus();
+        $(this).hide();
     });
 </script>
 </body>

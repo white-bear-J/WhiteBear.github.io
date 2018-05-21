@@ -847,6 +847,7 @@
     right: .17rem;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
 }
 
 .countNum{
@@ -931,4 +932,9 @@
 
 .select-sex-box .select-option .data.active{
     color: #6c8dd5;
+}
+
+
+.nav-pl-top.update-data{
+    font-size: .17rem;
 }
