@@ -59,6 +59,13 @@
 
     $(".clear-icon").click(function () {
         $(this).parents(".update-input-box").children(".input").val("").focus();
+        i = $(inputElement).val().length;
+        $(outputElement).html(200-i);
+        if(i>=180){
+            $(".countNum").addClass("text-red-b");
+        }else {
+            $(".countNum").removeClass("text-red-b");
+        }
     });
 </script>
 </body>
