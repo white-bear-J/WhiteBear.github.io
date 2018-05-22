@@ -241,3 +241,12 @@ function fixedBottom() {
         bottom:0
     });
 }
+
+
+function addIconAcitive(t) {
+    if($(t).hasClass("active")){
+        $(t).removeClass("active").children(".icon").removeClass("active");
+    }else {
+        $(t).addClass("active").children(".icon").addClass("active");
+    }
+}

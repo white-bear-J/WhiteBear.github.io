@@ -582,7 +582,7 @@
 }
 
 .wrapper-share .icon{
-    height: .18rem;
+    height: .193rem;
     width: .193rem;
     margin-right: 0;
     margin-left: .36rem;
@@ -649,6 +649,15 @@
     width: .66rem;
     height: .66rem;
     border-radius: 50%;
+}
+
+.personal-msg-content .head-pic .sex-icon{
+    position: absolute;
+    right: .06rem;
+    bottom: 0;
+    z-index: 10;
+    height: .17rem;
+    width: .17rem;
 }
 
 .personal-msg-content .msg-detail{
@@ -1008,4 +1017,436 @@
     height: .227rem;
     top: .136rem;
     left: .17rem;
+}
+
+
+/*粉丝，关注*/
+.fans-list .data{
+    height: 1rem;
+    padding: .18rem .17rem;
+    position: relative;
+}
+.fans-list .data .head-pic{
+    position: absolute;
+    left: .17rem;
+    top: .18rem;
+}
+.fans-list .data .head-pic .pic{
+    height: .636rem;
+    width: .636rem;
+    border-radius: 50%;
+}
+
+.fans-list .data .head-pic .sex-icon{
+    position: absolute;
+    right: .06rem;
+    bottom: 0;
+    z-index: 1;
+    height: .17rem;
+    width: .17rem;
+}
+
+.fans-list .data .msg-detail{
+    margin: 0 .966rem 0 .73rem ;
+}
+
+.fans-list .data .msg-detail{
+    padding: .125rem 0 ;
+}
+
+.fans-list .data{
+    border-bottom: .006rem solid #eaeaea;
+}
+
+.fans-list .data:nth-last-child(1){
+    border-bottom: none;
+}
+
+.fans-list .data .msg-detail .name{
+    font-size: .16rem;
+    line-height: .17rem;
+    height: .17rem;
+}
+
+.fans-list .data .msg-detail .name .p-name{
+    max-width: 1.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: .068rem;
+    height: .17rem;
+}
+
+.fans-list .data .msg-detail .motto{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .136rem;
+    color: #999;
+    line-height: .136rem;
+    margin-top: .09rem;
+}
+
+.fans-list .data .gz-btn{
+    position: absolute;
+    right: .17rem;
+    bottom: .18rem;
+    width: .568rem;
+    height: .557rem;
+    padding: .09rem 0;
+}
+
+.fans-list .data .gz-btn .gz,
+.fans-list .data .gz-btn .lt
+{
+    width: .568rem;
+    height: .284rem;
+    border-radius: .13rem;
+    background-color: #d43b33;
+    color: #fff;
+    font-size: .125rem;
+    line-height: .284rem;
+}
+
+.fans-list .data .gz-btn .gz.active{
+    background-color: #cbcbcb;
+}
+
+.fans-list .data .gz-btn .gz .icon{
+    width: .125rem;
+    height: .125rem;
+    margin-left: .08rem;
+    margin-right: .02rem;
+    margin-top: .07rem;
+}
+
+/*红包*/
+.hb_tab{
+    text-align: center;
+}
+
+.hb_tab .tab{
+    display: inline-block;
+    margin-right: .557rem;
+    position: relative;
+}
+
+.hb_tab .tab:nth-last-child(1){
+    margin-right: 0;
+}
+
+.hb_tab .tab .tab-bottom-icon{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: .35rem;
+    height: .018rem;
+    background-color: #d43b33;
+    display: none;
+}
+
+.hb_tab .tab.active .tab-bottom-icon{
+    display: block;
+}
+
+.hb-list .data{
+    position: relative;
+}
+
+.hb-list .data .hb-pic{
+    position: absolute;
+    top: .2rem;
+    left: .17rem;
+    width: .32rem;
+    height: .398rem;
+    background: url("../../assets/img/me/hongbao.png") no-repeat center;
+    background-size: 100%;
+}
+
+.hb-list .data .msg-detail{
+    margin-left: .6rem;
+    margin-right: .17rem;
+    padding: .2rem 0;
+    border-bottom: .006rem solid #eaeaea;
+}
+
+.hb-list .data:nth-last-child(1) .msg-detail{
+    border-bottom: none;
+}
+
+.hb-list .data .msg-detail .detail{
+    font-size: .16rem;
+    line-height: .17rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hb-list .data .msg-detail .msg{
+    font-size: .1136rem;
+    line-height: .12rem;
+    margin-top: .08rem;
+    color: #999;
+}
+
+
+.fans-list .talk-box{
+    position: absolute;
+    right: .17rem;
+    top: .18rem;
+    width: .69rem;
+    height: .73rem;
+    padding: .125rem 0;
+    text-align: right;
+}
+
+.fans-list .talk-box .time{
+    color: #999;
+    font-size: .1136rem;
+}
+
+.fans-list .talk-box .new{
+    font-size: .14rem;
+    color: #d43b33;
+    margin-top: .04rem;
+    display: none;
+}
+
+.fans-list .talk-box .new.active{
+    display: block;
+}
+
+.nav-pl-top .nc-icon{
+    position: absolute;
+    top: 0;
+    right: .17rem;
+    height: .5rem;
+    width: .17rem;
+}
+
+.myself-pl-list .data .head-pic{
+    position: absolute;
+    left: .17rem;
+    top: .18rem;
+}
+.myself-pl-list .data{
+    position: relative;
+}
+
+
+.myself-pl-list .data .head-pic .pic{
+    height: .4rem;
+    width: .4rem;
+    border-radius: 50%;
+}
+
+.myself-pl-list .data .head-pic .sex-icon {
+    position: absolute;
+    right: -.01rem;
+    bottom: 0;
+    z-index: 1;
+    height: .14rem;
+    width: .14rem;
+}
+
+.myself-pl-list .data .msg-detail{
+    margin: 0 .17rem 0 .664rem;
+    padding: .193rem 0;
+    padding-right: .63rem;
+    border-bottom: .006rem solid #eaeaea;
+}
+
+.myself-pl-list .data:nth-last-child(1) .msg-detail{
+    border-bottom: none;
+}
+
+.myself-pl-list .msg-detail .name{
+    font-size: .156rem;
+    line-height: .157rem;
+}
+
+.myself-pl-list .msg-detail .motto{
+    font-size: .136rem;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: .04rem;
+}
+
+.myself-pl-list .msg-detail .time{
+    color: #999;
+    font-size: .1136rem;
+    margin-top: .04rem;
+}
+
+.myself-pl-list .talk-pic-box{
+    position: absolute;
+    right: .17rem;
+    top: .18rem;
+    width: .42rem;
+    height: .46rem;
+    overflow: hidden;
+}
+
+.myself-pl-list .talk-pic-box .pl-pic{
+    width: 100%;
+}
+
+/*聊天*/
+.nav-pl-top .more-icon{
+    position: absolute;
+    right: .17rem;
+    top: 0;
+    height: .5rem;
+    width: .2rem;
+}
+
+.chat-submit-btn{
+    width: .5rem;
+    height: .24rem;
+    background-color: #d43b33;
+    color: #fff;
+    border-radius: .03rem;
+    margin-left: .1136rem;
+}
+
+.chat-box .hf-time{
+    font-size: .1136rem;
+    color: #999;
+    text-align: center;
+    margin-top: .193rem;
+}
+
+.chat-box .list .data .chat-box{
+    width: 70%;
+    position: relative;
+    padding: 0 .17rem;
+    margin-top: .125rem;
+}
+
+.chat-box .list .data .chat-box.you{
+    float: left;
+}
+
+.chat-box .list .data .chat-box.me{
+    float: right;
+}
+
+.chat-box .list .data .chat-box .head-pic{
+    position: absolute;
+    top: .02rem;
+    /*left: 0;*/
+    width: .364rem;
+    height: .364rem;
+}
+
+.chat-box .list .data .chat-box.you .head-pic{
+    left: .17rem;
+}
+
+.chat-box .list .data .chat-box.me .head-pic{
+    right: .17rem;
+}
+
+.chat-box .list .data .chat-box .head-pic .pic{
+    width: .364rem;
+    height: .364rem;
+}
+
+.chat-box .list .data .chat-box .chat-content{
+    padding: .1rem;
+}
+
+.chat-box .list .data .chat-box.you .chat-content{
+    margin-left: .58rem;
+    background-color: #fff;
+    border: .006rem solid #eaeaea;
+    border-radius: .03rem;
+    position: relative;
+}
+
+.chat-box .list .data .chat-box.me .chat-content{
+    margin-right: .58rem;
+    background-color: #40a3ff;
+    border: .006rem solid #eaeaea;
+    border-radius: .03rem;
+    position: relative;
+    color: #fff;
+}
+
+.chat-box .list .data .chat-box .chat-content .sanjiao-icon{
+    position: absolute;
+    top: .096rem;
+    width: .1rem;
+    height: .2rem;
+    z-index: 1;
+}
+
+.chat-box .list .data .chat-box.you .chat-content .sanjiao-icon{
+    left: -.09rem;
+}
+
+.chat-box .list .data .chat-box.me .chat-content .sanjiao-icon{
+    right: -.09rem;
+}
+
+.select-cz-box{
+    text-align: center;
+    font-size: .159rem;
+    line-height: .4545rem;
+}
+
+.select-cz-box .select-option .data,
+.select-cz-box .qx
+{
+    height: .4545rem;
+}
+
+.select-cz-box .select-option .data{
+    border-bottom: .006rem solid #eaeaea;
+}
+.select-cz-box .qx{
+    margin-top: .08rem;
+}
+
+.pop-box-b{
+    position: fixed;
+    z-index: 200;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    right: 0;
+    width: 2.8rem;
+    background-color: #fff;
+    padding: .17rem;
+    border-radius: .03rem;
+}
+
+.pop-box-b .tip{
+    text-align: center;
+    font-size: .16rem;
+}
+
+.pop-box-b .pop-btn{
+    text-align: center;
+    margin-top: .216rem;
+}
+
+.pop-box-b .pop-btn .yes,
+.pop-box-b .pop-btn .no{
+    width: 1.2rem;
+    height: .33rem;
+    border-radius: .03rem;
+    color: #fff;
+}
+
+.pop-box-b .pop-btn .yes{
+    background-color: #d43b33;
+}
+
+.pop-box-b .pop-btn .no{
+    background-color: #cbcbcb;
+    margin-right: .02rem;
 }

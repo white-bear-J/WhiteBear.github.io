@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="私聊">
+    <meta name="description" content="私聊">
+    <title>聊天</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body class="bg-gray">
+<div class="nav-pl-top update-data" style="border-bottom: none">
+    肯定抽不中
+    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+    <a class="cz" href="javascript:;"><i class="more-icon"></i></a>
+</div>
+<div style="height: .5rem"></div>
+<div class="container bg-gray">
+    <div class="chat-box">
+       <div class="hf-time">2018-05-03 下午6:45</div>
+        <div class="list">
+            <div class="data">
+                <div class="chat-box you">
+                    <div class="head-pic">
+                        <a>
+                            <img class="pic" src="assets/img/index/touxiang.png">
+                        </a>
+                    </div>
+                    <div class="chat-content">
+                        <div>小姐姐在吗小姐姐在吗小姐姐在吗小姐姐在吗小姐姐在吗小姐姐在吗</div>
+                        <i class="icon sanjiao-icon your"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="data">
+                <div class="chat-box you">
+                    <div class="head-pic">
+                        <a>
+                            <img class="pic" src="assets/img/index/touxiang.png">
+                        </a>
+                    </div>
+                    <div class="chat-content">
+                        <div>小姐姐小姐姐在吗</div>
+                        <i class="icon sanjiao-icon your"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="data">
+                <div class="chat-box me">
+                    <div class="head-pic">
+                        <a>
+                            <img class="pic" src="assets/img/index/touxiang.png">
+                        </a>
+                    </div>
+                    <div class="chat-content">
+                        <div>不在不在</div>
+                        <i class="icon sanjiao-icon my"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat-box">
+        <div class="hf-time">下午6:45</div>
+        <div class="list">
+            <div class="data">
+                <div class="chat-box you">
+                    <div class="head-pic">
+                        <a>
+                            <img class="pic" src="assets/img/index/touxiang.png">
+                        </a>
+                    </div>
+                    <div class="chat-content">
+                        <div>小姐姐在吗小姐姐在吗小姐姐在吗小姐姐在吗小姐姐在吗小姐姐在吗</div>
+                        <i class="icon sanjiao-icon your"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="data">
+                <div class="chat-box you">
+                    <div class="head-pic">
+                        <a>
+                            <img class="pic" src="assets/img/index/touxiang.png">
+                        </a>
+                    </div>
+                    <div class="chat-content">
+                        <div>小姐姐小姐姐在吗</div>
+                        <i class="icon sanjiao-icon your"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="data">
+                <div class="chat-box me">
+                    <div class="head-pic">
+                        <a>
+                            <img class="pic" src="assets/img/index/touxiang.png">
+                        </a>
+                    </div>
+                    <div class="chat-content">
+                        <div>不在不在</div>
+                        <i class="icon sanjiao-icon my"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部浮动-->
+<div class="pl-bottom-wrapper" style="bottom: 0">
+    <!--聊天输入-->
+    <div class="article-pl-out">
+        <div class="pl-input article-pl pop-box" style="width: 65%">
+            <input  class="input pull-left bg-gray" type="text" style="width: 76%;margin-left: 7%" maxlength="100" placeholder="不超过100字">
+        </div>
+        <div class="wrapper-share pull-right"><i class="icon bq-icon pull-left" style="margin-left: 0;margin-top: .03rem"></i><button class="chat-submit-btn pull-right show-num">发表</button></div>
+    </div>
+    <!--操作-->
+    <div class="select-cz-box top-qx bg-gray" style="display: none">
+        <div class="select-option bg-white">
+            <div class="data delete-chat">删除对话</div>
+            <div class="data hmd">加入黑名单</div>
+        </div>
+        <div class="qx bg-white qx-cz">取消</div>
+    </div>
+</div>
+
+<!--删除对话记录弹框-->
+<div class="delete-chat-pop pop-box-b" style="display: none">
+    <div class="tip">删除对话记录后将无法恢复，是否确定删除？</div>
+    <div class="pop-btn">
+        <button class="no qx-cz">取消</button>
+        <button class="yes">确定</button>
+    </div>
+</div>
+<!--删除对话记录弹框-->
+<div class="hmd-pop pop-box-b" style="display: none">
+    <div class="tip">确定要将此人加入黑名单？</div>
+    <div class="pop-btn">
+        <button class="no qx-cz">取消</button>
+        <button class="yes">确定</button>
+    </div>
+</div>
+<!--遮罩层-->
+<div class="mask"></div>
+<script>
+    $(".cz").click(function () {
+        $(".article-pl-out").hide();
+        $(".select-cz-box").show();
+        $(".mask").show();
+    });
+
+    $(".qx-cz").click(function () {
+        $(".article-pl-out").show();
+        $(".select-cz-box").hide();
+        $(".pop-box-b").hide();
+        $(".mask").hide();
+    });
+
+    $(".delete-chat").click(function () {
+            $(".article-pl-out").hide();
+            $(".delete-chat-pop").show();
+            $(".select-cz-box").hide();
+            $(".mask").show();
+        });
+
+    $(".hmd").click(function () {
+        $(".article-pl-out").hide();
+        $(".hmd-pop").show();
+        $(".select-cz-box").hide();
+        $(".mask").show();
+    });
+
+</script>
+</body>
+</html>

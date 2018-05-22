@@ -211,6 +211,17 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .nc-icon{background: url("../../assets/img/update-data/nicheng.png") no-repeat center; background-size: 100%}
 
+.sex-icon.man{background: url("../../assets/img/me/man.png") no-repeat center; background-size: 100%}
+.sex-icon.woman{background: url("../../assets/img/me/wm.png") no-repeat center; background-size: 100%}
+
+.add-gz-icon{background: url("../../assets/img/fans/guanzhu.png") no-repeat center; background-size: 100%}
+.add-gz-icon.active{background: url("../../assets/img/fans/huguan.png") no-repeat center; background-size: 100%}
+
+.more-icon{background: url("../../assets/img/talk/more.png") no-repeat center; background-size: 100%}
+
+.sanjiao-icon.your{background: url("../../assets/img/talk/sjb.png") no-repeat center; background-size: 100%}
+.sanjiao-icon.my{background: url("../../assets/img/talk/sj.png") no-repeat center; background-size: 100%}
+
 /*头部*/
 .nav{
     height: .5rem;
