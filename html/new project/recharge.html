@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="充值">
+    <meta name="description" content="充值">
+    <title>充值</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body>
+<div class="nav-pl-top update-data" style="border-bottom: none">
+    <div class="hb_tab">
+        <a class="tab active cz-type" title="buy-jinbi" data-type="1">充值金币<i class="tab-bottom-icon"></i></a>
+        <a class="tab cz-type" title="buy-vip" data-type="2">购买VIP<i class="tab-bottom-icon"></i></a>
+    </div>
+    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+</div>
+<div style="height: .5rem"></div>
+<div class="container">
+    <div>
+        <div id="buy-jinbi" class="recharge">
+            <div class="recharge-sy">
+                <div>当前剩余金币数量:<label class="text-orange">1000</label><a class="text-blue pull-right" href="recharge-jinbi-recorde.html">充值记录</a></div>
+            </div>
+            <div class="recharge-select">
+                <div class="title">充值金额</div>
+                <div class="recharge-select-li">
+                    <div class="data pay-select" data-money="16.00">
+                        <div class="content">
+                            <div class="option">60金币</div>
+                            <div class="cost">售价：6.00元</div>
+                        </div>
+                    </div>
+                    <div class="data pay-select" data-money="26.00">
+                        <div class="content">
+                            <div class="option">60金币</div>
+                            <div class="cost">售价：6.00元</div>
+                        </div>
+                    </div>
+                    <div class="data col3 pay-select" data-money="36.00">
+                        <div class="content">
+                            <div class="option">60金币</div>
+                            <div class="cost">售价：6.00元</div>
+                        </div>
+                    </div>
+                    <div class="data pay-select" data-money="46.00">
+                        <div class="content">
+                            <div class="option">60金币</div>
+                            <div class="cost">售价：6.00元</div>
+                        </div>
+                    </div>
+                    <div class="data-zdy czjb">
+                        <div class="content">
+                            <div>自定义</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="recharge-type" style="margin-top: .2rem">
+                <div class="title">充值方式</div>
+                <div class="recharge-type-li">
+                    <div class="data pay-type" data-type="1">
+                        <div class="pull-left"><i class="icon zfb-pay-icon pull-left"></i>支付宝支付</div>
+                        <div class="pull-right"><i class="icon select-icon"></i></div>
+                    </div>
+                    <div class="data pay-type" data-type="2">
+                        <div class="pull-left"><i class="icon wechat-pay-icon pull-left"></i>微信支付</div>
+                        <div class="pull-right"><i class="icon select-icon"></i></div>
+                    </div>
+                    <div class="data">
+                        <a class="block">
+                            <div class="pull-left"><i class="icon more-black-icon pull-left"></i>更多支付方式</div>
+                            <div class="pull-right"><i class="icon top-right-icon"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="buy-vip"  class="recharge" style="display: none">
+            <div class="recharge-sy">
+                <div>充值账号:<label class="text-orange">103423400</label><i class="icon vip-icon"></i><a class="text-blue pull-right">充值记录</a></div>
+                <div class="time">会员到期: 2018-05-22 &nbsp;12:00:00</div>
+            </div>
+            <div class="recharge-select">
+                <div class="title">选择套餐</div>
+                <div class="recharge-select-li">
+                    <div class="data pay-select" data-money="6.00">
+                        <div class="content">
+                            <div class="option">1个月</div>
+                            <div class="cost">售价：1.00元</div>
+                        </div>
+                    </div>
+                    <div class="data pay-select" data-money="16.00">
+                        <div class="content">
+                            <div class="option">3个月</div>
+                            <div class="cost">售价：6.00元</div>
+                        </div>
+                    </div>
+                    <div class="data col3 pay-select" data-money="26.00">
+                        <div class="content">
+                            <div class="option">6个月</div>
+                            <div class="cost">售价：16.00元</div>
+                        </div>
+                    </div>
+                    <div class="data pay-select" data-money="36.00">
+                        <div class="content">
+                            <div class="option">1年</div>
+                            <div class="cost">售价：116.00元</div>
+                        </div>
+                    </div>
+                    <div class="data-zdy czvip">
+                        <div class="content">
+                            <div>自定义</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="recharge-type" style="margin-top: .2rem">
+                <div class="title">充值方式</div>
+                <div class="recharge-type-li">
+                    <div class="data pay-type" data-type="1">
+                        <div class="pull-left"><i class="icon zfb-pay-icon pull-left"></i>支付宝支付</div>
+                        <div class="pull-right"><i class="icon select-icon"></i></div>
+                    </div>
+                    <div class="data pay-type" data-type="2">
+                        <div class="pull-left"><i class="icon wechat-pay-icon pull-left"></i>微信支付</div>
+                        <div class="pull-right"><i class="icon select-icon"></i></div>
+                    </div>
+                    <div class="data pay-type" data-type="3">
+                        <div class="pull-left"><i class="icon ye-pay-icon pull-left"></i>余额支付</div>
+                        <div class="pull-right"><i class="icon select-icon"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recharge-pay">
+        <div class="total">共计:<label class="text-orange">156元</label></div>
+        <div class="pay-btn"><button class="pay">充值</button></div>
+        <div class="tip text-gray">温馨提示：点击充值代表您同意<a class="text-blue">充值活动协议</a></div>
+    </div>
+
+    <!--提交数据-->
+    <input id="czCount" type="hidden" value="">
+    <input id="payType" type="hidden" value="">
+    <input id="czType" type="hidden" value="">
+
+</div>
+<script>
+    $(".cz-type").click(function () {
+        var czType = $(this).attr("data-type");
+        $("#czType").val(czType);
+    });
+
+    $(".pay-type").click(function () {
+        var payType = $(this).attr("data-type");
+        $("#payType").val(payType);
+        $(this).addClass("active").siblings(".pay-type").removeClass("active");
+        $(this).find(".select-icon").addClass("active");
+        $(this).siblings(".pay-type").find(".select-icon").removeClass("active");
+    });
+    $(".hb_tab .tab").click(tab);
+
+    $(function () {
+        var screeWidth = $("body").width();
+        $(".recharge-select .data").css("margin-bottom",screeWidth*0.02+"px");
+    });
+
+    
+    
+    $(".czjb").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+        }
+        $(this).children(".content").html("<input class='jinbi-input' type='text' placeholder='金币个数' autofocus>");
+        $(".jinbi-input").focus();
+        var myCild =  $(this).children(".content");
+        var my =  $(this);
+        $(".jinbi-input").blur(function () {
+            var jbCount=$(this).val();
+            var money = jbCount*10;
+            $(my).addClass("active").siblings().removeClass("active");
+            $("#czCount").val(money);
+            $(myCild).html("<div class=\"option\">"+jbCount+"金币</div><div class=\"cost\">售价："+money+"元</div>")
+        });
+    });
+
+    $(".czvip").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+        }
+        $(this).children(".content").html("<input class='jinbi-input' type='text' placeholder='vip月数' autofocus>");
+        $(".jinbi-input").focus();
+        var myCild =  $(this).children(".content");
+        var my =  $(this);
+        $(".jinbi-input").blur(function () {
+            var jbCount=$(this).val();
+            var money = jbCount*15;
+            $(my).addClass("active").siblings().removeClass("active");
+            $("#czCount").val(money);
+            $(myCild).html("<div class=\"option\">"+jbCount+"月</div><div class=\"cost\">售价："+money+"元</div>")
+        });
+    });
+
+    $(".pay-select").click(function () {
+         var money = $(this).attr("data-money");
+         $(this).addClass("active").siblings().removeClass("active");
+         $("#czCount").val(money);
+     });
+
+</script>
+</body>
+</html>

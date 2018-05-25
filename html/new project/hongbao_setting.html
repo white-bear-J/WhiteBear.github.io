@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="红包设置">
+    <meta name="description" content="红包设置">
+    <title>红包设置</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body class="bg-gray">
+<div class="nav-pl-top update-data" style="border-bottom: none">
+    <div class="hb_tab">
+        <a class="tab active" title="no-hongbao" style="margin-right: .3rem">无红包<i class="tab-bottom-icon"></i></a>
+        <a class="tab" title="random-hongbao" style="margin-right: .3rem">随机红包<i class="tab-bottom-icon"></i></a>
+        <a class="tab" title="gd-hongbao">固定红包<i class="tab-bottom-icon"></i></a>
+    </div>
+    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+</div>
+<div style="height: .5rem"></div>
+<div class="container bg-gray">
+    <div id="no-hongbao">
+        <div class="hb-input-box bg-white bg-gray-b">
+            <label class="text-gray">红包总金额</label>
+            <div class="pull-right"><input class="bg-gray-b text-gray" type="text" value="0" readonly><label class="text-gray">元</label></div>
+        </div>
+        <div class="hb-input-box bg-white bg-gray-b">
+            <label class="text-gray">红包总个数</label>
+            <div class="pull-right"><input class="bg-gray-b text-gray" type="text" value="0" readonly><label class="text-gray">个</label></div>
+        </div>
+        <div class="login-btn">
+            <button class="hb-submit">确认</button>
+        </div>
+    </div>
+
+
+    <div id="random-hongbao" style="display: none">
+        <div class="hb-input-box bg-white">
+            <label>红包总金额</label>
+            <div class="pull-right"><input type="text" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="请输入金额"><label>元</label></div>
+        </div>
+        <div class="hb-input-box bg-white">
+            <label>红包总个数</label>
+            <div class="pull-right"><input type="text" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="请输入个数"><label>个</label></div>
+        </div>
+        <div class="upload-group bg-white upload-span" style="border: none;margin-top: .16rem">
+            <div class="pull-left">限粉丝领取</div>
+            <div class="pull-right"><i class="icon kaiguan-icon"></i></div>
+        </div>
+        <div class="login-btn">
+            <button class="hb-submit">确认</button>
+        </div>
+    </div>
+    <div id="gd-hongbao" style="display: none">
+        <div class="hb-input-box bg-white">
+            <label>单人金额</label>
+            <div class="pull-right"><input type="text" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="请输入金额"><label>元</label></div>
+        </div>
+        <div class="hb-input-box bg-white">
+            <label>红包总个数</label>
+            <div class="pull-right"><input type="text" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="请输入个数"><label>个</label></div>
+        </div>
+        <div class="upload-group bg-white upload-span" style="border: none;margin-top: .16rem">
+            <div class="pull-left">限粉丝领取</div>
+            <div class="pull-right"><i class="icon kaiguan-icon"></i></div>
+        </div>
+        <div class="login-btn">
+            <button class="hb-submit">确认</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".hb_tab .tab").click(tab);
+    $(".kaiguan-icon").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+        }else {
+            $(this).addClass("active");
+        }
+    });
+</script>
+</body>
+</html>

@@ -250,3 +250,11 @@ function addIconAcitive(t) {
         $(t).addClass("active").children(".icon").addClass("active");
     }
 }
+
+function addAcitive(t) {
+    if($(t).hasClass("active")){
+        $(t).removeClass("active");
+    }else {
+        $(t).addClass("active");
+    }
+}

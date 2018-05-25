@@ -30,6 +30,22 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     /* Internet Explorer 10+ */
     color: #999;
 }
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select{
+    outline: none;
+    text-decoration: none;
+}
+select::-ms-expand { display: none; }
+
+option::-ms-expand{ display: none; }
+
+option{
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari 和 Chrome */
+    appearance:none;
+}
+
 .mask{
     position: fixed;
     top: 0;
@@ -43,10 +59,13 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 /*背景色*/
 
 .bg-gray{
-    background-color: #f4f4f4!important;
+    background-color: #f0f0f0!important;
 }
 .bg-white{
     background-color: #fff!important;
+}
+.bg-gray-b{
+    background-color: #e2e2e2!important;
 }
 
 /*字体色*/
@@ -81,6 +100,12 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     color: #6c8dd5!important;
 }
 
+.text-orange{
+    color: #f35f07;
+}
+
+
+
 /*图标*/
 .icon{display: inline-block;}
 
@@ -101,6 +126,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .wd-icon.active{background: url("../../assets/img/index/wode-xuanzhong.png") no-repeat center;background-size: 100%;}
 
 .point-left-icon{background: url("../../assets/img/index/bofangliang.png") no-repeat center;background-size: 100%;}
+
+.dz-no-icon{background: url("../../assets/img/my-video/dianzan.png") no-repeat center;background-size: 100%;}
+.ds-no-icon{background: url("../../assets/img/my-video/ds.png") no-repeat center;background-size: 100%;}
 
 .dz-icon{background: url("../../assets/img/index/dianzan.png") no-repeat center;background-size: 100%;}
 .dz-icon.active{background: url("../../assets/img/index/dianzan-xuanzhong.png") no-repeat center;background-size: 100%;}
@@ -218,9 +246,36 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .add-gz-icon.active{background: url("../../assets/img/fans/huguan.png") no-repeat center; background-size: 100%}
 
 .more-icon{background: url("../../assets/img/talk/more.png") no-repeat center; background-size: 100%}
+.more-black-icon{background: url("../../assets/img/recharge/more.png") no-repeat center; background-size: 100%}
 
 .sanjiao-icon.your{background: url("../../assets/img/talk/sjb.png") no-repeat center; background-size: 100%}
 .sanjiao-icon.my{background: url("../../assets/img/talk/sj.png") no-repeat center; background-size: 100%}
+
+.select-sanjiao-icon{background: url("../../assets/img/upload/xiangxia_a.png") no-repeat center; background-size: 100%}
+
+.kaiguan-icon{background: url("../../assets/img/upload/yes.png") no-repeat center; background-size: 100%}
+.kaiguan-icon.active{background: url("../../assets/img/upload/no.png") no-repeat center; background-size: 100%}
+
+.close-icon{background: url("../../assets/img/upload/shanchu.png") no-repeat center; background-size: 100%}
+
+.delete-icon{background: url("../../assets/img/my-video/sc.png") no-repeat center; background-size: 100%}
+
+.write-icon{background: url("../../assets/img/my-video/bj.png") no-repeat center; background-size: 100%}
+
+.camera-icon{background: url("../../assets/img/my-video/shangc.png") no-repeat center; background-size: 100%}
+
+.see-icon{background: url("../../assets/img/my-video/liulan.png") no-repeat bottom center; background-size: 100%}
+
+.zfb-pay-icon{background: url("../../assets/img/recharge/zhifubao.png") no-repeat bottom center; background-size: 100%}
+
+.wechat-pay-icon{background: url("../../assets/img/recharge/weixin.png") no-repeat bottom center; background-size: 100%}
+
+.ye-pay-icon{background: url("../../assets/img/recharge/yue.png") no-repeat bottom center; background-size: 100%}
+
+.select-icon{background: url("../../assets/img/recharge/weixuan.png") no-repeat bottom center; background-size: 100%}
+.select-icon.active{background: url("../../assets/img/recharge/xuanzhong.png") no-repeat bottom center; background-size: 100%}
+
+.select-label-icon{background: url("../../assets/img/label/qued.png") no-repeat bottom center; background-size: 100%}
 
 /*头部*/
 .nav{
@@ -255,9 +310,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .nav-search{
     display: block;
     height: .33rem;
-    float: right;
+    /*float: right;*/
     margin-right: .2rem;
     background-color: #f0f0f0;
+    margin-left: .2rem;
+    width: 70%;
 }
 
 .search-input .search .search-icon{
@@ -1000,6 +1057,19 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     color: #fff;
     font-size: .16rem;
     border-radius: .05rem;
+}
+.bq-box .bq-list{
+    padding: .08rem .08rem;
+    border: .006rem solid #eaeaea;
+}
+.bq-box .bq-list .data{
+    float: left;
+    width: 20%;
+    padding: 1%;
+}
+
+.bq-box .bq-list .data img{
+    width: 100%;
 }
 
 /*内容区域*/

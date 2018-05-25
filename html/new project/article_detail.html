@@ -212,6 +212,24 @@
 </script>
 <!--底部浮动-->
 <div class="pl-bottom-wrapper" style="bottom: 0">
+    <!--表情选择-->
+    <div class="bq-box" style="display: none">
+        <div class="bq-list">
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+            <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+        </div>
+    </div>
+    <!--点击弹出评论框-->
     <div class="article-pl-out">
         <div class="pl-input article-pl pop-box">
             <i class="icon pl-icon pull-left"></i>
@@ -412,8 +430,9 @@
     $(".pl-input").click(function () {
         $(".article-pl-out").hide();
         $(".pl-text-input").show();
-        $("#pl").focus();
+        $("body").scrollTop(0);
         fixedTop();
+        $("#pl").focus();
     });
     $(".show-num").click(function () {
         $(".article-pl-out").show().siblings(".pop-box").hide();
@@ -481,6 +500,25 @@
         }else {
             $(this).addClass("active");
         }
+    });
+
+    $(".bq-icon").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+            $(".bq-box").hide();
+        }else {
+            $(this).addClass("active");
+            $(".bq-box").show();
+        }
+    });
+
+    $(".bq").click(function () {
+        var str = $("#pl").val();
+        var bqstr = "#"+$(this).attr("data-id");
+
+        $("#pl").val(str+bqstr);
+        $(".bq-icon").removeClass("active");
+        $(".bq-box").hide();
     });
 </script>
 </body>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="添加标签">
+    <meta name="description" content="添加标签">
+    <title>添加标签</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body>
+<div class="nav-pl-top update-data bg-white" style="border-bottom: none">
+    添加标签
+    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+</div>
+<div style="height: .5rem"></div>
+<div class="container">
+    <div class="add-label">
+        <input class="input-label pull-left" type="text" maxlength="4" placeholder="添加标签">
+        <div class="right-btn pull-right">
+            <span class="num"><label class="count">0</label>/4</span>
+            <button class="add">添加</button>
+        </div>
+    </div>
+    <div class="label-list">
+        <div class="data">二次元</div>
+        <div class="data">明星话题</div>
+        <div class="data">国外新闻</div>
+        <div class="data">心情</div>
+        <div class="data">大陆新闻</div>
+        <div class="data">明星</div>
+        <div class="data">国外新闻</div>
+        <div class="data">心情</div>
+        <div class="data">大陆新闻</div>
+        <div class="data">明星</div>
+        <div class="data">国外新闻</div>
+        <div class="data">心情</div>
+    </div>
+</div>
+<script>
+
+    $(".input-label").bind("input propertychange",function () {
+        var i = $(".input-label").val().length;
+        $(".count").html(i);
+        if(i==4){
+            $(".num").addClass("text-red-b");
+        }else {
+            $(".num").removeClass("text-red-b");
+        }
+    })
+
+
+
+</script>
+</body>
+</html>

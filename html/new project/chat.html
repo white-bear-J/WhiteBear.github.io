@@ -71,6 +71,50 @@
         </div>
     </div>
     <div class="chat-box">
+    <div class="hf-time">下午6:45</div>
+    <div class="list">
+        <div class="data">
+            <div class="chat-box you">
+                <div class="head-pic">
+                    <a>
+                        <img class="pic" src="assets/img/index/touxiang.png">
+                    </a>
+                </div>
+                <div class="chat-content">
+                    <div>小姐姐在吗小姐姐在吗小姐姐在吗小姐姐在吗小姐姐在吗小姐姐在吗</div>
+                    <i class="icon sanjiao-icon your"></i>
+                </div>
+            </div>
+        </div>
+        <div class="data">
+            <div class="chat-box you">
+                <div class="head-pic">
+                    <a>
+                        <img class="pic" src="assets/img/index/touxiang.png">
+                    </a>
+                </div>
+                <div class="chat-content">
+                    <div>小姐姐小姐姐在吗</div>
+                    <i class="icon sanjiao-icon your"></i>
+                </div>
+            </div>
+        </div>
+        <div class="data">
+            <div class="chat-box me">
+                <div class="head-pic">
+                    <a>
+                        <img class="pic" src="assets/img/index/touxiang.png">
+                    </a>
+                </div>
+                <div class="chat-content">
+                    <div>不在不在</div>
+                    <i class="icon sanjiao-icon my"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="chat-box">
         <div class="hf-time">下午6:45</div>
         <div class="list">
             <div class="data">
@@ -117,10 +161,27 @@
 </div>
 <!--底部浮动-->
 <div class="pl-bottom-wrapper" style="bottom: 0">
+    <!--表情选择-->
+    <div class="bq-box" style="display: none">
+        <div class="bq-list">
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+           <div class="data bq" data-id="235"><img src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/cms/commonsub/editor/images/qw_review/qw_cat_0003.png"></div>
+        </div>
+    </div>
     <!--聊天输入-->
     <div class="article-pl-out">
         <div class="pl-input article-pl pop-box" style="width: 65%">
-            <input  class="input pull-left bg-gray" type="text" style="width: 76%;margin-left: 7%" maxlength="100" placeholder="不超过100字">
+            <input  class="input pull-left bg-gray" id="talk" type="text" style="width: 76%;margin-left: 7%" maxlength="100" placeholder="不超过100字">
         </div>
         <div class="wrapper-share pull-right"><i class="icon bq-icon pull-left" style="margin-left: 0;margin-top: .03rem"></i><button class="chat-submit-btn pull-right show-num">发表</button></div>
     </div>
@@ -178,6 +239,36 @@
         $(".hmd-pop").show();
         $(".select-cz-box").hide();
         $(".mask").show();
+    });
+    
+    $("#talk").click(function () {
+        showMask();
+        $("body").scrollTop(0);
+        $("#pl").focus();
+    });
+    
+    $("#talk").blur(function () {
+        fixedBottom();
+    });
+    
+    
+    $(".bq-icon").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+            $(".bq-box").hide();
+        }else {
+            $(this).addClass("active");
+            $(".bq-box").show();
+        }
+    });
+
+    $(".bq").click(function () {
+        var str = $("#talk").val();
+        var bqstr = "#"+$(this).attr("data-id");
+
+        $("#talk").val(str+bqstr);
+        $(".bq-icon").removeClass("active");
+        $(".bq-box").hide();
     });
 
 </script>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="上传视频">
+    <meta name="description" content="上传视频">
+    <title>上传视频</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body class="bg-gray">
+<div class="nav-pl-top update-data bg-white" style="border-bottom: none">
+    上传视频
+    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+    <a class="over text-blue">发布</a>
+</div>
+<div style="height: .5rem"></div>
+<div class="container bg-gray">
+    <div class="upload-group bg-white">
+        <input type="text" class="input-title" value="" placeholder="输入标题">
+    </div>
+    <div class="upload-group bg-white">
+        <textarea class="input-introduce" placeholder="视频介绍"></textarea>
+    </div>
+    <div class="upload-group bg-white upload-span select-video-class-box">
+        <div class="select-video-class">
+            <div class="pull-left option-select-name">视频分类</div>
+            <div class="pull-right"><i class="icon select-sanjiao-icon"></i></div>
+            <input type="hidden" class="video-type" value="">
+        </div>
+        <div class="select-option bg-white select-video-class-option">
+            <div class="option" data-id="0">-请选择-</div>
+            <div class="option" data-id="1">娱乐</div>
+            <div class="option" data-id="2">休闲</div>
+            <div class="option" data-id="3">明星</div>
+            <div class="option" data-id="4">宠物</div>
+        </div>
+    </div>
+    <div class="upload-group bg-white upload-span">
+        <div class="pull-left">标签</div>
+        <div class="pull-right"><label class="text-red-b pull-left">国内，动物，花卉</label><a href="label.html"><i class="icon top-right-icon"></i></a></div>
+    </div>
+    <div class="upload-group bg-white upload-span">
+        <div class="pull-left">红包</div>
+        <div class="pull-right"><label class="text-red-b pull-left">随机红包</label><a href="hongbao_setting.html"><i class="icon top-right-icon"></i></a></div>
+    </div>
+    <div class="upload-group bg-white upload-span">
+        <div class="pull-left">是否开放评论</div>
+        <div class="pull-right"><i class="icon kaiguan-icon"></i></div>
+    </div>
+    <div class="upload-group bg-white upload-box">
+        <div class="video-upload-box bg-gray pull-left upload">
+            <div class="bg">
+                <div class="pic"></div>
+                <div class="span">上传视频</div>
+            </div>
+            <input type="file" class="uploadfile-video">
+        </div>
+        <div class="video-upload-box bg-gray pull-left watch">
+            <div class="top-icon"><i class="icon close-icon pull-right"></i></div>
+            <div class="bottom-span">15:23</div>
+        </div>
+    </div>
+</div>
+<script>
+    
+    $(".kaiguan-icon").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+        }else {
+            $(this).addClass("active");
+        }
+    });
+
+    $(".select-video-class").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+            $(".select-video-class-option").hide();
+        }else {
+            $(this).addClass("active");
+            $(".select-video-class-option").show();
+        }
+    });
+
+    $(".option").bind("click",function () {
+        var optionName = $(this).html();
+        var optionID = $(this).attr("data-id");
+        $(".video-type").val(optionID);
+        $(".option-select-name").html(optionName);
+        if(optionName=="-请选择-"){
+            $(".option-select-name").html("视频分类");
+        }else {
+            $(".option-select-name").html(optionName);
+        }
+        $(".select-video-class").removeClass("active");
+        $(".select-video-class-option").hide();
+    });
+
+    
+    $(".select-video-class-box").mouseleave(function () {
+        $(".select-video-class-option").hide();
+        $(".select-video-class").removeClass("active");
+    });
+
+</script>
+</body>
+</html>
