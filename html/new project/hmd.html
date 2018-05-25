@@ -8,9 +8,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
     <meta name="format-detection" content="email=no"/>
-    <meta name="keywords" content="我的关注">
-    <meta name="description" content="我的关注">
-    <title>我的关注</title>
+    <meta name="keywords" content="黑名单">
+    <meta name="description" content="黑名单">
+    <title>黑名单</title>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
     <script src="assets/js/common.js"></script>
@@ -20,7 +20,7 @@
 </head>
 <body class="bg-gray">
 <div class="nav-pl-top update-data" style="border-bottom: none">
-    我的关注
+    黑名单
     <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
 </div>
 <div style="height: .5rem"></div>
@@ -199,6 +199,9 @@
     </div>
 </div>
 <script>
+    $(".lt").click(function () {
+        $(this).addClass("active")
+    });
 </script>
 </body>
 </html>

@@ -1109,7 +1109,8 @@
     line-height: .284rem;
 }
 
-.fans-list .data .gz-btn .gz.active{
+.fans-list .data .gz-btn .gz.active,
+.fans-list .data .gz-btn .lt.active{
     background-color: #cbcbcb;
 }
 
