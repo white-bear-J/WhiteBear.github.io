@@ -430,8 +430,8 @@
     $(".pl-input").click(function () {
         $(".article-pl-out").hide();
         $(".pl-text-input").show();
-        $("body").scrollTop(0);
-        fixedTop();
+        // $("body").scrollTop(0);
+        showMask();
         $("#pl").focus();
     });
     $(".show-num").click(function () {
@@ -442,12 +442,12 @@
     $(".to-share").click(function () {
         $(".pl-bottom-wrapper .share-box").show()
         $(".article-pl-out").hide();
-        fixedTop();
+        showMask();
     });
     $(".to-ds").click(function () {
         $(".article-pl-out").hide();
         $(".pl-bottom-wrapper .dashang-box").show().siblings(".pop-box").hide();
-        fixedTop();
+        showMask();
     });
 
     $(".number .choose").click(function () {
@@ -491,8 +491,8 @@
         $(".article-pl-out").hide();
         $(".pl-text-input").show();
         $("#pl").focus();
-        $("body").scrollTop(0);
-        fixedTop();
+        // $("body").scrollTop(0);
+        showMask();
     });
 
     $(".dz-icon,.dz-gray-icon,.dz-white-icon").click(function () {

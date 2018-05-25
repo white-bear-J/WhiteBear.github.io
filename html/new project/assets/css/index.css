@@ -2278,3 +2278,22 @@
     width: .738rem;
     margin: 0 auto;
 }
+
+.ts-type-box .hmd-time .type{
+    padding: 0;
+    margin-top: .227rem;
+}
+
+.hmd-box .title {
+    height: .16rem;
+    line-height: .16rem;
+    font-size: .159rem;
+    color: #333;
+    padding: 0 .17rem;
+}
+
+.hmd-box  .title .icon {
+    height: .16rem;
+    width: .148rem;
+    border-bottom: .006rem solid #f0f0f0;
+}

@@ -203,14 +203,32 @@
         <button class="yes">确定</button>
     </div>
 </div>
-<!--删除对话记录弹框-->
+<!--黑名单录弹框-->
 <div class="hmd-pop pop-box-b" style="display: none">
     <div class="tip">确定要将此人加入黑名单？</div>
     <div class="pop-btn">
         <button class="no qx-cz">取消</button>
-        <button class="yes">确定</button>
+        <button class="yes hmd-qd">确定</button>
     </div>
 </div>
+
+<!--选择黑名单解除时间-->
+    <div class="ts-box hmd-box pop-box-b" style="display: none">
+        <div class="ts-type-box">
+            <div class="title" style="padding: 0;line-height: .161rem">选择拉黑时间<i class="icon show-more-icon pull-right show-type active"></i></div>
+            <div class="ts-type hmd-time bg-white">
+                <div class="type"><i class="icon hmd-choose-icon active"></i>1天</div>
+                <div class="type"><i class="icon hmd-choose-icon"></i>7天</div>
+                <div class="type"><i class="icon hmd-choose-icon"></i>30天</div>
+                <div class="type"><i class="icon hmd-choose-icon"></i>1年</div>
+                <div class="type"><i class="icon hmd-choose-icon"></i>永久</div>
+            </div>
+        </div>
+        <div class="pop-btn">
+            <button class="no qx-cz">取消</button>
+            <button class="yes">确定</button>
+        </div>
+    </div>
 <!--遮罩层-->
 <div class="mask"></div>
 <script>
@@ -269,6 +287,25 @@
         $("#talk").val(str+bqstr);
         $(".bq-icon").removeClass("active");
         $(".bq-box").hide();
+    });
+    
+    $(".hmd-qd").click(function () {
+        $(".ts-box").show();
+        $(".hmd-pop").hide();
+    });
+
+    $(".show-type").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+            $(".ts-type").hide();
+        }else {
+            $(this).addClass("active");
+            $(".ts-type").show(500);
+        }
+    });
+    $(".ts-type .type").click(function () {
+        $(this).children(".icon").addClass("active");
+        $(this).siblings().children(".icon").removeClass("active");
     });
 
 </script>
