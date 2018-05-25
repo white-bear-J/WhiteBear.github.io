@@ -14,7 +14,7 @@
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css?v=2">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
     <script src="assets/js/common.js"></script>
 </head>
@@ -437,8 +437,9 @@
     $(".pl-input").click(function () {
         $(this).hide();
         $(".pl-text-input").show();
-        $("body").scrollTop(0);
-        fixedTop();
+        // $("body").scrollTop(0);
+        // fixedTop();
+        showMask();
         $("#pl").focus();
     });
     $(".show-num").click(function () {
@@ -448,13 +449,15 @@
 
     $(".to-share").click(function () {
         $(".pl-bottom-wrapper .share-box").show().siblings(".pop-box").hide();
-        fixedTop();
+        // fixedTop();
+        showMask();
     });
     $(".to-ds").click(function () {
         $(".pl-bottom-wrapper .dashang-box").show().siblings(".pop-box").hide();
         $(".dashang-box .choose-gift").show();
         $(".dashang-box .ds-input").hide();
-        fixedTop();
+        // fixedTop();
+        showMask();
     });
 
     $(".number .choose").click(function () {
@@ -500,8 +503,10 @@
     $(".hf-icon").click(function () {
         $(".pl-input").hide();
         $(".pl-text-input").show();
+        // $("body").scrollTop(0);
         $("#pl").focus();
-        fixedTop();
+        // fixedTop();
+        showMask();
     });
 
     $(".dz-icon,.dz-gray-icon,.dz-white-icon").click(function () {

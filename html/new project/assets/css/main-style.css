@@ -881,13 +881,17 @@ option{
     color: #666;
     margin-top: .045rem;
 }
+.dashang-box{
+    border-bottom: .006rem solid #fff;
 
+}
 .dashang-box .input-number{
     height: .545rem;
-    line-height: .545rem;
+    line-height: .539rem;
     text-align: center;
     overflow: hidden;
     position: relative;
+    border-bottom: .006rem solid #fff;
 }
 
 .dashang-box .input-number .number{
