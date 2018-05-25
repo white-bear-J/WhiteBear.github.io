@@ -1102,7 +1102,7 @@
 {
     width: .568rem;
     height: .284rem;
-    border-radius: .13rem;
+    border-radius: .2rem;
     background-color: #d43b33;
     color: #fff;
     font-size: .125rem;
@@ -1266,6 +1266,15 @@
     height: .5rem;
     width: .17rem;
 }
+
+.nav-pl-top .shanchu-icon{
+    position: absolute;
+    top: 0;
+    right: .17rem;
+    height: .5rem;
+    width: .17rem;
+}
+
 
 .myself-pl-list .data .head-pic{
     position: absolute;
@@ -1501,6 +1510,7 @@
     margin: .1rem .17rem 0 .17rem;
     border-radius: .03rem;
     position: relative;
+    border: .006rem solid #dedede;
 }
 
 .upload-group .input-title{
@@ -1510,7 +1520,7 @@
     height: .5rem;
     width: 100%;
     border-radius: .03rem;
-    border: .006rem solid #dedede;
+    /*border: .006rem solid #dedede;*/
 }
 
 .upload-group .input-introduce{
@@ -1520,7 +1530,6 @@
     height: 1.136rem;
     width: 100%;
     border-radius: .03rem;
-    border: .006rem solid #dedede;
 }
 
 
@@ -1712,6 +1721,7 @@
     text-align: right;
     width: 2rem;
     margin-right: .1rem;
+    height: .4rem;
 }
 
 .login-btn .hb-submit{
@@ -2188,4 +2198,83 @@
     color: #fff;
     background-color: #d43b33;
     border-radius: .23rem;
+}
+/*推荐关注*/
+.recommend-title{
+    font-size: .2159rem;
+    line-height: .216rem;
+    text-align: center;
+    margin-top: .568rem;
+}
+
+.recommend-list{
+    margin-top: .25rem;
+}
+.recommend-list .data{
+    width: 25%;
+    float: left;
+    overflow: hidden;
+    margin-top: .318rem;
+}
+
+.recommend-list .data-box{
+    width: .647rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.recommend-list .data-box .head-pic{
+    position: relative;
+}
+.recommend-list .data-box .head-pic .pic{
+    width: .647rem;
+    height: .647rem;
+    border-radius: 50%;
+}
+
+.recommend-list .head-pic .renzheng-icon {
+    position: absolute;
+    right: .02rem;
+    bottom: 0;
+    z-index: 1;
+    height: .16rem;
+    width: .16rem;
+}
+
+.recommend-list .select-recommend-icon{
+    position: absolute;
+    right: .02rem;
+    top: 0;
+    z-index: 1;
+    height: .17rem;
+    width: .17rem;
+    display: none;
+}
+.recommend-list .data-box.active .select-recommend-icon{
+    display: block;
+}
+
+.recommend-list .name{
+    font-size: .125rem;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: .079rem;
+}
+
+.add-label-btn .change-icon{
+    width: .159rem;
+    height: .159rem;
+}
+
+.add-label-btn .update-data {
+    font-size: .159rem;
+    margin-bottom: .27rem;
+    line-height: .16rem;
+}
+
+.add-label-btn .update-data .block{
+    width: .738rem;
+    margin: 0 auto;
 }
