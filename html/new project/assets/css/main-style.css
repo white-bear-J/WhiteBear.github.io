@@ -1122,3 +1122,19 @@ option{
     padding-bottom: .686rem;
     background-color: #ffffff;
 }
+
+/*上下拉加载刷新*/
+.update-box{
+    height: .9rem;
+    position: absolute;
+    top: -.9rem;
+}
+
+.update-box .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: .136rem;
+    color: #999;
+}

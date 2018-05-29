@@ -20,6 +20,12 @@
 </head>
 <body>
 <div class="header">
+    <div class="update-box bg-gray">
+        <div class="content">
+            <i class="icon jiazai-icon"></i>
+            <label>正在刷新</label>
+        </div>
+    </div>
     <div class="nav row">
         <div class="nav-logo col-xs-2 col-md-2 ">
             <div class="logo"></div>
@@ -401,53 +407,7 @@
         </div>
     </div>
 </div>
-<!--<script>-->
-    <!--var index = 0;-->
-    <!--var count= 3;-->
-    <!--var flag=0;-->
 
-    <!--$(".page-box").css("width",(count*100)+"%");-->
-    <!--$(".gift-page").css("width",(100/count)+"%");-->
-
-    <!--count = $(".gift-page-index ").children("a").length;-->
-
-    <!--$(".gift-page").on("touchstart", function(e) {-->
-        <!--startX = e.originalEvent.changedTouches[0].pageX;-->
-        <!--startY = e.originalEvent.changedTouches[0].pageY;-->
-    <!--});-->
-
-    <!--$(".gift-page").on("touchend", function(e) {-->
-
-        <!--moveEndX = e.originalEvent.changedTouches[0].pageX;-->
-        <!--moveEndY = e.originalEvent.changedTouches[0].pageY;-->
-        <!--X = moveEndX - startX;-->
-        <!--Y = moveEndY - startY;-->
-        <!--//左滑-->
-        <!--if ( X < 0 ) {-->
-            <!--e.preventDefault();-->
-            <!--index++;-->
-            <!--if(index>count-1){-->
-                <!--index = 0;-->
-            <!--}-->
-            <!--move(index);-->
-        <!--}-->
-        <!--//右滑-->
-        <!--else if ( X > 0 ) {-->
-            <!--e.preventDefault();-->
-            <!--index&#45;&#45;;-->
-            <!--if(index<0){-->
-                <!--index = count-1;-->
-            <!--}-->
-            <!--move(index);-->
-        <!--}-->
-    <!--});-->
-
-    <!--function move(index){-->
-        <!--$(".page-box").stop().animate({left:-(index*100)+'%'},500);-->
-        <!--$(".gift-page-index a").eq(index).addClass("active").siblings().removeClass("active");-->
-    <!--}-->
-
-<!--</script>-->
 <!--遮罩层-->
 <div class="mask show-num"></div>
 <script>
