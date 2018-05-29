@@ -78,6 +78,10 @@ option{
 .text-red-b{
     color: #d43b33!important;
 }
+.text-red-b{
+    color: #d43b33!important;
+}
+
 .text-yellow{
     color: #ffbb36!important;
 }
@@ -256,6 +260,8 @@ option{
 
 .select-sanjiao-icon{background: url("../../assets/img/upload/xiangxia_a.png") no-repeat center; background-size: 100%}
 
+.select-sanjiao-blue-icon{background: url("../../assets/img/income/xiangxia.png") no-repeat center; background-size: 100%}
+
 .kaiguan-icon{background: url("../../assets/img/upload/yes.png") no-repeat center; background-size: 100%}
 .kaiguan-icon.active{background: url("../../assets/img/upload/no.png") no-repeat center; background-size: 100%}
 
@@ -287,6 +293,10 @@ option{
 .change-icon{background: url("../../assets/img/label/huan.png") no-repeat center; background-size: 100%}
 
 .shanchu-icon{background: url("../../assets/img/talk/shanchu.png") no-repeat center; background-size: 100%}
+
+.ds-income-icon{background: url("../../assets/img/income/das.png") no-repeat center; background-size: 100%}
+.hb-income-icon{background: url("../../assets/img/income/hongbao.png") no-repeat center; background-size: 100%}
+.gg-income-icon{background: url("../../assets/img/income/guanggao.png") no-repeat center; background-size: 100%}
 
 /*头部*/
 .nav{
@@ -521,11 +531,14 @@ option{
 }
 
 .gift-list .data .gz{
+    position: relative;
     font-size: .136rem;
     color: #d43b33;
     height: .136rem;
     line-height: .136rem;
     margin-top: .036rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .gift-list .data .gz.active{
@@ -539,6 +552,7 @@ option{
 .gift-list .data .gz .icon{
     width: .136rem;
     height: .136rem;
+    margin-right: .02rem;
 }
 
 .poster-box{
@@ -546,6 +560,7 @@ option{
     padding: .148rem 15px;
     border-top: .006rem solid #dfdfdf;
     border-bottom: .006rem solid #dfdfdf;
+    position: relative;
 }
 
 .poster-box .head-img .pic{
@@ -615,6 +630,10 @@ option{
 }
 
 .poster-box .index-gz-btn{
+    position: absolute;
+    top: 50%;
+    right: .16rem;
+    transform: translateY(-50%);
     width: .625rem;
     height: .26rem;
     color: #ffffff;

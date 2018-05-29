@@ -860,6 +860,11 @@
     display: none;
 }
 
+.update-input-box .clear-icon.active,
+.pw-input-box .clear-icon.active{
+    display: inline-block;
+}
+
 .countNum{
     padding: 0 .17rem;
     font-size: .1136rem;
@@ -908,6 +913,11 @@
     line-height: .454rem;
     padding: 0 .17rem;
 }
+
+.pw-input input{
+    width: 100%;
+}
+
 .pw-input-box .get-code{
     position: absolute;
     top: 50%;
@@ -997,7 +1007,7 @@
 }
 
 .toRegister{
-    position: fixed;bottom: .2rem;
+    position: absolute;bottom: .2rem;
     width: 100%;
     text-align: center;
 }
@@ -2297,4 +2307,202 @@
     height: .16rem;
     width: .148rem;
     border-bottom: .006rem solid #f0f0f0;
+}
+
+/*我的收入*/
+.income-title{
+    text-align: center;
+    height: 1.386rem;
+    background: url("../../assets/img/income/bj.png") no-repeat;
+    background-size: cover;
+    padding-top: .1136rem;
+}
+
+.income-title .tip{
+    font-size: .136rem;
+    color: #999;
+
+    line-height: .137rem;
+}
+
+.income-title .money{
+    margin-top: .1136rem;
+    font-size: .227rem;
+    color: #f35f07;
+    line-height: .2271rem;
+}
+
+.income-btn-group{
+    padding: .16rem;
+}
+
+.income-btn-group button{
+    width: 48%;
+    height: .454rem;
+    border: .006rem solid #f35f07;
+    color: #f35f07;
+    line-height: .454rem;
+    background-color: #fff;
+}
+
+.income-group{
+    height: .5568rem;
+    line-height: .5568rem;
+    font-size: .136rem;
+    position: relative;
+}
+
+.income-group .select-box{
+    position: relative;
+    margin-right: .5rem;
+}
+
+.income-group .select-income-class{
+    padding: 0 .16rem;
+}
+
+.income-group .select-box .option-select-name{
+    margin-right: .16rem;
+}
+
+.income-group .select-box .select-sanjiao-icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: .1136rem;
+    height: .5569rem;
+}
+
+.income-group  .select-option {
+    position: absolute;
+    width: 100%;
+    top: .5rem;
+    left: 0;
+    z-index: 1;
+    color: #666;
+    box-shadow: 0 0 0.03rem 0 #999;
+    display: none;
+}
+
+.income-group .select-option .option {
+    height: .4rem;
+    line-height: .4rem;
+    padding: 0 .147rem;
+    color: #666;
+}
+
+.income-group .select-option .option:hover {
+    background-color: #d43b33;
+    color: #fff;
+}
+
+.income-list .title{
+    font-size: .136rem;
+    line-height: .4rem;
+    padding: 0 .16rem;
+}
+.income-list .data{
+    position: relative;
+    background-color: #fff;
+}
+.income-list .head-pic{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: .17rem;
+    padding-left: .16rem;
+}
+.income-list .head-pic .pic{
+    width: .42rem;
+    height: .42rem;
+    border-radius: 50%;
+}
+
+.income-list .head-pic .sex-icon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: .1rem;
+    height: .1rem;
+}
+
+.income-list .detail{
+    padding-top: .17rem;
+    padding-bottom: .17rem;
+    padding-right: .16rem;
+    margin-left: .728rem;
+    border-bottom: .006rem solid #eaeaea;
+}
+
+.income-list .detail .name{
+    font-size: .159rem;
+    line-height: .16rem;
+    margin-top: .06rem;
+}
+
+.income-list .detail .time{
+    font-size: .1136rem;
+    line-height: .1137rem;
+    margin-top: .09rem;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.income-list .detail .money{
+    line-height: .42rem;
+    font-size: .147rem;
+    text-align: right;
+}
+
+.nav-select-box{
+    position: absolute;
+    top: 0;
+    right: .16rem;
+}
+
+.nav-select-box .option-select-name{
+    margin-right: .17rem;
+}
+
+.nav-select-box .select-sanjiao-blue-icon{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: .5rem;
+    width: .1136rem;
+}
+
+.count-group{
+    background-color: #fff;
+    padding: .193rem .16rem;
+    position: relative;
+    margin-top: .08rem;
+}
+
+.count-group .count-icon-pic{
+    position: absolute;
+    top: .193rem;
+    left: .16rem;
+}
+
+.count-group .count-icon-pic .icon{
+    width: .41rem;
+    height: .41rem;
+}
+
+
+.count-group .detail{
+    line-height: .41rem;
+    margin-left: .75rem;
+}
+
+.count-group .detail .type{
+    font-size: .159rem;
+}
+
+.count-group .detail .money{
+    font-size: .1477rem;
 }

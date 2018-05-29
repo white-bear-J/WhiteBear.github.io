@@ -13,72 +13,142 @@
     <title>修改手机号</title>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/vue.min.js"></script>
     <script src="assets/js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 </head>
 <body class="bg-gray">
-<div class="nav-pl-top update-data" style="border-bottom: none">
-    修改手机号
-    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
-    <a class="over">完成</a>
-</div>
-<div style="height: .5rem"></div>
-<div class="container bg-gray">
-    <div class="pw-input-box bg-white">
-        <i class="icon phone-icon"></i>
-        <div class="pw-input"><input class="input phone" id="phone" type="text" maxlength="11" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="请输入新的手机号码"></div>
-        <i class="icon clear-icon"></i>
+<div id="updatePhone">
+    <div class="nav-pl-top update-data" style="border-bottom: none">
+        修改手机号
+        <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+        <a class="over" v-on:click="submitData">完成</a>
     </div>
-    <div class="pw-input-box bg-white">
-        <i class="icon yzm-icon"></i>
-        <div class="pw-input"><input class="input" id="yzm" type="text" maxlength="4" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="输入验证码"></div>
-        <a class="get-code pull-right">获取验证码</a>
+    <div style="height: .5rem"></div>
+    <div class="container bg-gray">
+        <div class="pw-input-box bg-white">
+            <i class="icon phone-icon"></i>
+            <div class="pw-input"><input class="input phone" type="number" v-model="phoneNumber" maxlength="11" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="请输入新的手机号码"></div>
+            <i class="icon clear-icon"  v-bind:class="{ active: clearPhone }" v-on:click="clear('phone')"></i>
+        </div>
+        <div class="pw-input-box bg-white">
+            <i class="icon yzm-icon"></i>
+            <div class="pw-input" style="margin-right: .8rem"><input class="input" type="text" v-model="code" maxlength="4" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="输入验证码"></div>
+            <a class="get-code pull-right" v-on:click="intval">获取验证码</a>
+        </div>
+
     </div>
-
 </div>
-
 <script>
-
-    var time=60;
-    var interval;
-    $("#phone").bind("input propertychange",function () {
-        var i = $(this).val().length;
-        if(i>0){
-            $(this).parents(".pw-input").siblings(".clear-icon").css("display","inline-block")
-        }else {
-            $(this).parents(".pw-input").siblings(".clear-icon").hide();
+    var updatePhone = new Vue({
+        el: '#updatePhone',
+        data: {
+            phoneNumber: "",
+            code:"",
+            clearPhone:false,
+            time:60,
+            interval:function () {},
+            data:{
+                phone:this.phoneNumber,
+                code:this.code
+            }
+        },
+        watch:{
+            phoneNumber:function (val) {
+                if(val==""){
+                    this.clearPhone = false;
+                }else {
+                    this.clearPhone = true;
+                }
+            }
+        },
+        methods: {
+            submitData:function () {
+                var tel = this.phoneNumber;
+                var code = this.code;
+                var checkPhone = checkMobile(tel);
+                if(checkPhone!=1){
+                    this.phoneNumber="";
+                    alert("手机号格式错误！")
+                }
+                if(code.length!=4){
+                    alert("验证码错误！")
+                }
+                if(checkPhone == 1 && code.length == 4){
+                    alert("yes!");
+                    // ajaxPost(this.data,"url",function (data) {
+                    //
+                    // });
+                }
+            },
+            clear:function (type) {
+                if(type == "phone"){
+                    this.phoneNumber= "";
+                }
+            },
+            intval:function () {
+                this.getTime();
+                this.interval = setInterval(this.getTime,1000);
+            },
+            getTime:function () {
+                if(this.time==60){
+                    $(".get-code").unbind("click");
+                }
+                this.time--;
+                $(".get-code").addClass("text-gray").html(this.time+"S后重发");
+                if(this.time==0){
+                    clearInterval(interval);
+                    $(".get-code").removeClass("text-gray").html("获取验证码").bind("click",this.intval);
+                    this.time=60;
+                }
+            }
         }
-    });
-    $(".clear-icon").click(function () {
-      $(this).parents(".pw-input-box").children(".pw-input").find(".phone").val("").focus();
-      $(this).hide();
-    });
-
-    $(".get-code").bind("click",intval);
-
-
-
-    function intval() {
-        getTime();
-        interval = setInterval(getTime,1000);
-    }
-
-
-    function getTime() {
-        if(time==60){
-            $(".get-code").unbind("click");
-        }
-        time--;
-        $(".get-code").addClass("text-gray").html(time+"S后重发");
-        if(time==0){
-            clearInterval(interval);
-            $(".get-code").removeClass("text-gray").html("获取验证码").bind("click",intval);
-            time=60;
-        }
-    }
-
+    })
 </script>
+
+
+<!--<script>-->
+
+    <!--var time=60;-->
+    <!--var interval;-->
+    <!--$("#phone").bind("input propertychange",function () {-->
+        <!--var i = $(this).val().length;-->
+        <!--if(i>0){-->
+            <!--$(this).parents(".pw-input").siblings(".clear-icon").css("display","inline-block")-->
+        <!--}else {-->
+            <!--$(this).parents(".pw-input").siblings(".clear-icon").hide();-->
+        <!--}-->
+    <!--});-->
+    <!--$(".clear-icon").click(function () {-->
+      <!--$(this).parents(".pw-input-box").children(".pw-input").find(".phone").val("").focus();-->
+      <!--$(this).hide();-->
+    <!--});-->
+
+    <!--$(".get-code").bind("click",intval);-->
+
+
+
+    <!--function intval() {-->
+        <!--getTime();-->
+        <!--interval = setInterval(getTime,1000);-->
+    <!--}-->
+
+
+    <!--function getTime() {-->
+        <!--if(time==60){-->
+            <!--$(".get-code").unbind("click");-->
+        <!--}-->
+        <!--time&#45;&#45;;-->
+        <!--$(".get-code").addClass("text-gray").html(time+"S后重发");-->
+        <!--if(time==0){-->
+            <!--clearInterval(interval);-->
+            <!--$(".get-code").removeClass("text-gray").html("获取验证码").bind("click",intval);-->
+            <!--time=60;-->
+        <!--}-->
+    <!--}-->
+
+<!--</script>-->
 </body>
 </html>

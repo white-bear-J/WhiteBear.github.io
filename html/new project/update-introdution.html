@@ -8,65 +8,64 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
     <meta name="format-detection" content="email=no"/>
-    <meta name="keywords" content="修改个人介绍">
-    <meta name="description" content="修改个人介绍">
-    <title>修改个人介绍</title>
+    <meta name="keywords" content="个性签名">
+    <meta name="description" content="个性签名">
+    <title>个性签名</title>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/vue.min.js"></script>
     <script src="assets/js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 </head>
 <body class="bg-gray">
-<div class="nav-pl-top update-data" style="border-bottom: none">
-    修改个人介绍
-    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
-    <a class="over">完成</a>
-</div>
-<div style="height: .5rem"></div>
-<div class="container bg-gray">
-    <div>
-        <div class="update-textarea-box bg-white">
-            <textarea class="textarea introduction" id="introduction" maxlength="200" placeholder="&nbsp;&nbsp;快来编辑你的个人介绍吧"></textarea>
-            <!--<i class="icon clear-icon"></i>-->
+<div id="motto">
+    <div class="nav-pl-top update-data" style="border-bottom: none">
+        个性签名
+        <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+        <a class="over" v-on:click="submitData">完成</a>
+    </div>
+    <div style="height: .5rem"></div>
+    <div class="container bg-gray">
+        <div>
+            <div class="update-textarea-box bg-white">
+                <textarea class="textarea introduction" v-model="motto" maxlength="200" placeholder="  快来编辑你的个性签名"></textarea>
+            </div>
+            <div class="countNum" v-bind:class="{ 'text-red-b': danger }">剩余输入字数<span>{{mottoLength}}</span></div>
         </div>
-        <div class="countNum">剩余输入字数<span id="introductionNum">200</span></div>
     </div>
 </div>
 <script>
-    //输入监听
-    var inputElement = "#introduction";
-    var outputElement = "#introductionNum";
-
-    inputListener(inputElement,outputElement);
-
-    function inputListener(inputElement,outputElement) {
-        var i = 0;
-        var max = $(inputElement).attr("maxlength");
-
-        $(inputElement).bind("input propertychange",function () {
-            i = $(inputElement).val().length;
-            $(outputElement).html(200-i);
-            if(i>=180){
-                $(".countNum").addClass("text-red-b");
-            }else {
-                $(".countNum").removeClass("text-red-b");
+    var motto = new Vue({
+        el: '#motto',
+        data: {
+            motto: "",
+            mottoLength:0,
+            danger:false,
+            data:{
+                motto:this.motto,
             }
-        })
-
-    }
-
-    $(".clear-icon").click(function () {
-        $(this).parents(".update-input-box").children(".input").val("").focus();
-        i = $(inputElement).val().length;
-        $(outputElement).html(200-i);
-        if(i>=180){
-            $(".countNum").addClass("text-red-b");
-        }else {
-            $(".countNum").removeClass("text-red-b");
-        }
-    });
+        },
+        watch:{
+            motto:function (val) {
+                if(val.length>190){
+                    this.danger = true;
+                }else {
+                    this.danger = false;
+                }
+                this.mottoLength = 200 - val.length;
+            }
+        },
+        methods: {
+            submitData:function () {
+                    alert("yes!");
+                    // ajaxPost(this.data,"url",function (data) {
+                    //
+                    // });
+                }
+            }
+    })
 </script>
 </body>
 </html>

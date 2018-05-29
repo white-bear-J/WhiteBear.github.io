@@ -13,6 +13,7 @@
     <title>验证码登录</title>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/vue.min.js"></script>
     <script src="assets/js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
@@ -24,19 +25,19 @@
     <div class="introduce">登录XX精彩即刻呈现</div>
     <i class="icon index-close-icon" onclick="window.close();"></i>
 </div>
-<div class="container bg-white">
+<div class="container bg-white" id="login">
     <div class="pw-input-box bg-gray">
         <i class="icon phone-icon"></i>
-        <div class="pw-input"><input class="input phone bg-gray" id="phone" type="text" maxlength="11" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="手机号码"></div>
-        <i class="icon clear-icon"></i>
+        <div class="pw-input" style="margin-right: 0"><input class="input phone bg-gray" id="phone" type="number" v-model="phoneNumber"  maxlength="11" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="手机号码"></div>
+        <i class="icon clear-icon"  v-bind:class="{ active: clearPhone }" v-on:click="clear('phone')"></i>
     </div>
     <div class="pw-input-box bg-gray">
         <i class="icon yzm-icon"></i>
-        <div class="pw-input"><input class="input bg-gray" id="yzm" type="text" maxlength="4" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="输入验证码"></div>
-        <a class="get-code pull-right">获取验证码</a>
+        <div class="pw-input" style="margin-right: .8rem"><input class="input bg-gray" id="yzm" type="text" v-model="code" maxlength="4" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="输入验证码"></div>
+        <a class="get-code pull-right" v-on:click="intval">获取验证码</a>
     </div>
     <div class="login-btn">
-        <button class="login-submit">登录</button>
+        <button class="login-submit" v-on:click="submitData">登录</button>
     </div>
     <div class="login-other">
         <a class="block pull-left type">忘记密码</a>
@@ -46,47 +47,70 @@
 <div class="toRegister"><a class="hrefRegister" href="register.html">注册 > </a></div>
 
 <script>
-
-    var time=60;
-    var interval;
-
-    $("#phone").bind("input propertychange",function () {
-        var i = $(this).val().length;
-        if(i>0){
-            $(this).parents(".pw-input").siblings(".clear-icon").css("display","inline-block")
-        }else {
-            $(this).parents(".pw-input").siblings(".clear-icon").hide();
+    var login = new Vue({
+        el: '#login',
+        data: {
+            phoneNumber: "",
+            code:"",
+            clearPhone:false,
+            time:60,
+            interval:function () {},
+            data:{
+                phone:this.phoneNumber,
+                code:this.code
+            }
+        },
+        watch:{
+            phoneNumber:function (val) {
+                if(val==""){
+                    this.clearPhone = false;
+                }else {
+                    this.clearPhone = true;
+                }
+            }
+        },
+        methods: {
+            submitData:function () {
+                var tel = this.phoneNumber;
+                var code = this.code;
+                var checkPhone = checkMobile(tel);
+                if(checkPhone!=1){
+                    this.phoneNumber="";
+                    alert("手机号格式错误！")
+                }
+                if(code.length!=4){
+                    alert("验证码错误！")
+                }
+                if(checkPhone == 1 && code.length == 4){
+                    alert("yes!");
+                    // ajaxPost(this.data,"url",function (data) {
+                    //
+                    // });
+                }
+            },
+            clear:function (type) {
+                if(type == "phone"){
+                    this.phoneNumber= "";
+                }
+            },
+            intval:function () {
+                this.getTime();
+                this.interval = setInterval(this.getTime,1000);
+            },
+            getTime:function () {
+                if(this.time==60){
+                    $(".get-code").unbind("click");
+                }
+                this.time--;
+                $(".get-code").addClass("text-gray").html(this.time+"S后重发");
+                if(this.time==0){
+                    clearInterval(interval);
+                    $(".get-code").removeClass("text-gray").html("获取验证码").bind("click",this.intval);
+                    this.time=60;
+                }
+            }
         }
-    });
-    $(".clear-icon").click(function () {
-        $(this).parents(".pw-input-box").children(".pw-input").find(".phone").val("").focus();
-        $(this).hide();
-    });
-
-
-    $(".get-code").bind("click",intval);
-
-
-
-    function intval() {
-        getTime();
-        interval = setInterval(getTime,1000);
-    }
-
-
-    function getTime() {
-        if(time==60){
-            $(".get-code").unbind("click");
-        }
-        time--;
-        $(".get-code").addClass("text-gray").html(time+"S后重发");
-        if(time==0){
-            clearInterval(interval);
-            $(".get-code").removeClass("text-gray").html("获取验证码").bind("click",intval);
-            time=60;
-        }
-    }
-
+    })
 </script>
 </body>
 </html>

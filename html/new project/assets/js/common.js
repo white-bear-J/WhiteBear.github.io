@@ -258,3 +258,56 @@ function addAcitive(t) {
         $(t).addClass("active");
     }
 }
+
+function ajaxPost(data,url,success) {
+    $.ajax({
+        type:"POST",
+        url:url,
+        data:data,
+        dataType:"json",
+        success: success,
+        error:function(jqXHR) {
+            alert("发生错误："+jqXHR.status);
+        }
+    });
+}
+
+
+//邮箱验证
+function checkEmail(url){
+    var email = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if (email.test(url)) {
+        return 1;//正确
+    }else{
+        return 2;//错误
+    }
+}
+
+// 手机验证
+function checkMobile(tel){
+    var phone = /^0?(13[0-9]|15[012356789]|17[0123456789]|18[0123456789]|14[57])[0-9]{8}$/;
+    if(phone.test(tel)){
+        return 1;
+    }else{
+        return 2;
+    }
+}
+
+//由数字，英文字母，下划线组成的字符串密码账号等
+function passwordID(str){
+    var num = /^[a-zA-Z]{1}([a-zA-Z0-9]|[_]){6,16}$/;
+    if(num.test(str)){
+        return 1;
+    }else{
+        return 2;
+    }
+}
+//身份证号验证
+function IDNumber(idN){
+    var id = /^\d{15}|\d{18}$/;
+    if(id.test(idN)){
+        return 1;
+    }else{
+        return 2;
+    }
+}

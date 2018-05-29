@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="查看统计">
+    <meta name="description" content="查看统计">
+    <title>查看统计</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/tool/selectWheel/mobileSelect.css">
+    <script src="assets/tool/selectWheel/city.js"></script>
+    <script src="assets/tool/selectWheel/date.js"></script>
+    <script src="assets/tool/selectWheel/mobileSelect.js" type="text/javascript"></script>
+</head>
+<body class="bg-gray">
+<div class="nav-pl-top update-data" style="border-bottom: none">
+    查看统计
+    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+    <div class="nav-select-box" id="selectDate">
+        <div class="option-select-name text-blue">月份</div>
+        <i class="select-sanjiao-blue-icon"></i>
+    </div>
+</div>
+<div style="height: .5rem"></div>
+<div class="container bg-gray" style="padding-bottom: 0">
+    <div class="count-group">
+        <div class="count-icon-pic">
+            <i class="icon ds-income-icon"></i>
+        </div>
+        <div class="detail">
+            <label class="type">打赏收入</label>
+            <label class="money pull-right text-orange">+200</label>
+        </div>
+    </div>
+    <div class="count-group">
+        <div class="count-icon-pic">
+            <i class="icon hb-income-icon"></i>
+        </div>
+        <div class="detail">
+            <label class="type">红包收入</label>
+            <label class="money pull-right text-orange">+200</label>
+        </div>
+    </div>
+    <div class="count-group">
+        <div class="count-icon-pic">
+            <i class="icon gg-income-icon"></i>
+        </div>
+        <div class="detail">
+            <label class="type">广告收入</label>
+            <label class="money pull-right text-orange">+200</label>
+        </div>
+    </div>
+</div>
+<script>
+    var mobileSelect = new MobileSelect({
+        trigger: '#selectDate',
+        title: '',
+        wheels: "month",
+        position:[0, 0],
+        callback:function(indexArr, data){
+            var dayStr="";
+            for (var i in data){
+                if(i!=data.length-1){
+                    if(data[i].id >= 10){
+                        dayStr += data[i].id+"-"
+                    }else {
+                        dayStr += "0"+data[i].id+"-"
+                    }
+                }else {
+                    if(data[i].id >= 10){
+                        dayStr += data[i].id;
+                    }else {
+                        dayStr += "0"+data[i].id;
+                    }
+                }
+            }
+            console.log(dayStr);
+            $("#selectDate").find(".option-select-name").html(dayStr)
+        }
+    });
+</script>
+</body>
+</html>

@@ -13,6 +13,7 @@
     <title>注册</title>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/vue.min.js"></script>
     <script src="assets/js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
@@ -24,81 +25,138 @@
     <div class="introduce">COME ON,只有会员才能看到的精彩</div>
     <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
 </div>
-<div class="container bg-white">
+<div class="container bg-white" id="register">
     <div class="pw-input-box bg-gray">
         <i class="icon phone-icon"></i>
-        <div class="pw-input"><input class="input phone bg-gray" id="phone" type="text" maxlength="11" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="手机号码"></div>
-        <i class="icon clear-icon"></i>
+        <div class="pw-input"><input class="input phone bg-gray" id="phone" type="number" v-model="phoneNumber" maxlength="11" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="手机号码"></div>
+        <i class="icon clear-icon"  v-bind:class="{ active: clearPhone }" v-on:click="clear('phone')"></i>
     </div>
     <div class="pw-input-box bg-gray">
         <i class="icon yzm-icon"></i>
-        <div class="pw-input"><input class="input bg-gray" id="yzm" type="text" maxlength="4" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="输入验证码"></div>
-        <a class="get-code pull-right">获取验证码</a>
+        <div class="pw-input" style="margin-right: .8rem"><input class="input bg-gray"  v-model="code" id="yzm" type="text" maxlength="4" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="输入验证码"></div>
+        <a class="get-code pull-right" v-on:click="intval">获取验证码</a>
     </div>
     <div>
         <div class="pw-input-box bg-gray">
             <i class="icon pw-icon"></i>
-            <div class="pw-input"><input id="newPw" class="input phone bg-gray" type="password" minlength="6" maxlength="16" value=""  placeholder="请输入密码"></div>
-            <i class="icon clear-icon"></i>
+            <div class="pw-input"><input id="newPw" class="input phone bg-gray" v-model="password" type="password" minlength="6" maxlength="16" value=""  placeholder="请输入密码"></div>
+            <i class="icon clear-icon" v-bind:class="{ active: clearPw }" v-on:click="clear('password')"></i>
         </div>
     </div>
     <div>
         <div class="pw-input-box bg-gray">
             <i class="icon nc-icon"></i>
-            <div class="pw-input"><input id="name" class="input phone bg-gray" type="text" maxlength="10" value=""  placeholder="请输入昵称"></div>
-            <i class="icon clear-icon"></i>
+            <div class="pw-input"><input id="name" class="input phone bg-gray" type="text" v-model="name" maxlength="10" value=""  placeholder="请输入昵称"></div>
+            <i class="icon clear-icon"  v-bind:class="{ active: clearName }" v-on:click="clear('name')"></i>
         </div>
     </div>
     <div class="login-btn">
-        <button class="login-submit">注册</button>
+        <button class="login-submit" v-on:click="submitData">注册</button>
     </div>
     <div class="register-tip">
         温馨提示：点击注册代表您已阅读并同意<a class="text-blue">用户协议</a>。
     </div>
 </div>
-
 <script>
-
-    var time=60;
-    var interval;
-
-    $("#phone,#newPw,#name").bind("input propertychange",function () {
-        var i = $(this).val().length;
-        if(i>0){
-            $(this).parents(".pw-input").siblings(".clear-icon").css("display","inline-block")
-        }else {
-            $(this).parents(".pw-input").siblings(".clear-icon").hide();
+    var register = new Vue({
+        el: '#register',
+        data: {
+            phoneNumber: "",
+            code:"",
+            password:"",
+            name:"",
+            clearPhone:false,
+            clearPw:false,
+            clearName:false,
+            time:60,
+            interval:function () {},
+            data:{
+                phone:this.phoneNumber,
+                code:this.code,
+                password:this.password,
+                name:this.name
+            }
+        },
+        watch:{
+            phoneNumber:function (val) {
+                if(val==""){
+                    this.clearPhone = false;
+                }else {
+                    this.clearPhone = true;
+                }
+            },
+            password:function (val) {
+                if(val==""){
+                    this.clearPw = false;
+                }else {
+                    this.clearPw = true;
+                }
+            },
+            name:function (val) {
+                if(val==""){
+                    this.clearName = false;
+                }else {
+                    this.clearName = true;
+                }
+            }
+        },
+        methods: {
+            submitData:function () {
+                var tel = this.phoneNumber;
+                var code = this.code;
+                var pw = this.password;
+                var checkPhone = checkMobile(tel);
+                var checkPw = passwordID(pw);
+                if(checkPhone!=1){
+                    this.phoneNumber="";
+                    alert("手机号格式错误！");
+                    return;
+                }
+                if(code.length!=4){
+                    alert("验证码错误！");
+                    return;
+                }
+                if(checkPw!=1){
+                    this.password="";
+                    alert("密码格式错误！");
+                    return;
+                }
+                if(checkPhone == 1 && code.length == 4){
+                    alert("yes!");
+                    // ajaxPost(this.data,"url",function (data) {
+                    //
+                    // });
+                }
+            },
+            clear:function (type) {
+                if(type == "phone"){
+                    this.phoneNumber= "";
+                }
+                if(type == "password"){
+                    this.password = "";
+                }
+                if(type == "name"){
+                    this.name = "";
+                }
+            },
+            intval:function () {
+                this.getTime();
+                interval = setInterval(this.getTime,1000);
+            },
+            getTime:function () {
+                if(this.time==60){
+                    $(".get-code").unbind("click");
+                }
+                this.time--;
+                $(".get-code").addClass("text-gray").html(this.time+"S后重发");
+                if(this.time==0){
+                    clearInterval(interval);
+                    $(".get-code").removeClass("text-gray").html("获取验证码").bind("click",intval);
+                    this.time=60;
+                }
+            }
         }
-    });
-    $(".clear-icon").click(function () {
-        $(this).parents(".pw-input-box").children(".pw-input").find(".phone").val("").focus();
-        $(this).hide();
-    });
-
-
-    $(".get-code").bind("click",intval);
-
-
-
-    function intval() {
-        getTime();
-        interval = setInterval(getTime,1000);
-    }
-
-
-    function getTime() {
-        if(time==60){
-            $(".get-code").unbind("click");
-        }
-        time--;
-        $(".get-code").addClass("text-gray").html(time+"S后重发");
-        if(time==0){
-            clearInterval(interval);
-            $(".get-code").removeClass("text-gray").html("获取验证码").bind("click",intval);
-            time=60;
-        }
-    }
-
+    })
 </script>
 </body>
 </html>

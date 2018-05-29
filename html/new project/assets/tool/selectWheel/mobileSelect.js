@@ -4,6 +4,7 @@
  * Released under the MIT License.
  */
 var year =getDay();
+var month =getMonth();
 
 (function() {
 	function getClass(dom,string) {
@@ -25,8 +26,11 @@ var year =getDay();
             }
             this.wheelsData =  [{data : city}];
         }else if(config.wheels == "date"){
-            //日期联级
+            //年月日联级
             this.wheelsData =  [{data : year}];
+        }else if(config.wheels == "month"){
+            //年月联级
+            this.wheelsData =  [{data : month}];
         }else {
             this.wheelsData = config.wheels;
         }

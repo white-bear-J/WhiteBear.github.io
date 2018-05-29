@@ -2,6 +2,7 @@
  * Created by Administrator on 2017/7/10.
  */
 var getYear = new Array();
+var yearMonth = new Array();
 
 var maxYear = new Date().getFullYear();
 var minYear = maxYear-80;
@@ -58,4 +59,20 @@ function getDay() {
         }
     }
     return getYear;
+}
+function getMonth() {
+    for(var i = 0;i<yearLenth;i++){
+        var thisYear =  maxYear-i;
+        yearMonth[i] = {};
+        yearMonth[i].name = thisYear+"年";
+        yearMonth[i].id = thisYear;
+        yearMonth[i].childs = [];
+        for (var j = 0;j<12;j++){
+            yearMonth[i].childs[j]= {};
+            var thisMonth =  j+1;
+            yearMonth[i].childs[j].id = thisMonth;
+            yearMonth[i].childs[j].name = thisMonth+"月";
+        }
+    }
+    return yearMonth;
 }
