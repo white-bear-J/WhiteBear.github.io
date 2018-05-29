@@ -36,7 +36,7 @@ $(function () {
 function slideDownStep1(dist){ // dist 下滑的距离，用以拉长背景模拟拉伸效果
     var slideDown = $(".up-box");
     $(slideDown).show();
-    $(slideDown).css("height",dist+"px")
+    // $(slideDown).css("height",dist+"px")
 }
 //第二步：下拉，然后松开，
 function slideDownStep2(){
