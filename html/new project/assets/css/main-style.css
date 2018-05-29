@@ -298,6 +298,8 @@ option{
 .hb-income-icon{background: url("../../assets/img/income/hongbao.png") no-repeat center; background-size: 100%}
 .gg-income-icon{background: url("../../assets/img/income/guanggao.png") no-repeat center; background-size: 100%}
 
+.jiazai-icon{background: url("../../assets/img/income/jaiza.gif") no-repeat center; background-size: 100%}
+
 /*头部*/
 .nav{
     height: .5rem;
@@ -1125,9 +1127,8 @@ option{
 
 /*上下拉加载刷新*/
 .update-box{
-    height: .9rem;
-    position: absolute;
-    top: -.9rem;
+    height: .6rem;
+    position: relative;
 }
 
 .update-box .content{
@@ -1135,6 +1136,12 @@ option{
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    font-size: .136rem;
+    font-size: .113rem;
     color: #999;
+}
+
+.update-box .content .jiazai-icon{
+    width: .15rem;
+    height: .15rem;
+    margin-right: .1136rem;
 }
