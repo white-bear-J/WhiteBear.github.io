@@ -13,7 +13,9 @@
     <title>修改资料</title>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/vue.min.js"></script>
     <script src="assets/js/common.js"></script>
+    <script src="assets/js/dataUrl.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
@@ -24,123 +26,168 @@
 
 </head>
 <body class="bg-gray">
-<div class="nav-pl-top update-data" style="border-bottom: none">
-    修改资料
-    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+<div id="updateData">
+    <div class="nav-pl-top update-data" style="border-bottom: none">
+        修改资料
+        <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+    </div>
+    <div style="height: .5rem"></div>
+    <div class="container bg-gray" >
+        <div class="update-msg-box f-box bg-white">
+            <div class="img-box row">
+                <a href="#">
+                    <div class="col-md-3 col-xs-3"><img class="head-pic" src="assets/img/index/touxiang.png"></div>
+                    <div class="update col-md-9 col-xs-9"><label class="text-gray">修改头像</label><i class="icon top-right-icon pull-right"></i></div>
+                </a>
+            </div>
+            <div class="label-box row">
+                <a href="javascript:;">
+                    <div class="col-md-3 col-xs-3 text-gray">账号</div>
+                    <div class="update col-md-9 col-xs-9"><label class="text-gray">{{number}}</label></div>
+                </a>
+            </div>
+            <div class="label-box row">
+                <a href="update_name.html">
+                    <div class="col-md-3 col-xs-3 text-gray">昵称</div>
+                    <div class="update col-md-9 col-xs-9"><label class="text-black">{{name}}</label><i class="icon top-right-icon pull-right"></i></div>
+                </a>
+            </div>
+            <div class="label-box row">
+                <a href="javascript:;" v-on:click="setSex">
+                    <div class="col-md-3 col-xs-3 text-gray">性别</div>
+                    <div class="update col-md-9 col-xs-9"><label class="text-gray">{{sex}}</label><i class="icon top-right-icon pull-right"></i></div>
+                </a>
+            </div>
+            <div class="label-box row">
+                <a href="javascript:;" id="selectCity">
+                    <div class="col-md-3 col-xs-3 text-gray">城市</div>
+                    <div class="update col-md-9 col-xs-9"><label class="text-black" id="city">{{city}}</label><i class="icon top-right-icon pull-right"></i></div>
+                </a>
+            </div>
+            <div class="label-box row">
+                <a href="javascript:;" id="selectDate">
+                    <div class="col-md-3 col-xs-3 text-gray">出生日期</div>
+                    <div class="update col-md-9 col-xs-9"><label class="text-black" id="birth">{{birthday}}</label><i class="icon top-right-icon pull-right"></i></div>
+                </a>
+            </div>
+        </div>
+        <div class="update-msg-box bg-white">
+            <div class="label-box row">
+                <a href="update-phone.html">
+                    <div class="col-md-3 col-xs-3 text-gray">手机</div>
+                    <div class="update col-md-9 col-xs-9"><label class="text-black">{{phoneNumber}}</label><i class="icon top-right-icon pull-right"></i></div>
+                </a>
+            </div>
+            <div class="label-box row">
+                <a href="update-password.html">
+                    <div class="col-md-3 col-xs-3 text-gray">密码</div>
+                    <div class="update col-md-9 col-xs-9"><label class="text-black">{{password}}</label><i class="icon top-right-icon pull-right"></i></div>
+                </a>
+            </div>
+            <div class="label-box row">
+                <a href="update-email.html">
+                    <div class="col-md-3 col-xs-3 text-gray">邮箱</div>
+                    <div class="update col-md-9 col-xs-9"><label class="text-black">{{email}}</label><i class="icon top-right-icon pull-right"></i></div>
+                </a>
+            </div>
+        </div>
+        <div class="update-msg-box bg-white">
+            <div class="label-box row">
+                <a href="update-introdution.html">
+                    <div class="col-md-3 col-xs-3 text-gray">个性签名</div>
+                    <div class="update col-md-9 col-xs-9"><label class="text-black" v-bind:class="{'text-gray':watchMotto}">{{motto}}</label><i class="icon top-right-icon pull-right"></i></div>
+                </a>
+            </div>
+            <div class="label-box row">
+                <a href="interest_label.html">
+                    <div class="col-md-3 col-xs-3 text-gray">标签</div>
+                    <div class="update col-md-9 col-xs-9"><label class="text-black">{{label}}</label><i class="icon top-right-icon pull-right"></i></div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <!--底部浮动-->
+    <div class="pl-bottom-wrapper" style="bottom: 0;display: none">
+        <!--性别-->
+        <div class="select-sex-box top-qx" style="display: none">
+            <div class="top-qx-box bg-gray"><p class="pull-left show-num" v-on:click="hideMask">取消</p><p class="pull-right text-gray-b">完成</p></div>
+            <div class="select-option">
+                <div class="sex data" v-on:click="addARmoveS">男</div>
+                <div class="sex data" v-on:click="addARmoveS">女</div>
+                <div class="sex data active" v-on:click="addARmoveS">保密</div>
+            </div>
+        </div>
+        <!--城市-->
+        <!--出生日期-->
+        <!--头像-->
+        <div class="select-pic-box top-qx" style="display: none">
+            <input type="hidden" id="head-pic" value="">
+        </div>
+    </div>
+    <!--遮罩层-->
+    <div class="mask"></div>
 </div>
-<div style="height: .5rem"></div>
-<div class="container bg-gray">
-    <div class="update-msg-box f-box bg-white">
-        <div class="img-box row">
-            <a href="#">
-                <div class="col-md-3 col-xs-3"><img class="head-pic" src="assets/img/index/touxiang.png"></div>
-                <div class="update col-md-9 col-xs-9"><label class="text-gray">修改头像</label><i class="icon top-right-icon pull-right"></i></div>
-            </a>
-        </div>
-        <div class="label-box row">
-            <a href="javascript:;">
-                <div class="col-md-3 col-xs-3 text-gray">账号</div>
-                <div class="update col-md-9 col-xs-9"><label class="text-gray">1654564245</label></div>
-            </a>
-        </div>
-        <div class="label-box row">
-            <a href="update_name.html">
-                <div class="col-md-3 col-xs-3 text-gray">昵称</div>
-                <div class="update col-md-9 col-xs-9"><label class="text-black">离离原上草</label><i class="icon top-right-icon pull-right"></i></div>
-            </a>
-        </div>
-        <div class="label-box row">
-            <a href="javascript:setSex();">
-                <div class="col-md-3 col-xs-3 text-gray">性别</div>
-                <div class="update col-md-9 col-xs-9"><label class="text-gray">未设定</label><i class="icon top-right-icon pull-right"></i></div>
-            </a>
-        </div>
-        <div class="label-box row">
-            <a href="javascript:;" id="selectCity">
-                <div class="col-md-3 col-xs-3 text-gray">城市</div>
-                <div class="update col-md-9 col-xs-9"><label class="text-black">广西-北海-合浦</label><i class="icon top-right-icon pull-right"></i></div>
-            </a>
-        </div>
-        <div class="label-box row">
-            <a href="javascript:;" id="selectDate">
-                <div class="col-md-3 col-xs-3 text-gray">出生日期</div>
-                <div class="update col-md-9 col-xs-9"><label class="text-black">2010-10-02</label><i class="icon top-right-icon pull-right"></i></div>
-            </a>
-        </div>
-    </div>
-    <div class="update-msg-box bg-white">
-        <div class="label-box row">
-            <a href="update-phone.html">
-                <div class="col-md-3 col-xs-3 text-gray">手机</div>
-                <div class="update col-md-9 col-xs-9"><label class="text-black">12345678953</label><i class="icon top-right-icon pull-right"></i></div>
-            </a>
-        </div>
-        <div class="label-box row">
-            <a href="update-password.html">
-                <div class="col-md-3 col-xs-3 text-gray">密码</div>
-                <div class="update col-md-9 col-xs-9"><label class="text-black">*************</label><i class="icon top-right-icon pull-right"></i></div>
-            </a>
-        </div>
-        <div class="label-box row">
-            <a href="update-email.html">
-                <div class="col-md-3 col-xs-3 text-gray">邮箱</div>
-                <div class="update col-md-9 col-xs-9"><label class="text-black">54654654654@qq.com</label><i class="icon top-right-icon pull-right"></i></div>
-            </a>
-        </div>
-    </div>
-    <div class="update-msg-box bg-white">
-        <div class="label-box row">
-            <a href="update-introdution.html">
-                <div class="col-md-3 col-xs-3 text-gray">个性签名</div>
-                <div class="update col-md-9 col-xs-9"><label class="text-black">快来编辑你的个人介绍吧</label><i class="icon top-right-icon pull-right"></i></div>
-            </a>
-        </div>
-    </div>
-</div>
-<!--底部浮动-->
-<div class="pl-bottom-wrapper" style="bottom: 0;display: none">
-    <!--性别-->
-    <div class="select-sex-box top-qx" style="display: none">
-        <div class="top-qx-box bg-gray"><p class="pull-left show-num">取消</p><p class="pull-right text-gray-b">完成</p></div>
-        <div class="select-option">
-            <div class="sex data">男</div>
-            <div class="sex data">女</div>
-            <div class="sex data active">保密</div>
-        </div>
-    </div>
-    <!--城市-->
-    <!--出生日期-->
-    <!--头像-->
-    <div class="select-pic-box top-qx" style="display: none">
-      <input type="hidden" id="head-pic" value="">
-    </div>
-</div>
-<!--遮罩层-->
-<div class="mask"></div>
 <script>
-    $(".sex").click(function () {
-        $(this).addClass("active").siblings().removeClass("active");
-    });
-
-    // openPicFile({
-    //     uploadfileID:"classPic",//input[type="file"]的文件id,
-    //     sawfile_target:".classPic_saw_file",//显示图片的div选择器,
-    //     uploadBtn:"#classPicBtn"//提交按钮选择器,
-    //     //employeeImageUploadUrl:图片上传接口地址,
-    //     //PicUrl_target:储存图片服务器地址的input[type='hidden']选择器
-    // });
-
-    function setSex(){
-        $(".pl-bottom-wrapper").show();
-        $(".select-sex-box").show();
-        $(".mask").show();
-    }
-
-
-    $(".show-num").click(function () {
-        $(".pl-bottom-wrapper").hide();
-        fixedBottom();
-    });
+    var updateData = new Vue({
+        el: '#updateData',
+        data: {
+            number:"",
+            name:"",
+            sex: "",
+            sexID: "",
+            city: "",
+            cityID: "",
+            birthday: "",
+            phoneNumber: "",
+            password: "",
+            email: "",
+            motto: "",
+            label: "",
+            watchMotto:false,
+        },
+        beforeCreate:function(){
+            var _self=this;
+            ajaxPost(url,"",function(data){
+                console.log(data);
+                _self.name= data.msg.nichen;
+                _self.number = data.msg.qq;
+                _self.sex= data.msg.sex;
+                _self.sexID= data.msg.sex;
+                _self.city= data.msg.name;
+                _self.cityID= data.msg.name;
+                _self.birthday= data.msg.ads;
+                _self.phoneNumber= data.msg.logtime;
+                _self.password= data.msg.regtime;
+                _self.email= data.msg.email;
+                _self.motto= data.msg.email;
+            })
+        },
+        watch:{
+          motto:function () {
+              if(this.motto==""){
+                  this.watchMotto=true;
+                  this.motto = "来编辑个性签名吧~";
+              }else {
+                  this.watchMotto=false;
+              }
+          }  
+        },
+        methods: {
+            setSex:function () {
+                $(".pl-bottom-wrapper").show();
+                $(".select-sex-box").show();
+                $(".mask").show();
+            },
+            hideMask:function () {
+                $(".pl-bottom-wrapper").hide();
+                fixedBottom();
+            },
+            addARmoveS:function () {
+                $(this).addClass("active").siblings().removeClass("active");
+            }
+        }
+    })
 </script>
 <script>
     var mobileSelect5 = new MobileSelect({
@@ -149,7 +196,16 @@
         wheels: "city",
         position:[2, 2, 2],
         callback:function(indexArr, data){
-            console.log(data[data.length-1].id+"/"+data[data.length-1].name);
+            var cityStr="";
+            for (var i in data){
+                if(i!=data.length-1){
+                    cityStr += data[i].name+"-"
+                }else {
+                    cityStr += data[i].name;
+                }
+            }
+            console.log(data[data.length-1].id+"/"+cityStr);
+            $("#city").html(cityStr)
         }
     });
 
@@ -176,8 +232,16 @@
                 }
             }
             console.log(dayStr);
+            $("#birth").html(dayStr)
         }
     });
+
+
+</script>
+<script>
+
+
+
 </script>
 </body>
 </html>

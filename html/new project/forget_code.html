@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="找回密码">
+    <meta name="description" content="找回密码">
+    <title>找回密码</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/vue.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body class="bg-gray">
+<div id="getNewPassword">
+
+    <div class="nav-pl-top update-data" style="border-bottom: none">
+        找回密码
+        <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+        <a class="over" v-on:click="submitData">完成</a>
+    </div>
+    <div style="height: .5rem"></div>
+    <div class="container bg-gray">
+        <div>
+            <div class="pw-input-box bg-white">
+                <i class="icon phone-icon"></i>
+                <div class="pw-input"><input class="input phone" type="number" v-model="phoneNumber" maxlength="11" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="请输入新的手机号码"></div>
+                <i class="icon clear-icon"  v-bind:class="{ active: clearPhone }" v-on:click="clear('phone')"></i>
+            </div>
+            <div class="pw-tip text-red-b">{{phoneCheckTip}}</div>
+        </div>
+        <div>
+            <div class="pw-input-box bg-white">
+                <i class="icon yzm-icon"></i>
+                <div class="pw-input" style="margin-right: .8rem"><input class="input" type="text" v-model="code" maxlength="4" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="输入验证码"></div>
+                <a class="get-code pull-right" v-on:click="intval">获取验证码</a>
+            </div>
+            <div class="pw-tip text-red-b">{{codeCheckTip}}</div>
+        </div>
+        <div>
+            <div>
+                <div class="pw-input-box bg-white">
+                    <i class="icon pw-icon"></i>
+                    <div class="pw-input"><input  v-model="newPassword" class="input phone" type="password" minlength="6" maxlength="16"  placeholder="请输入新密码"></div>
+                    <i class="icon clear-icon" v-bind:class="{ active: clearNewPw }" v-on:click="clear('newPw')"></i>
+                </div>
+            </div>
+            <div class="pw-tip text-red-b">{{NewPwCheckTip}}</div>
+        </div>
+        <div>
+            <div class="pw-input-box bg-white">
+                <i class="icon pw-icon"></i>
+                <div class="pw-input"><input  v-model="passwordCheck" class="input phone" type="password" minlength="6" maxlength="16"  placeholder="请确认新密码"></div>
+                <i class="icon clear-icon" v-bind:class="{ active: clearCheckPw }" v-on:click="clear('checkPw')"></i>
+            </div>
+            <div class="pw-tip text-red-b">{{pwCheckTip}}</div>
+        </div>
+
+    </div>
+    <div class="tip-box">{{tip}}</div>
+</div>
+
+<script>
+    var getNewPassword = new Vue({
+        el: '#getNewPassword',
+        data: {
+            phoneNumber: "",
+            code:"",
+            newPassword:"",
+            passwordCheck:"",
+            clearPhone:false,
+            clearNewPw:false,
+            clearCheckPw:false,
+            time:60,
+            pwCheckTip:"",
+            phoneCheckTip:"",
+            codeCheckTip:"",
+            NewPwCheckTip:"",
+            tip:"",
+            interval:function () {},
+            data:{
+                phone:this.phoneNumber,
+                code:this.code
+            }
+        },
+        watch:{
+            phoneNumber:function (val) {
+                if(val==""){
+                    this.clearPhone = false;
+                }else {
+                    this.clearPhone = true;
+                }
+            },
+            newPassword:function (val) {
+                if(val==""){
+                    this.clearNewPw = false;
+                }else {
+                    this.clearNewPw = true;
+                }
+            },
+            passwordCheck:function (val) {
+                this.pwCheckTip="";
+                if(val==""){
+                    this.clearCheckPw = false;
+                }else {
+                    this.clearCheckPw = true;
+                }
+            }
+        },
+        methods: {
+            submitData:function () {
+                var tel = this.phoneNumber;
+                var code = this.code;
+                var checkPhone = checkMobile(tel);
+                var newPw = this.newPassword;
+                var checkPw = this.passwordCheck;
+                var newCheck = passwordID(newPw);
+                if(checkPhone!=1){
+                    this.phoneNumber="";
+                    this.phoneCheckTip = "手机号格式错误！";
+                    return;
+                }
+                if(code.length!=4){
+                    this.codeCheckTip = "验证码错误！";
+                    return;
+                }
+                if(newCheck != 1){
+                    this.newPassword="";
+                    this.passwordCheck="";
+                    this.NewPwCheckTip = "新密码格式错误！";
+                    return;
+                }
+                if(newPw != checkPw){
+                    this.pwCheckTip="两次密码输入不一致";
+                    return;
+                }
+                if(checkPhone == 1 && code.length == 4&&newCheck == 1 && newPw == checkPw){
+                    this.tip = "yes!";
+                    $(".tip-box").fadeIn();
+                    setTimeout(function () {
+                        $(".tip-box").fadeOut();
+                        this.tip = "";
+                    },1000)
+                    // ajaxPost(this.data,"url",function (data) {
+                    //
+                    // });
+                }
+            },
+            clear:function (type) {
+                if(type == "phone"){
+                    this.phoneNumber= "";
+                }
+                if(type == "newPw"){
+                    this.newPassword= "";
+                }
+                if(type == "checkPw"){
+                    this.passwordCheck= "";
+                }
+            },
+            intval:function () {
+                this.getTime();
+                this.interval = setInterval(this.getTime,1000);
+            },
+            getTime:function () {
+                if(this.time==60){
+                    $(".get-code").unbind("click");
+                }
+                this.time--;
+                $(".get-code").addClass("text-gray").html(this.time+"S后重发");
+                if(this.time==0){
+                    clearInterval(interval);
+                    $(".get-code").removeClass("text-gray").html("获取验证码").bind("click",this.intval);
+                    this.time=60;
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

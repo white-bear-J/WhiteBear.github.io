@@ -26,18 +26,25 @@
     <i class="icon index-close-icon" onclick="window.close();"></i>
 </div>
 <div class="container bg-white" id="login">
-    <div class="pw-input-box bg-gray">
-        <i class="icon phone-icon"></i>
-        <div class="pw-input" style="margin-right: 0"><input class="input phone bg-gray" id="phone" style="width: 100%" type="number" maxlength="11" v-model="phoneNumber"  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="手机号码"></div>
-        <i class="icon clear-icon"  v-bind:class="{ active: clearPhone }" v-on:click="clear('phone')"></i>
-    </div>
     <div>
         <div class="pw-input-box bg-gray">
-            <i class="icon pw-icon"></i>
-            <div class="pw-input" style="margin-right: 0"><input id="newPw" class="input phone bg-gray" type="password" minlength="6" maxlength="16" v-model="password"  placeholder="请输入密码"></div>
-            <i class="icon clear-icon" v-bind:class="{ active: clearPw }" v-on:click="clear('password')"></i>
+            <i class="icon phone-icon"></i>
+            <div class="pw-input" style="margin-right: 0"><input class="input phone bg-gray" id="phone" style="width: 100%" type="number" maxlength="11" v-model="phoneNumber"  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="手机号码"></div>
+            <i class="icon clear-icon"  v-bind:class="{ active: clearPhone }" v-on:click="clear('phone')"></i>
         </div>
+        <div class="pw-tip text-red-b">{{phoneCheckTip}}</div>
     </div>
+    <div>
+        <div>
+            <div class="pw-input-box bg-gray">
+                <i class="icon pw-icon"></i>
+                <div class="pw-input" style="margin-right: 0"><input id="newPw" class="input phone bg-gray" type="password" minlength="6" maxlength="16" v-model="password"  placeholder="请输入密码"></div>
+                <i class="icon clear-icon" v-bind:class="{ active: clearPw }" v-on:click="clear('password')"></i>
+            </div>
+        </div>
+        <div class="pw-tip text-red-b">{{passwordTip}}</div>
+    </div>
+
     <div class="login-btn">
         <button class="login-submit" v-on:click="submitData">登录</button>
     </div>
@@ -45,6 +52,7 @@
         <a class="block pull-left type">忘记密码</a>
         <a class="block pull-right type" href="login_code.html">验证码登录</a>
     </div>
+    <div class="tip-box">{{tip}}</div>
 </div>
 
 <div class="toRegister"><a class="hrefRegister" href="register.html">注册 > </a></div>
@@ -55,6 +63,9 @@
         data: {
             phoneNumber: "",
             password:"",
+            phoneCheckTip:"",
+            passwordTip:"",
+            tip:"",
             clearPhone:false,
             clearPw:false,
             // time:60,
@@ -88,14 +99,19 @@
                 var checkPw = passwordID(pw);
                 if(checkPhone!=1){
                     this.phoneNumber="";
-                    alert("手机号格式错误！")
+                    this.phoneCheckTip = "手机号格式错误！";
                 }
                 if(checkPw!=1){
                     this.password="";
-                    alert("密码格式错误！")
+                    this.passwordTip = "密码格式错误！";
                 }
                 if(checkPhone == 1&&checkPw == 1){
-                    alert("yes!");
+                    this.tip = "yes!";
+                    $(".tip-box").fadeIn();
+                    setTimeout(function () {
+                        $(".tip-box").fadeOut();
+                        this.tip = "";
+                    },1000)
                     // ajaxPost(this.data,"url",function (data) {
                     //
                     // });

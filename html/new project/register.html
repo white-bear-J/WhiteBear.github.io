@@ -26,15 +26,21 @@
     <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
 </div>
 <div class="container bg-white" id="register">
-    <div class="pw-input-box bg-gray">
-        <i class="icon phone-icon"></i>
-        <div class="pw-input"><input class="input phone bg-gray" id="phone" type="number" v-model="phoneNumber" maxlength="11" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="手机号码"></div>
-        <i class="icon clear-icon"  v-bind:class="{ active: clearPhone }" v-on:click="clear('phone')"></i>
+    <div>
+        <div class="pw-input-box bg-gray">
+            <i class="icon phone-icon"></i>
+            <div class="pw-input"><input class="input phone bg-gray" id="phone" type="number" v-model="phoneNumber" maxlength="11" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="手机号码"></div>
+            <i class="icon clear-icon"  v-bind:class="{ active: clearPhone }" v-on:click="clear('phone')"></i>
+        </div>
+        <div class="pw-tip text-red-b">{{phoneTip}}</div>
     </div>
-    <div class="pw-input-box bg-gray">
-        <i class="icon yzm-icon"></i>
-        <div class="pw-input" style="margin-right: .8rem"><input class="input bg-gray"  v-model="code" id="yzm" type="text" maxlength="4" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="输入验证码"></div>
-        <a class="get-code pull-right" v-on:click="intval">获取验证码</a>
+    <div>
+        <div class="pw-input-box bg-gray">
+            <i class="icon yzm-icon"></i>
+            <div class="pw-input" style="margin-right: .8rem"><input class="input bg-gray"  v-model="code" id="yzm" type="text" maxlength="4" value=""  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="输入验证码"></div>
+            <a class="get-code pull-right" v-on:click="intval">获取验证码</a>
+        </div>
+        <div class="pw-tip text-red-b">{{codeTip}}</div>
     </div>
     <div>
         <div class="pw-input-box bg-gray">
@@ -42,6 +48,7 @@
             <div class="pw-input"><input id="newPw" class="input phone bg-gray" v-model="password" type="password" minlength="6" maxlength="16" value=""  placeholder="请输入密码"></div>
             <i class="icon clear-icon" v-bind:class="{ active: clearPw }" v-on:click="clear('password')"></i>
         </div>
+        <div class="pw-tip text-red-b">{{passwordTip}}</div>
     </div>
     <div>
         <div class="pw-input-box bg-gray">
@@ -56,6 +63,8 @@
     <div class="register-tip">
         温馨提示：点击注册代表您已阅读并同意<a class="text-blue">用户协议</a>。
     </div>
+
+    <div class="tip-box">{{tip}}</div>
 </div>
 <script>
     var register = new Vue({
@@ -65,6 +74,10 @@
             code:"",
             password:"",
             name:"",
+            phoneTip:"",
+            passwordTip:"",
+            codeTip:"",
+            tip:"",
             clearPhone:false,
             clearPw:false,
             clearName:false,
@@ -82,6 +95,7 @@
                 if(val==""){
                     this.clearPhone = false;
                 }else {
+                    this.phoneTip = "";
                     this.clearPhone = true;
                 }
             },
@@ -89,6 +103,7 @@
                 if(val==""){
                     this.clearPw = false;
                 }else {
+                    this.passwordTip = "";
                     this.clearPw = true;
                 }
             },
@@ -97,6 +112,12 @@
                     this.clearName = false;
                 }else {
                     this.clearName = true;
+                }
+            },
+            code:function (val) {
+                if(val!=""){
+                    this.codeTip = "";
+                    this.clearName = false;
                 }
             }
         },
@@ -108,21 +129,26 @@
                 var checkPhone = checkMobile(tel);
                 var checkPw = passwordID(pw);
                 if(checkPhone!=1){
+                    this.phoneTip = "手机号格式错误！";
                     this.phoneNumber="";
-                    alert("手机号格式错误！");
                     return;
                 }
                 if(code.length!=4){
-                    alert("验证码错误！");
+                    this.codeTip = "验证码错误！";
                     return;
                 }
                 if(checkPw!=1){
                     this.password="";
-                    alert("密码格式错误！");
+                    this.passwordTip = "密码格式错误！";
                     return;
                 }
                 if(checkPhone == 1 && code.length == 4){
-                    alert("yes!");
+                    this.tip = "yes!";
+                    $(".tip-box").fadeIn();
+                    setTimeout(function () {
+                        $(".tip-box").fadeOut();
+                        this.tip = "";
+                    },1000)
                     // ajaxPost(this.data,"url",function (data) {
                     //
                     // });

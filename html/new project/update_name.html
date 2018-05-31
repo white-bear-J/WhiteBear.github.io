@@ -13,24 +13,57 @@
     <title>修改昵称</title>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/vue.min.js"></script>
     <script src="assets/js/common.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
 </head>
 <body class="bg-gray">
-<div class="nav-pl-top update-data" style="border-bottom: none">
-    修改昵称
-    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
-    <a class="over">完成</a>
-</div>
-<div style="height: .5rem"></div>
-<div class="container bg-gray">
-    <div class="update-input-box bg-white">
-        <input class="input name" id="name" type="text" maxlength="10" value="" placeholder="不超过10个字">
-        <i class="icon clear-icon"></i>
+<div id="updateName">
+    <div class="nav-pl-top update-data" style="border-bottom: none">
+        修改昵称
+        <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+        <a class="over" v-on:click="submitData()">完成</a>
+    </div>
+    <div style="height: .5rem"></div>
+    <div class="container bg-gray">
+        <div class="update-input-box bg-white">
+            <input class="input name" v-model="name" type="text" maxlength="10" value="" placeholder="不超过10个字">
+            <i class="icon clear-icon"  v-bind:class="{ active: clearName }" v-on:click="clear('name')"></i>
+        </div>
     </div>
 </div>
+<script>
+    var updateName = new Vue({
+        el: '#updateName',
+        data: {
+            name: "",
+            clearName:false,
+        },
+        watch:{
+            name:function (val) {
+                if(val==""){
+                    this.clearName = false;
+                }else {
+                    this.clearName = true;
+                }
+            }
+        },
+        methods: {
+            // submitData:function (){
+            //         ajaxPost({name:this.name},url,function (data) {
+            //
+            //         });
+            // },
+            clear:function (type) {
+                if(type == "name"){
+                    this.name= "";
+                }
+            }
+        }
+    })
+</script>
 <script>
     $("#name").bind("input propertychange",function () {
         var i = $(this).val().length;

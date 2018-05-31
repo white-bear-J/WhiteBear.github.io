@@ -259,7 +259,7 @@ function addAcitive(t) {
     }
 }
 
-function ajaxPost(data,url,success) {
+function ajaxPost(url,data,success) {
     $.ajax({
         type:"POST",
         url:url,

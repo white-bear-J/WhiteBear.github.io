@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="媒体认证">
+    <meta name="description" content="媒体认证">
+    <title>媒体认证</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/tool/selectWheel/mobileSelect.css">
+    <script src="assets/tool/selectWheel/city.js"></script>
+    <script src="assets/tool/selectWheel/date.js"></script>
+    <script src="assets/tool/selectWheel/mobileSelect.js" type="text/javascript"></script>
+</head>
+<body class="bg-gray">
+<div class="nav-pl-top update-data" style="border-bottom: none">
+    媒体认证
+    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+    <label class="sh pull-right text-red">审核中</label>
+</div>
+<div style="height: .5rem"></div>
+<div class="container bg-gray" style="padding-bottom: 0">
+    <div class="certification-box bg-white">
+        <div class="certification-group">
+            <i class="icon rz-icon rz-name-icon"></i>
+            <div class="rz-input"><input class="input phone bg-white" type="text" maxlength="11" v-model="name"  placeholder="填写您的真实姓名"></div>
+        </div>
+        <div class="certification-group">
+            <i class="icon rz-icon rz-id-icon"></i>
+            <div class="rz-input"><input class="input phone bg-white" type="number" v-model="IDCard"  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="填写身份证号码"></div>
+        </div>
+        <div class="certification-group">
+            <i class="icon rz-icon rz-organization-icon"></i>
+            <div class="rz-input"><input class="input phone bg-white" type="text" maxlength="11" v-model="organization"  placeholder="填写机构名称"></div>
+        </div>
+        <div class="certification-group">
+            <i class="icon rz-icon rz-code-icon"></i>
+            <div class="rz-input"><input class="input phone bg-white" type="number" v-model="code"  onkeyup="value=value.replace(/[^\d]/g,'');"  placeholder="填写统一社会信用代码"></div>
+        </div>
+    </div>
+    <div class="certification-box bg-white">
+        <div class="certification-group" id="selectType">
+            <div class="type-select-box">
+                <i class="icon rz-icon rz-type-icon"></i>
+                <div class="rz-input">
+                    <div class="select-type-class">
+                        <div class="pull-left option-select-name">选择开户类型</div>
+                        <div class="pull-right"><i class="icon select-sanjiao-icon"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="select-option bg-white select-type-option">
+                <div class="option" data-id="0">支付宝</div>
+                <div class="option" data-id="1">中国银行</div>
+                <div class="option" data-id="2">建设银行</div>
+            </div>
+        </div>
+        <div class="certification-group" id="address">
+            <i class="icon rz-icon rz-address-icon"></i>
+            <div class="rz-input"><input class="input phone bg-white" type="text" v-model="address"  placeholder="开户银行地址"></div>
+        </div>
+        <div class="certification-group">
+            <i class="icon rz-icon rz-number-icon"></i>
+            <div class="rz-input"><input class="input phone bg-white" type="text" v-model="address" onkeyup="value=value.replace(/[^\d]/g,'');" placeholder="开户账号"></div>
+        </div>
+    </div>
+    <div class="pic-upload-box-group">
+        <div class="pic-upload-small-box IDPic">
+            <input class="rz-big-uploadPic" id="IDPic" type="file">
+            <div class="saw-file IDPic-saw"></div>
+            <label class="tip">手持身份证照片</label>
+        </div>
+        <div class="pic-upload-small-box zzPic">
+            <input class="rz-big-uploadPic" id="zzPic" type="file">
+            <div class="saw-file zzPic-saw"></div>
+            <label class="tip">营业执照</label>
+        </div>
+        <div class="pic-upload-small-box zlPic">
+            <input class="rz-big-uploadPic" id="zlPic" type="file">
+            <div class="saw-file zlPic-saw"></div>
+            <label class="tip">授权资料扫描件</label>
+        </div>
+
+    </div>
+    <div class="upload-zl"><a class="block text-blue">授权资料扫描件下载地址</a></div>
+    <div class="submit-box" style="margin-top: 0">
+        <div><button>提交</button></div>
+        <div class="tip">温馨提示：点击注册提交您已阅读并同意<a class="text-blue">用户协议</a>。 </div>
+    </div>
+</div>
+<script>
+
+    $(".type-select-box").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+            $(".select-type-option").hide();
+        }else {
+            $(this).addClass("active");
+            $(".select-type-option").show();
+        }
+    });
+
+    $(".option").bind("click",function () {
+        var optionName = $(this).html();
+        if(optionName == "支付宝"){
+            $("#address").hide();
+        }else {
+            $("#address").show();
+        }
+        $(".option-select-name").html(optionName);
+        $(".type-select-box").removeClass("active");
+        $(".select-type-option").hide();
+    });
+
+
+    openPicFile({
+        uploadfileID:"IDPic",//input[type="file"]的文件id,
+        sawfile_target:".IDPic-saw",//显示图片的div选择器,
+        // uploadBtn:"#classPicBtn"//提交按钮选择器,
+        //employeeImageUploadUrl:图片上传接口地址,
+        //PicUrl_target:储存图片服务器地址的input[type='hidden']选择器
+    });
+    openPicFile({
+        uploadfileID:"zzPic",//input[type="file"]的文件id,
+        sawfile_target:".zzPic-saw",//显示图片的div选择器,
+        // uploadBtn:"#classPicBtn"//提交按钮选择器,
+        //employeeImageUploadUrl:图片上传接口地址,
+        //PicUrl_target:储存图片服务器地址的input[type='hidden']选择器
+    });
+    openPicFile({
+        uploadfileID:"zlPic",//input[type="file"]的文件id,
+        sawfile_target:".zlPic-saw",//显示图片的div选择器,
+        // uploadBtn:"#classPicBtn"//提交按钮选择器,
+        //employeeImageUploadUrl:图片上传接口地址,
+        //PicUrl_target:储存图片服务器地址的input[type='hidden']选择器
+    });
+</script>
+</body>
+</html>

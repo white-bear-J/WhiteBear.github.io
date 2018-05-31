@@ -17,9 +17,7 @@ $(function () {
     });
 
     $("body").on("touchend",function (e) {
-        if(_end >0){
-            console.log("左滑或上滑 "+_end);
-        }else{
+        if(_end <-10){
             console.log("右滑或下滑"+_end);
             slideDownStep2();
             //刷新成功则
@@ -41,7 +39,7 @@ function slideDownStep1(dist){ // dist 下滑的距离，用以拉长背景模�
 //第二步：下拉，然后松开，
 function slideDownStep2(){
     //刷新数据
-    if($(window).scrollTop()==0){
+    if($(window).scrollTop()<0){
         location.reload();
     }
 }
@@ -49,4 +47,5 @@ function slideDownStep2(){
 function slideDownStep3(){
     var slideDown = $(".up-box");
     $(slideDown).hide();
+    _end = 0;
 }

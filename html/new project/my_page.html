@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta name="format-detection" content="email=no"/>
+    <meta name="keywords" content="个人主页">
+    <meta name="description" content="个人主页">
+    <title>个人主页</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/renovate_update.js?v=1"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+</head>
+<body class="bg-gray">
+<div class="update-box bg-gray up-box" style="display: none">
+    <div class="content">
+        <i class="icon jiazai-icon pull-left"></i>
+        <label class="pull-left">松开刷新...</label>
+    </div>
+</div>
+<div class="container bg-gray" style="padding-bottom: 0">
+    <div class="personal-page-msg">
+        <div class="personal-page-msg-header">
+            <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-icon"></i></a>
+            <a class="cz" href="javascript:;"><i class="icon more-white-icon"></i></a>
+        </div>
+        <div class="personal-page-msg-content">
+            <div class="head-pic">
+                <a>
+                    <img class="pic" src="assets/img/index/touxiang.png">
+                    <i class="icon sex-icon man"></i>
+                </a>
+            </div>
+            <div class="msg-detail">
+                <div class="name"><label class="p-name pull-left">离离原上草</label><span class="quanwei pull-left"><i class="icon renzheng-icon"></i></span><i class="icon vip-icon pull-left"></i></div>
+                <div class="data">成长：<label class="text-green">56</label><span>|</span>魅力：<label class="text-red">45</label><span>|</span>财富：<label class="text-yellow">45</label></div>
+                <div class="motto">个性签名</div>
+            </div>
+            <div class="to-update">
+                <button class="gz">
+                    <i class="icon add-gz-icon pull-left"></i>
+                    <label class="pull-left">关注</label>
+                </button>
+            </div>
+        </div>
+        <div class="personal-page-msg-bottom row">
+            <div class="col-xs-4 col-md-4">
+                <p>1.5W</p>
+                <p class="text-white-purple">总排名</p>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <p>45</p>
+                <p class="text-white-purple">地区排名</p>
+            </div>
+            <div class="col-xs-4 col-md-4">
+                <p>452</p>
+                <p class="text-white-purple">主页人气</p>
+            </div>
+        </div>
+    </div>
+    <div class="personal-page-data bg-white">
+        <div class="page-control vip-page">
+           <button class="control-btn tab active" title="video">视频</button>
+           <button class="control-btn tab" title="article">文章</button>
+        </div>
+        <div class="page-control no-vip-page" style="display: none">
+            <button class="control-btn tab active" title="video">视频收藏</button>
+            <button class="control-btn tab" title="article">文章收藏</button>
+        </div>
+        <div>
+            <div id="video">
+                <div class="index-data">
+                    <div class="data-list collect-video-list" data-type="1">
+                        <div class="content row">
+                            <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                            <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                            <div class="video-box big-video">
+                                <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                                <div class="pop"></div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon hb-icon to-ds"></i>1526</div>
+                                <!--<div class="group-li last pull-right"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-video-list" data-type="1">
+                        <div class="content row">
+                            <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                            <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                            <div class="video-box big-video">
+                                <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                                <div class="pop"></div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon hb-icon to-ds"></i>1526</div>
+                                <!--<div class="group-li last pull-right"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-video-list" data-type="1">
+                        <div class="content row">
+                            <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                            <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                            <div class="video-box big-video">
+                                <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                                <div class="pop"></div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon hb-icon to-ds"></i>1526</div>
+                                <!--<div class="group-li last pull-right"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-video-list" data-type="1">
+                        <div class="content row">
+                            <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                            <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                            <div class="video-box big-video">
+                                <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                                <div class="pop"></div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon hb-icon to-ds"></i>1526</div>
+                                <!--<div class="group-li last pull-right"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-video-list" data-type="1">
+                        <div class="content row">
+                            <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                            <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                            <div class="video-box big-video">
+                                <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                                <div class="pop"></div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon hb-icon to-ds"></i>1526</div>
+                                <!--<div class="group-li last pull-right"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-video-list" data-type="1">
+                        <div class="content row">
+                            <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                            <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                            <div class="video-box big-video">
+                                <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                                <div class="pop"></div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon hb-icon to-ds"></i>1526</div>
+                                <!--<div class="group-li last pull-right"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-video-list" data-type="1">
+                        <div class="content row">
+                            <div class="words"><a>一周热门影视 | 豆瓣8.4  国产综艺终于不靠流量明星刷眼球了。</a></div>
+                            <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                            <div class="video-box big-video">
+                                <div class="num"><i class="icon point-left-icon pull-left"></i><span class="pull-left">153万</span><span class="pull-right">15:20</span></div>
+                                <div class="pop"></div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon hb-icon to-ds"></i>1526</div>
+                                <!--<div class="group-li last pull-right"></div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="article" style="display: none">
+                <div class="index-data personal-page-index-data">
+                    <div class="data-list collect-article-list" data-type="1">
+                        <div class="content row">
+                            <div class="words">
+                                <div class="word-title"><a href="article_detail.html">欧洲是沉睡的美人，一觉睡出了遍地vintage欧洲是沉睡的美人，一觉睡出了遍地vintage</a></div>
+                                <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                                <div class="word-contet">
+                                    一月初离开欧洲前，我当了一回伯尔尼纳快车的乘客。
+                                    伯尔尼纳快车并不快，这趟南北走向的高山窄轨火...
+                                </div>
+                                <div class="pic-box row">
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon see-icon"></i>1526</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-article-list" data-type="1">
+                        <div class="content row">
+                            <div class="words">
+                                <div class="word-title"><a href="article_detail.html">欧洲是沉睡的美人，一觉睡出了遍地vintage欧洲是沉睡的美人，一觉睡出了遍地vintage</a></div>
+                                <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                                <div class="word-contet">
+                                    一月初离开欧洲前，我当了一回伯尔尼纳快车的乘客。
+                                    伯尔尼纳快车并不快，这趟南北走向的高山窄轨火...
+                                </div>
+                                <div class="pic-box row">
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon see-icon"></i>1526</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-article-list" data-type="1">
+                        <div class="content row">
+                            <div class="words">
+                                <div class="word-title"><a href="article_detail.html">欧洲是沉睡的美人，一觉睡出了遍地vintage欧洲是沉睡的美人，一觉睡出了遍地vintage</a></div>
+                                <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                                <div class="word-contet">
+                                    一月初离开欧洲前，我当了一回伯尔尼纳快车的乘客。
+                                    伯尔尼纳快车并不快，这趟南北走向的高山窄轨火...
+                                </div>
+                                <div class="pic-box row">
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon see-icon"></i>1526</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-article-list" data-type="1">
+                        <div class="content row">
+                            <div class="words">
+                                <div class="word-title"><a href="article_detail.html">欧洲是沉睡的美人，一觉睡出了遍地vintage欧洲是沉睡的美人，一觉睡出了遍地vintage</a></div>
+                                <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                                <div class="word-contet">
+                                    一月初离开欧洲前，我当了一回伯尔尼纳快车的乘客。
+                                    伯尔尼纳快车并不快，这趟南北走向的高山窄轨火...
+                                </div>
+                                <div class="pic-box row">
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon see-icon"></i>1526</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-article-list" data-type="1">
+                        <div class="content row">
+                            <div class="words">
+                                <div class="word-title"><a href="article_detail.html">欧洲是沉睡的美人，一觉睡出了遍地vintage欧洲是沉睡的美人，一觉睡出了遍地vintage</a></div>
+                                <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                                <div class="word-contet">
+                                    一月初离开欧洲前，我当了一回伯尔尼纳快车的乘客。
+                                    伯尔尼纳快车并不快，这趟南北走向的高山窄轨火...
+                                </div>
+                                <div class="pic-box row">
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon see-icon"></i>1526</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-article-list" data-type="1">
+                        <div class="content row">
+                            <div class="words">
+                                <div class="word-title"><a href="article_detail.html">欧洲是沉睡的美人，一觉睡出了遍地vintage欧洲是沉睡的美人，一觉睡出了遍地vintage</a></div>
+                                <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                                <div class="word-contet">
+                                    一月初离开欧洲前，我当了一回伯尔尼纳快车的乘客。
+                                    伯尔尼纳快车并不快，这趟南北走向的高山窄轨火...
+                                </div>
+                                <div class="pic-box row">
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon see-icon"></i>1526</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-list collect-article-list" data-type="1">
+                        <div class="content row">
+                            <div class="words">
+                                <div class="word-title"><a href="article_detail.html">欧洲是沉睡的美人，一觉睡出了遍地vintage欧洲是沉睡的美人，一觉睡出了遍地vintage</a></div>
+                                <p class="posting-time">2018-04-11&nbsp;12:33</p>
+                                <div class="word-contet">
+                                    一月初离开欧洲前，我当了一回伯尔尼纳快车的乘客。
+                                    伯尔尼纳快车并不快，这趟南北走向的高山窄轨火...
+                                </div>
+                                <div class="pic-box row">
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                    <div class="article-pic pull-left">
+                                        <img class="pic pull-left" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg" alt="插图">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom-icon-group">
+                                <div class="group-li pull-left"><i class="icon dz-icon"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon ds-icon to-ds"></i>1526</div>
+                                <div class="group-li pull-left"><i class="icon see-icon"></i>1526</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="update-box bg-gray">
+        <div class="content">
+            <i class="icon jiazai-icon pull-left"></i>
+            <label class="pull-left">正在刷新...</label>
+        </div>
+    </div>
+</div>
+<!--底部浮动-->
+<div class="pl-bottom-wrapper" style="bottom: 0">
+    <!--分享-->
+    <div class="share-box pop-box bg-gray" style="display: none">
+        <div class="share-list-outsaide-box">
+            <div class="share-list-box">
+                <div class="share-list">
+                    <div class="icon weibo-icon pull-left"><a class="block"></a></div>
+                    <div class="icon pengyouquan-icon pull-left"><a class="block"></a></div>
+                    <div class="icon qq-icon pull-left"><a class="block"></a></div>
+                    <div class="icon wechat-icon pull-left"><a class="block"></a></div>
+                    <div class="icon qqzone-icon pull-left"><a class="block"></a></div>
+                    <div class="icon qqzone-icon pull-left"><a class="block"></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="qx-btn bg-white show-num">取消</div>
+    </div>
+    <!--打赏-->
+    <div class="dashang-box pop-box bg-gray" style="display: none">
+        <div class="choose-gift">
+            <div class="title">打赏<i class="icon index-close-icon show-num"></i></div>
+            <div class="b-gift-box bg-white">
+                <div class="page-box">
+                    <div class="gift-page">
+                        <div class="gift pull-left active">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                        <div class="gift pull-left">
+                            <div class="ds-img">
+                                <img class="gift-img" src="assets/img/pop/gift.png">
+                            </div>
+                            <div class="ds-type">么么哒</div>
+                            <div class="ds-cost">50M币</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input-number">
+                <div class="number row">
+                    <div class="col-xs-2">数量:</div>
+                    <div class="col-xs-2 choose"><a class="block">1</a></div>
+                    <div class="col-xs-2 choose"><a class="block">20</a></div>
+                    <div class="col-xs-2 choose"><a class="block">50</a></div>
+                    <div class="col-xs-2 choose active"><a class="block">100</a></div>
+                    <div class="col-xs-2 user-defined">自定义</div>
+                </div>
+                <div class="submit">
+                    <button class="submit-btn show-num">发表</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--操作-->
+    <div class="select-cz-box top-qx bg-gray" style="display: none">
+        <div class="select-option bg-white">
+            <div class="data share">分享</div>
+            <div class="data chat" onclick="window.location.href='chat.html'">私信</div>
+            <div class="data jvbao">举报</div>
+            <div class="data hmd">加入黑名单</div>
+        </div>
+        <div class="qx bg-white qx-cz">取消</div>
+    </div>
+</div>
+<!--举报-->
+<div class="ts-mask" style="display: none">
+    <div class="ts-box">
+        <div class="close-title bg-gray"><i class="icon index-close-icon pull-right colse-pop"></i></div>
+        <div class="ts-type-box">
+            <div class="title">举报类型<i class="icon show-more-icon pull-right show-type active"></i></div>
+            <div class="ts-type">
+                <div class="type"><i class="icon choose-icon active"></i>政治谣言</div>
+                <div class="type"><i class="icon choose-icon"></i>垃圾广告</div>
+                <div class="type"><i class="icon choose-icon"></i>人身攻击</div>
+            </div>
+        </div>
+        <div class="ts-description">
+            <div class="title">举报描述</div>
+            <div class="ts-textarea">
+                <textarea></textarea>
+            </div>
+        </div>
+        <div class="submit-btn">
+            <button class="ts-submit">发表</button>
+        </div>
+    </div>
+</div>
+<!--黑名单录弹框-->
+<div class="hmd-pop pop-box-b" style="display: none">
+    <div class="tip">确定要将此人加入黑名单？</div>
+    <div class="pop-btn">
+        <button class="no qx-cz">取消</button>
+        <button class="yes hmd-qd">确定</button>
+    </div>
+</div>
+<!--选择黑名单解除时间-->
+<div class="ts-box hmd-box pop-box-b" style="display: none">
+    <div class="ts-type-box">
+        <div class="title" style="padding: 0;line-height: .161rem">选择拉黑时间<i class="icon show-more-icon pull-right show-type active"></i></div>
+        <div class="ts-type hmd-time bg-white">
+            <div class="type"><i class="icon hmd-choose-icon active"></i>1天</div>
+            <div class="type"><i class="icon hmd-choose-icon"></i>7天</div>
+            <div class="type"><i class="icon hmd-choose-icon"></i>30天</div>
+            <div class="type"><i class="icon hmd-choose-icon"></i>1年</div>
+            <div class="type"><i class="icon hmd-choose-icon"></i>永久</div>
+        </div>
+    </div>
+    <div class="pop-btn">
+        <button class="no qx-cz">取消</button>
+        <button class="yes">确定</button>
+    </div>
+</div>
+<!--遮罩层-->
+<div class="mask"></div>
+<script>
+    $(".gz").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+            $(this).html("<i class=\"icon add-gz-icon pull-left\"></i><label class=\"pull-left\">关注</label>");
+        }else {
+            $(this).addClass("active");
+            $(this).html("已关注");
+        }
+    });
+    
+    $(".control-btn").click(tab);
+
+    $(".cz").click(function () {
+        $(".article-pl-out").hide();
+        $(".select-cz-box").show();
+        $(".mask").show();
+    });
+    $(".hmd").click(function () {
+        $(".hmd-pop").show();
+        $(".select-cz-box").hide();
+        $(".mask").show();
+    });
+
+    $(".jvbao").click(function () {
+        $(".ts-mask").show();
+        $(".select-cz-box").hide();
+        $(".pop-box-b").hide();
+        $(".mask").hide();
+    });
+
+    $(".colse-pop").click(function () {
+        $(".ts-mask").hide();
+        $(".show-type").addClass("active");
+        $(".ts-type").show();
+    });
+
+    $(".share").click(function () {
+        $(".share-box").show();
+        $(".select-cz-box").hide();
+        $(".pop-box-b").hide();
+        showMask();
+    });
+
+    $(".qx-cz").click(function () {
+        $(".select-cz-box").hide();
+        $(".pop-box-b").hide();
+        $(".mask").hide();
+    });
+
+    $(".show-num").click(function () {
+        $(".pop-box").hide();
+        fixedBottom();
+    });
+
+    $(".hmd-qd").click(function () {
+        $(".ts-box").show();
+        $(".hmd-pop").hide();
+    });
+
+    $(".show-type").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+            $(".ts-type").hide();
+        }else {
+            $(this).addClass("active");
+            $(".ts-type").show(500);
+        }
+    });
+    $(".ts-type .type").click(function () {
+        $(this).children(".icon").addClass("active");
+        $(this).siblings().children(".icon").removeClass("active");
+    });
+
+
+//    打赏
+    $(".to-ds").click(function () {
+        $(".article-pl-out").hide();
+        $(".pl-bottom-wrapper .dashang-box").show().siblings(".pop-box").hide();
+        showMask();
+    });
+
+    $(".number .choose").click(function () {
+        $(this).addClass("active").siblings(".choose").removeClass("active");
+        $(".user-defined").empty().append('自定义');
+    });
+
+    $(".gift").unbind().bind("click",function () {
+        $(".gift").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $(".user-defined").click(function () {
+        $(".choose").removeClass("active");
+        $(this).empty().append('<input class="defined_num" type="text">');
+        $(".defined_num").focus();
+    })
+    $(".dz-icon,.dz-gray-icon,.dz-white-icon").click(function () {
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");
+        }else {
+            $(this).addClass("active");
+        }
+    });
+</script>
+</body>
+</html>

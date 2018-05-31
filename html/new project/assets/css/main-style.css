@@ -46,6 +46,13 @@ option{
     appearance:none;
 }
 
+.display-none{
+    display: none;
+}
+.display-block{
+    display: block;
+}
+
 .mask{
     position: fixed;
     top: 0;
@@ -102,6 +109,9 @@ option{
 
 .text-blue{
     color: #6c8dd5!important;
+}
+.text-blue-b{
+    color: #009fe7!important;
 }
 
 .text-orange{
@@ -254,6 +264,7 @@ option{
 
 .more-icon{background: url("../../assets/img/talk/more.png") no-repeat center; background-size: 100%}
 .more-black-icon{background: url("../../assets/img/recharge/more.png") no-repeat center; background-size: 100%}
+.more-white-icon{background: url("../../assets/img/page/more.png") no-repeat center; background-size: 100%}
 
 .sanjiao-icon.your{background: url("../../assets/img/talk/sjb.png") no-repeat center; background-size: 100%}
 .sanjiao-icon.my{background: url("../../assets/img/talk/sj.png") no-repeat center; background-size: 100%}
@@ -299,6 +310,26 @@ option{
 .gg-income-icon{background: url("../../assets/img/income/guanggao.png") no-repeat center; background-size: 100%}
 
 .jiazai-icon{background: url("../../assets/img/income/jaiza.gif") no-repeat center; background-size: 100%}
+
+.left-sanjiao-icon{background: url("../../assets/img/income/xiangyou.png") no-repeat center; background-size: 100%}
+
+.zmt-income-icon{background: url("../../assets/img/renzheng/zmt.png") no-repeat center; background-size: 100%}
+.mt-income-icon{background: url("../../assets/img/renzheng/mt.png") no-repeat center; background-size: 100%}
+.qy-income-icon{background: url("../../assets/img/renzheng/qy.png") no-repeat center; background-size: 100%}
+.zf-income-icon{background: url("../../assets/img/renzheng/zf.png") no-repeat center; background-size: 100%}
+.qt-income-icon{background: url("../../assets/img/renzheng/qt.png") no-repeat center; background-size: 100%}
+
+.rz-name-icon{background: url("../../assets/img/renzheng/my.png") no-repeat center; background-size: 100%}
+.rz-id-icon{background: url("../../assets/img/renzheng/shengf.png") no-repeat center; background-size: 100%}
+.rz-type-icon{background: url("../../assets/img/renzheng/leix.png") no-repeat center; background-size: 100%}
+.rz-address-icon{background: url("../../assets/img/renzheng/dizhi.png") no-repeat center; background-size: 100%}
+.rz-number-icon{background: url("../../assets/img/renzheng/zhanghu.png") no-repeat center; background-size: 100%}
+.rz-organization-icon{background: url("../../assets/img/renzheng/jigou.png") no-repeat center; background-size: 100%}
+.rz-code-icon{background: url("../../assets/img/renzheng/xinyong.png") no-repeat center; background-size: 100%}
+.rz-jg-jb-icon{background: url("../../assets/img/renzheng/jibie.png") no-repeat center; background-size: 100%}
+.rz-jg-type-icon{background: url("../../assets/img/renzheng/jglb.png") no-repeat center; background-size: 100%}
+
+.tuichu-icon{background: url("../../assets/img/me/tuichu.png") no-repeat center; background-size: 100%}
 
 /*头部*/
 .nav{

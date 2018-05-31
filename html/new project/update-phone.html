@@ -107,48 +107,5 @@
         }
     })
 </script>
-
-
-<!--<script>-->
-
-    <!--var time=60;-->
-    <!--var interval;-->
-    <!--$("#phone").bind("input propertychange",function () {-->
-        <!--var i = $(this).val().length;-->
-        <!--if(i>0){-->
-            <!--$(this).parents(".pw-input").siblings(".clear-icon").css("display","inline-block")-->
-        <!--}else {-->
-            <!--$(this).parents(".pw-input").siblings(".clear-icon").hide();-->
-        <!--}-->
-    <!--});-->
-    <!--$(".clear-icon").click(function () {-->
-      <!--$(this).parents(".pw-input-box").children(".pw-input").find(".phone").val("").focus();-->
-      <!--$(this).hide();-->
-    <!--});-->
-
-    <!--$(".get-code").bind("click",intval);-->
-
-
-
-    <!--function intval() {-->
-        <!--getTime();-->
-        <!--interval = setInterval(getTime,1000);-->
-    <!--}-->
-
-
-    <!--function getTime() {-->
-        <!--if(time==60){-->
-            <!--$(".get-code").unbind("click");-->
-        <!--}-->
-        <!--time&#45;&#45;;-->
-        <!--$(".get-code").addClass("text-gray").html(time+"S后重发");-->
-        <!--if(time==0){-->
-            <!--clearInterval(interval);-->
-            <!--$(".get-code").removeClass("text-gray").html("获取验证码").bind("click",intval);-->
-            <!--time=60;-->
-        <!--}-->
-    <!--}-->
-
-<!--</script>-->
 </body>
 </html>

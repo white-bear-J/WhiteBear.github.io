@@ -957,7 +957,7 @@
 
 
 .nav-pl-top.update-data{
-    font-size: .17rem;
+    font-size: .15rem;
 }
 
 /*注册登录*/
@@ -2506,3 +2506,514 @@
 .count-group .detail .money{
     font-size: .1477rem;
 }
+
+
+/*个人主页*/
+.personal-page-msg{
+    padding: .1rem .17rem .16rem .17rem;
+    background: url(../../assets/img/page/bj.png) no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.personal-page-msg-header{
+    position: relative;
+    height: .25rem;
+}
+
+.personal-page-msg-header .return-icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: .25rem;
+    width: .14rem;
+}
+
+.personal-page-msg-header .more-white-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: .25rem;
+    width: .216rem;
+}
+
+.personal-page-msg-content{
+    position: relative;
+    margin-top: .216rem;
+    margin-bottom: .216rem;
+}
+
+.personal-page-msg-content .head-pic {
+    position: absolute;
+    width: .727rem;
+    top: 0;
+    left: 0;
+}
+
+.personal-page-msg-content .head-pic .pic {
+    width: .727rem;
+    height: .727rem;
+    border-radius: 50%;
+}
+
+.personal-page-msg-content .head-pic .sex-icon {
+    position: absolute;
+    right: .06rem;
+    bottom: 0;
+    z-index: 10;
+    height: .17rem;
+    width: .17rem;
+}
+
+.personal-page-msg-content .msg-detail {
+    margin-left: .87rem;
+    margin-right: .125rem;
+    font-size: .1136rem;
+    padding-top: .06rem;
+}
+
+.personal-page-msg-content .msg-detail .name {
+    font-size: .179rem;
+    line-height: .18rem;
+}
+
+.personal-page-msg-content .msg-detail span {
+    padding: 0 .054rem;
+}
+
+.personal-page-msg-content .msg-detail .data {
+    margin-top: .136rem;
+    line-height: .1137rem;
+    color: #c8cef9;
+    font-size: .1136rem;
+}
+.personal-page-msg-content .msg-detail .motto {
+    margin-top: .136rem;
+    line-height: .1137rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #c8cef9;
+    font-size: .1136rem;
+}
+
+.personal-page-msg-content .to-update {
+    position: absolute;
+    top: .06rem;
+    right: 0;
+    width: .568rem;
+}
+
+.personal-page-msg-content .to-update .gz{
+    width: .568rem;
+    height: .272rem;
+    background-color: #d43b33;
+    color: #fff;
+    line-height: .272rem;
+    border-radius: .15rem;
+    text-align: center;
+    font-size: .125rem;
+
+}
+
+.personal-page-msg-content .to-update .gz.active{
+    background-color: #cbcbcb;
+}
+
+.personal-page-msg-content .to-update label{
+    line-height: .28rem;
+}
+.personal-page-msg-content .to-update .icon{
+    height: .25rem;
+    width: .125rem;
+    margin-right: .03rem;
+    margin-left: .08rem;
+}
+
+.personal-page-msg-bottom{
+    text-align: center;
+    margin-top: .19rem;
+    font-size: .136rem;
+    line-height: .226rem;
+}
+
+.personal-page-data{
+    margin-top: .09rem;
+    border-top: .006rem solid #dfdfdf;
+    padding: 0 .16rem;
+}
+
+.personal-page-data .page-control{
+    padding: .17rem 0;
+    border-bottom: .006rem solid #eaeaea;
+}
+
+.personal-page-data .page-control .control-btn{
+    width: .68rem;
+    height: .261rem;
+    line-height: .261rem;
+    border: .006rem solid #999;
+    color: #999;
+    background-color: #fff;
+    border-radius: .15rem;
+    margin-right: .159rem;
+}
+
+.personal-page-data .page-control .control-btn.active{
+    border-color: #d43b33;
+    color: #d43b33;
+}
+
+.personal-page-data .collect-article-list .bottom-icon-group .group-li {
+    padding-right: .34rem;
+}
+
+/*收入记录*/
+.nav-pl-top .money{
+    position: absolute;
+    right: .17rem;
+    top: 0;
+    font-size: .147rem;
+}
+
+.income-zh-list .data{
+    padding: .1rem .17rem;
+    background-color: #fff;
+    border-bottom: .006rem solid #f0f0f0;
+}
+
+.income-zh-list .pay-type{
+    font-size: .1477rem;
+    line-height: .15rem;
+}
+
+.income-zh-list .time{
+    font-size: .1137rem;
+    color: #999;
+    line-height: .114rem;
+    margin-top: .09rem;
+}
+
+.income-zh-list .money{
+    text-align: right;
+    font-size: .148rem;
+    line-height: .354rem;
+    font-weight: bold;
+}
+
+.income-zh-title{
+    padding: .136rem .17rem;
+    font-size: .13rem;
+}
+
+.zh-input{
+    padding: .181rem .15rem;
+    font-size: .13rem;
+    line-height: .454rem;
+}
+
+.zh-money{
+    height: .454rem;
+    width: 1.06rem;
+    border: .006rem solid #f35f07;
+    padding: 0 .09rem;
+    text-align: center;
+    margin-right: .0568rem;
+}
+
+.zh-jinbi{
+    height: .454rem;
+    width: 1.06rem;
+    border: .006rem solid #dbdbdb;
+    padding: 0 .09rem;
+    text-align: center;
+    margin-right: .0568rem;
+    margin-left: .0568rem;
+}
+
+.zh-input .left-sanjiao-icon{
+    height: .454rem;
+    width: .079rem;
+    margin-left: .0568rem;
+}
+
+.zh-input .zh-btn{
+    height: .454rem;
+    width: .85rem;
+    background-color: #dbdbdb;
+    color: #fff;
+    border-radius: .025rem;
+}
+
+.zh-input .zh-btn.active{
+    background-color: #f35f07;
+}
+
+.tx-money{
+    height: .454rem;
+    width: 2.34rem;
+    border: .006rem solid #dbdbdb;
+    padding: 0 .14rem;
+}
+
+.tx-tip{
+    color: #999;
+    font-size: .1rem;
+    line-height: .105rem;
+    margin-top: .1rem;
+}
+
+.tip-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: .4rem;
+    line-height: .4rem;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: .15rem;
+    z-index: 999;
+    display: none;
+}
+
+
+/*认证*/
+
+.count-group.rz .detail{
+    line-height: .41rem;
+    margin-left: .57rem;
+}
+
+.count-group .detail .top-right-icon{
+    height: .41rem;
+    width: .08rem;
+}
+
+.nav-pl-top .sh{
+    position: absolute;
+    right: .16rem;
+    top:0;
+    font-size: .15rem;
+}
+
+.certification-group{
+    height: .5rem;
+    line-height: .5rem;
+    padding: 0 .16rem;
+    position: relative;
+    padding-bottom: .01rem;
+    border-bottom: .01rem solid #f0f0f0;
+    font-size: .14rem;
+    margin-top: .08rem;
+}
+
+.certification-group .rz-icon{
+    position: absolute;
+    top: 0;
+    left: .16rem;
+    width: .22rem;
+    height: .5rem;
+}
+
+.certification-group .rz-input{
+    padding-left: .32rem;
+    height: .49rem;
+}
+
+.certification-group .rz-input .input{
+    width: 100%;
+    height: .4rem;
+}
+.rz-input .select-type-class{
+    height: .5rem;
+    /*overflow: hidden;*/
+}
+
+.rz-input .select-type-class .pull-right{
+    height: .5rem;
+}
+
+.rz-input .select-type-class .select-sanjiao-icon{
+    width: .1rem;
+    height: .49rem;
+}
+
+.certification-group .select-option{
+    position: absolute;
+    z-index: 1;
+    top: .5rem;
+    left: 0;
+    width: 100%;
+    display: none;
+    border-bottom: .01rem solid #dfdfdf;
+}
+
+.certification-group .option{
+    padding: 0 .15rem;
+    height: .36rem;
+    line-height: .36rem;
+    color: #666;
+}
+
+.certification-group .option:active{
+    background-color: #d43b33;
+    color: #fff;
+}
+
+.pic-upload-box{
+    margin: .12rem .16rem 0 .16rem;
+    height: 1.6rem;
+    border: .01rem dashed #dfdfdf;
+    position: relative;
+}
+
+.pic-upload-box .rz-big-uploadPic{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+.pic-upload-box{
+    background: url("../../assets/img/renzheng/shenfen.png") no-repeat 50% .34rem;
+    background-size: 30%;
+}
+.pic-upload-box .rz-big-uploadPic{
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.pic-upload-box .saw-file{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.pic-upload-box .tip{
+    position: absolute;
+    bottom: .34rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #666;
+}
+
+.submit-box{
+    margin-top: .42rem;
+    padding: 0 .28rem;
+}
+
+.submit-box button{
+    width: 100%;
+    height: .42rem;
+    line-height: .42rem;
+    background-color: #d43b33;
+    color: #fff;
+    border-radius: .025rem;
+}
+
+.submit-box .tip{
+    font-size: .1rem;
+    color: #999;
+    margin-top: .12rem;
+}
+
+.pic-upload-box-group{
+    padding: 0 .14rem;
+    margin-top: .12rem;
+}
+
+.pic-upload-small-box{
+    width: 1.08rem;
+    height: .6rem;
+    border: .01rem dashed #dfdfdf;
+    float: left;
+    margin-left: .1rem;
+    font-size: .1rem;
+    color: #666;
+    position: relative;
+}
+
+.pic-upload-small-box.IDPic{
+    background: url("../../assets/img/renzheng/shenfen.png") no-repeat 50% .1rem;
+    background-size: 35%;
+}
+
+.pic-upload-small-box.zzPic{
+    background: url("../../assets/img/renzheng/yyz.png") no-repeat 50% .1rem;
+    background-size: 35%;
+}
+.pic-upload-small-box.zlPic{
+    background: url("../../assets/img/renzheng/sqzl.png") no-repeat 50% .1rem;
+    background-size: 25%;
+}
+
+.pic-upload-small-box .saw-file{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+.pic-upload-small-box:nth-child(1){
+    margin-left: 0;
+}
+
+.pic-upload-small-box .rz-big-uploadPic{
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.pic-upload-small-box .tip{
+    position: absolute;
+    bottom: .08rem;
+    color: #666;
+    width: 100%;
+    text-align: center;
+}
+
+.upload-zl {
+    font-size: .13rem;
+    text-align: center;
+    line-height: .13rem;
+    margin-top: .18rem;
+    margin-bottom: .18rem;
+}
+/*协议*/
+.agreement{
+    padding: .2rem .16rem;
+    font-size: .13rem;
+    line-height: .28rem;
+}
+
+.agreement div{
+    margin-bottom: .26rem;
+}
+
+
+.agreement .title{
+    font-size: .14rem;
+    font-weight: bolder;
+}
+
