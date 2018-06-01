@@ -21,8 +21,9 @@
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/bootstrap.min/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css?v=2">
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css?v=3">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css?v=1">
+    <script src="assets/js/vue.min.js"></script>
     <script src="assets/js/common.js"></script>
 </head>
 <body class="bg-gray">
@@ -64,55 +65,13 @@
             <div class="right-shadow shadow"></div>
             <div class="title">礼物榜</div>
             <div class="gift-list-box">
-                <div class="gift-list">
-                    <div class="data pull-left">
+                <div class="gift-list" id="snedgift">
+                    <div class="data pull-left" v-for="(gift,index) in gifts" >
                         <div class="head-img">
-                            <a><img class="pic" src="assets/img/index/touxiang.png"></a>
+                            <a :href="gift.home_url"><img class="pic" :src="gift.logo"></a>
                         </div>
-                        <div class="name"><a>离离原上草</a></div>
-                        <div class="gz active pull-left"><i class="icon add-icon pull-left active"></i><label class="pull-left">关注</label></div>
-                    </div>
-                    <div class="data pull-left">
-                        <div class="head-img">
-                            <a><img class="pic" src="assets/img/index/touxiang.png"></a>
-                        </div>
-                        <div class="name"><a>离离原上草</a></div>
-                        <div class="gz active pull-left"><i class="icon add-icon pull-left active"></i><label class="pull-left">关注</label></div>
-                    </div>
-                    <div class="data pull-left">
-                        <div class="head-img">
-                            <a><img class="pic" src="assets/img/index/touxiang.png"></a>
-                        </div>
-                        <div class="name"><a>离离原上草</a></div>
-                        <div class="gz active pull-left"><i class="icon add-icon pull-left active"></i><label class="pull-left">关注</label></div>
-                    </div>
-                    <div class="data pull-left">
-                        <div class="head-img">
-                            <a><img class="pic" src="assets/img/index/touxiang.png"></a>
-                        </div>
-                        <div class="name"><a>离离原上草</a></div>
-                        <div class="gz active pull-left"><i class="icon add-icon pull-left active"></i><label class="pull-left">关注</label></div>
-                    </div>
-                    <div class="data pull-left">
-                        <div class="head-img">
-                            <a><img class="pic" src="assets/img/index/touxiang.png"></a>
-                        </div>
-                        <div class="name"><a>离离原上草</a></div>
-                        <div class="gz active pull-left"><i class="icon add-icon pull-left active"></i><label class="pull-left">关注</label></div>
-                    </div>
-                    <div class="data pull-left">
-                        <div class="head-img">
-                            <a><img class="pic" src="assets/img/index/touxiang.png"></a>
-                        </div>
-                        <div class="name"><a>离离原上草</a></div>
-                        <div class="gz active pull-left"><i class="icon add-icon pull-left active"></i><label class="pull-left">关注</label></div>
-                    </div>
-                    <div class="data pull-left">
-                        <div class="head-img">
-                            <a><img class="pic" src="assets/img/index/touxiang.png"></a>
-                        </div>
-                        <div class="name"><a>离离原上草</a></div>
-                        <div class="gz active pull-left"><i class="icon add-icon pull-left active"></i><label class="pull-left">关注</label></div>
+                        <div class="name"><a :href="gift.home_url">{{gift.name}}</a></div>
+                        <div class="gz pull-left" :class="{active:gift.gz}" @click="guanzhu(gift,gift.id)"><i class="icon add-icon pull-left" :class="{active:gift.gz}"></i><label class="pull-left">关注</label></div>
                     </div>
                 </div>
             </div>
@@ -275,123 +234,18 @@
         <div class="qx-btn bg-white show-num">取消</div>
     </div>
     <!--打赏-->
-    <div class="dashang-box pop-box bg-gray" style="display: none">
+    <div class="dashang-box pop-box bg-gray" style="display: none"  id="giftPage">
         <div class="choose-gift">
             <div class="title">打赏<i class="icon index-close-icon show-num"></i></div>
             <div class="b-gift-box bg-white">
                 <div class="page-box">
                     <div class="gift-page">
-                        <div class="gift pull-left active">
+                        <div  v-for="(gift,index) in gifts" class="gift pull-left" :data-id="gift.id" @click="addActive(gift,index)" v-bind:class="{active:gift.isActive}">
                             <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
+                                <img class="gift-img" :src="gift.url">
                             </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
-                        </div>
-                        <div class="gift pull-left">
-                            <div class="ds-img">
-                                <img class="gift-img" src="assets/img/pop/gift.png">
-                            </div>
-                            <div class="ds-type">么么哒</div>
-                            <div class="ds-cost">50M币</div>
+                            <div class="ds-type">{{gift.name}}</div>
+                            <div class="ds-cost">{{gift.money}}M币</div>
                         </div>
                     </div>
                 </div>
@@ -406,7 +260,7 @@
                     <div class="col-xs-2 user-defined">自定义</div>
                 </div>
                 <div class="submit">
-                    <button class="submit-btn show-num">发表</button>
+                    <button class="submit-btn" @click="getUser">发表</button>
                 </div>
             </div>
         </div>
@@ -469,19 +323,14 @@
         $(".user-defined").empty().append('自定义');
     });
 
-    $(".gift").unbind().bind("click",function () {
-        $(".gift").removeClass("active");
-        $(this).addClass("active");
-    });
-
     $(".user-defined").click(function () {
         $(".choose").removeClass("active");
         $(this).empty().append('<input class="defined_num" type="text">');
         $(".defined_num").focus();
     });
-    
+
     $(".to-ts").click(function () {
-        $(".ts-mask").show();
+            $(".ts-mask").show();
         }
     );
     $(".colse-pop").click(function () {
@@ -489,7 +338,7 @@
         $(".show-type").addClass("active");
         $(".ts-type").show();
     });
-    
+
     $(".show-type").click(function () {
         if($(this).hasClass("active")){
             $(this).removeClass("active");
@@ -538,6 +387,180 @@
         $(".bq-icon").removeClass("active");
         $(".bq-box").hide();
     });
+
+
+</script>
+<script type="text/javascript">
+
+    var Bus = new Vue();
+
+    var vm = new Vue({
+
+        el: "#snedgift",
+        data(){
+            return{
+                gifts:[],
+                userID:"文章id"
+            }
+
+        },
+        mounted(){
+            window.addEventListener('scroll', this.handleScroll);
+
+            var _self = this;
+
+            var sendGiftData = [
+                {
+                    id:1,
+                    name:"离离原上草",
+                    logo:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
+                    home_url:"<?=Web_Path?>template/mobile/my_page.html",
+                    gz:true
+                },
+                {
+                    id:2,
+                    name:"离离原上草",
+                    logo:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
+                    home_url:"<?=Web_Path?>template/mobile/my_page.html",
+                    gz:true
+                },
+                {
+                    id:3,
+                    name:"离离原上草",
+                    logo:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
+                    home_url:"<?=Web_Path?>template/mobile/my_page.html",
+                    gz:true
+                },
+                {
+                    id:4,
+                    name:"离离原上草",
+                    logo:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
+                    home_url:"<?=Web_Path?>template/mobile/my_page.html",
+                    gz:true
+                },
+                {
+                    id:5,
+                    name:"离离原上草",
+                    logo:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
+                    home_url:"<?=Web_Path?>template/mobile/my_page.html",
+                    gz:false
+                }];
+            // 获取分类列表并设置外框宽度
+            // ajaxPost(CN_API['index_class'],{table:"vod"},function(data){
+            //     if(data.code==0){
+            //         this.items = data.msg;
+            //          var itemBoxWidth = this.items.length/5;
+            //          if(itemBoxWidth<1){
+            //          $("#itemsBox").css("width", "100%");
+            //           }else{
+            //          var boxWidth = (itemBoxWidth+1)*100%
+            //          $("#itemsBox").css("width", boxWidth);
+            // }
+
+            //     }
+            this.gifts = sendGiftData;
+            var itemBoxWidth = this.gifts.length;
+            if(itemBoxWidth/4<1){
+                $("#snedgift").css("width", "100%");
+            }else{
+                var boxWidth = itemBoxWidth*0.91;
+                $("#snedgift").css("width", boxWidth+"rem");
+            }
+        },
+        methods:{
+            guanzhu:function (list,userid) {
+                Bus.$emit('user', this.userID);
+                list.gz = !list.gz;
+            }
+        }
+
+    })
+
+    var gift = new Vue({
+
+        el: "#giftPage",
+        data(){
+            return{
+                gifts:[],
+                userID:"none"
+            }
+        },
+        mounted(){
+            var _this = this;
+            Bus.$on('user',function(a){
+                _this.userID = a;
+                console.log(_this.userID);
+            });
+
+            window.addEventListener('scroll', this.handleScroll);
+
+            var giftData = [
+                {
+                    id:1,
+                    name:"离离原上草",
+                    url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
+                    money:"50",
+                },
+                {
+                    id:2,
+                    name:"离离原上草",
+                    url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
+                    money:"500",
+                },
+                {
+                    id:3,
+                    name:"离离原上草",
+                    url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
+                    money:"501",
+                },
+                {
+                    id:4,
+                    name:"离离原上草",
+                    url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
+                    money:"502",
+                },
+                {
+                    id:5,
+                    name:"离离原上草",
+                    url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
+                    money:"503",
+                }];
+            // 获取分类列表并设置外框宽度
+            // ajaxPost(CN_API['index_class'],{table:"vod"},function(data){
+            //     if(data.code==0){
+            //         this.items = data.msg;
+            //          var itemBoxWidth = this.items.length/5;
+            //          if(itemBoxWidth<1){
+            //          $("#itemsBox").css("width", "100%");
+            //           }else{
+            //          var boxWidth = (itemBoxWidth+1)*100%
+            //          $("#itemsBox").css("width", boxWidth);
+            // }
+
+            //     }
+            for (var i  in giftData) {
+                giftData[i].isActive = false;
+            }
+            this.gifts = giftData;
+        },
+        methods:{
+            addActive:function(list,index){
+                for (var i  in this.gifts) {
+                    if(i==index){
+                        this.gifts[i].isActive= true;
+                    }else{
+                        this.gifts[i].isActive= false;
+                    }
+
+                }
+            },
+            getUser:function(){
+                $(".pl-input").show().siblings(".pop-box").hide();
+                fixedBottom();
+            }
+        }
+
+    })
 </script>
 </body>
 </html>
