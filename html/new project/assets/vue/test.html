@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.js"></script>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="a">
+   <!--<btn-a></btn-a>-->
+   <!--<btn-b></btn-b>-->
+
+    <div id="temA"><button @click="setData">{{msg}}</button></div>
+    <div id="temB"><button>{{msg}}</button></div>
+
+
+</div>
+
+
+  <script>
+      var c = new Vue();
+
+      var a = new Vue({
+          el:"#temA",
+          // template:'<button @click="setData">{{msg}}</button>',
+          data(){
+              return{
+                  msg:"按钮一",
+              }
+          },
+          mounted(){
+              this.setData();
+            },
+          methods:{
+              setData() {
+                  c.$emit('msg', this.msg);
+              }
+          }
+      });
+
+      var b = new Vue ({
+          el:"#temB",
+          // template:'<button>{{msg}}</button>',
+          data(){
+              return{
+                  msg:"按钮二",
+              }
+          },
+          mounted(){
+                  var _this = this;
+                  c.$on('msg', function (val) {
+                      _this.msg = val;
+                      alert(val)
+                  });
+          }
+      });
+
+      //
+      // window.onload=function(){
+      //     new Vue({
+      //         el:'#a',
+      //         data:{
+      //
+      //         },
+      //         components:{
+      //             'btn-a':a,
+      //             'btn-b':b,
+      //         }
+      //     })
+      // }
+
+
+  </script>
+</body>
+</html>

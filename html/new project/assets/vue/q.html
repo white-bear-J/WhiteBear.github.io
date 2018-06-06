@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title><?=$title?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta name="MobileOptimized" content="width">
@@ -8,57 +9,42 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
     <meta name="format-detection" content="email=no"/>
-    <meta name="keywords" content="视频详情">
-    <meta name="description" content="视频详情">
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="screen-orientation" content="portrait" />
-    <meta name="x5-orientation" content="portrait" />
-
-    <title>视频详情</title>
+    <meta name="keywords" content="<?=$keywords?>">
+    <meta name="description" content="<?=$description?>">
+    <script src="<?=Web_Path?>packs/js/api.js"></script>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src="assets/bootstrap.min/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap.min/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css?v=3">
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css?v=1">
-    <script src="assets/js/vue.min.js"></script>
-    <script src="assets/js/common.js"></script>
+    <script src="<?=Web_Path?>template/mobile/assets/bootstrap.min/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?=Web_Path?>template/mobile/assets/bootstrap.min/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?=Web_Path?>template/mobile/assets/css/main-style.css?v=1">
+    <link rel="stylesheet" type="text/css" href="<?=Web_Path?>template/mobile/assets/css/index.css">
+    <script src="<?=Web_Path?>template/mobile/assets/js/vue.min.js"></script>
+    <script src="<?=Web_Path?>template/mobile/assets/js/common.js"></script>
 </head>
 <body class="bg-gray">
-<div style="position: relative">
-    <div class="nav-video">
-        <a class="return block" href="javascript:;" onClick="history.back(-1);"><i class="icon return-icon"></i></a>
-        <video src="http://demo.pan.ctcms.cn/video/m3u8/201805/22/3bc867c1cb6e/playlist.m3u8" poster="http://demo.pan.ctcms.cn/video/m3u8/201805/22/3bc867c1cb6e/1.jpg" controls="" webkit-playsinline="true" playsinline="true"></video>
+<div class="nav-pl-top">
+    <a class="return" href="javascript:;" onclick="history.back(-1);"><i class="icon return-black-icon"></i></a>
+    <div class="article-icon-box pull-right">
+        <div class="ic pull-left"><i class="icon dz-white-icon cl"></i><div><?=format_wan($row->dhits)?></div></div>
+        <div class="ic pull-left"><i class="icon collect-icon cl"></i><div><?=format_wan($row->shits)?></div></div>
+        <div class="ic pull-left"><i class="icon ds-white-icon to-ds"></i><div><?=format_wan($row->shang_cion)?></div></div>
+        <?php if($hb->cion2>0){?>
+        <div class="ic pull-left"><i class="icon hb-white-icon"></i><div><?=format_wan($hb->cion2)?></div></div>
+        <?php }?>
     </div>
 </div>
-<div class="row">
-    <video style="width: 100%;background-color: #000">
-
-    </video>
-</div>
+<div style="height: .5rem"></div>
 <div class="container bg-gray" style="padding-bottom: .6rem;">
     <div class="detail-container">
         <div class="video-title-box bg-white">
-            <div class="title row">
-                <span class="col-xs-11">一周热门影视 | 豆瓣8.4，国产综艺终于不靠流量明星刷眼球了</span>
-                <i class="icon show-more-icon pull-right"></i>
+            <div class="title row" style="padding-top: .136rem">
+                <span class="col-xs-12"><?=$row->title?></span>
             </div>
             <div class="video-btn-box">
-                <div class="pull-left"><i class="icon bfl-black-icon pull-left"></i>1536万</div>
-                <div class="pull-left"><i class="icon zf-icon pull-left"></i>1536万</div>
-                <div class="pull-left"><i class="icon time-icon pull-left"></i>2018-02-03</div>
-                <div class="pull-right"><i class="icon jubao-black-icon pull-left to-ts"></i><i class="icon share-icon pull-left to-share"></i></div>
+                <div class="pull-left"><i class="icon yd-icon pull-left"></i><?=format_wan($row->hits)?></div>
+                <div class="pull-left"><i class="icon time-icon pull-left"></i><?=date('Y-m-d H:i',$row->addtime)?></div>
             </div>
-            <div class="video-introduce">
-                2018年《头号玩家》依然强势霸榜，科幻片《湮灭》在上映后热度一2018年《头号玩家》依然强势霸榜，科幻片《湮灭》在上映后热度一2018年《头号玩家》依然强势霸榜，科幻片《湮灭》在上映后热度一
-            </div>
-            <div class="video-icon-box row">
-                <div class="pull-left col-xs-3"><i class="icon dz-white-icon pull-left cl"></i><label class="pull-left">1536万</label></div>
-                <div class="pull-left col-xs-3"><i class="icon collect-icon pull-left cl"></i><label class="pull-left">1536万</label></div>
-                <div class="pull-left col-xs-3"><i class="icon ds-white-icon pull-left to-ds"></i><label class="pull-left">1536万</label></div>
-                <div class="pull-left col-xs-3"><i class="icon hb-white-icon pull-left"></i><label class="pull-left">1536万</label></div>
+            <div class="article-introduce">
+                <?=$row->content?>
             </div>
         </div>
         <div class="gift-box bg-white">
@@ -71,7 +57,7 @@
                             <a :href="gift.home_url"><img class="pic" :src="gift.logo"></a>
                         </div>
                         <div class="name"><a :href="gift.home_url">{{gift.name}}</a></div>
-                        <div class="gz pull-left" :class="{active:gift.gz}" @click="guanzhu(gift,gift.id)"><i class="icon add-icon pull-left" :class="{active:gift.gz}"></i><label class="pull-left">关注</label></div>
+                        <div class="gz pull-left" :class="{active:gift.utype}" @click="guanzhu(gift,gift.id,gift.utype)"><i class="icon add-icon pull-left" :class="{active:gift.utype}"></i><label class="pull-left">关注</label></div>
                     </div>
                 </div>
             </div>
@@ -105,7 +91,7 @@
                         <div class="btn-group">
                             <div class="pull-left"><i class="icon jubao-white-icon pull-left to-ts"></i>举报</div>
                             <div class="pull-left"><i class="icon hf-icon pull-left"></i>回复</div>
-                            <div class="pull-left"><i class="icon dz-white-icon pull-left"></i>562万</div>
+                            <div class="pull-left"><i class="icon dz-gray-icon pull-left"></i>562万</div>
                         </div>
                     </div>
                 </div>
@@ -122,7 +108,7 @@
                         <div class="btn-group">
                             <div class="pull-left"><i class="icon jubao-white-icon pull-left to-ts"></i>举报</div>
                             <div class="pull-left"><i class="icon hf-icon pull-left"></i>回复</div>
-                            <div class="pull-left"><i class="icon dz-white-icon pull-left"></i>562万</div>
+                            <div class="pull-left"><i class="icon dz-gray-icon pull-left"></i>562万</div>
                         </div>
                         <div class="son-pl-list bg-gray">
                             <div class="son-list">
@@ -203,14 +189,18 @@
         </div>
     </div>
     <!--点击弹出评论框-->
-    <div class="pl-input pop-box">
-        <i class="icon pl-icon pull-left"></i>
-        <div  class="input pull-left">说点什么吧......</div>
+    <div class="article-pl-out">
+        <div class="pl-input article-pl pop-box">
+            <i class="icon pl-icon pull-left"></i>
+            <div  class="input pull-left">说点什么吧......</div>
+        </div>
+        <div class="wrapper-share pull-right"><i class="icon jubao-black-icon pull-left to-ts"></i><i class="icon share-icon pull-left to-share"></i></div>
     </div>
+
     <!--发表评论-->
     <div class="pl-text-input pop-box" style="display: none">
         <div class="textarea">
-            <textarea id="pl" placeholder="请文明发言，遵守互联网上七条公约" autofocus></textarea>
+            <textarea id="pl" placeholder="请文明发言，遵守互联网上七条公约"></textarea>
         </div>
         <div class="submit">
             <i class="icon bq-icon pull-left"></i>
@@ -256,7 +246,7 @@
                     <div v-for="(count,index) in counts" v-if="index<4" class="col-xs-2 choose" v-bind:class="{ active:index==isActive}" @click="selectNumber(index,count.number)"><a class="block">{{count.number}}</a></div>
                     <div else-if class="col-xs-2 user-defined" @click="inputGift($event)">
                         <label v-bind:class="{ 'display-none' : zdy}">自定义</label>
-                        <input class="defined_num" v-bind:class="{ 'display-none' : !zdy}" type="text" v-model.lazy="dsCount">
+                        <input class="defined_num" v-bind:class="{ 'display-none' : !zdy}" type="text" v-model.lazy="dsCount" autofocus>
                     </div>
                 </div>
                 <div class="submit">
@@ -264,9 +254,7 @@
                 </div>
             </div>
         </div>
-        <input type="hidden" value="<?=$id?>" v-model="videoID">
-        <input type="hidden" value="" v-model="giftID">
-        <input type="hidden" value="" v-model="dsCount">
+        <input class="videoID" type="hidden" value="<?=$id?>">
     </div>
 </div>
 <!--投诉-->
@@ -292,45 +280,47 @@
         </div>
     </div>
 </div>
+<script>
+    $(".ts-type .type").click(function () {
+        $(this).children(".icon").addClass("active");
+        $(this).siblings().children(".icon").removeClass("active");
+    });
+</script>
 <!--遮罩层-->
 <div class="mask show-num"></div>
 <script>
     $(".pl-input").click(function () {
-        $(this).hide();
+        $(".article-pl-out").hide();
         $(".pl-text-input").show();
         // $("body").scrollTop(0);
-        // fixedTop();
         showMask();
         $("#pl").focus();
     });
     $(".show-num").click(function () {
-        $(".pl-input").show().siblings(".pop-box").hide();
+        $(".article-pl-out").show().siblings(".pop-box").hide();
         fixedBottom();
     });
 
     $(".to-share").click(function () {
-        $(".pl-bottom-wrapper .share-box").show().siblings(".pop-box").hide();
-        // fixedTop();
+        $(".pl-bottom-wrapper .share-box").show()
+        $(".article-pl-out").hide();
         showMask();
     });
     $(".to-ds").click(function () {
+        $(".article-pl-out").hide();
         $(".pl-bottom-wrapper .dashang-box").show().siblings(".pop-box").hide();
-        $(".dashang-box .choose-gift").show();
-        $(".dashang-box .ds-input").hide();
-        // fixedTop();
         showMask();
     });
 
     $(".number .choose").click(function () {
-        $(this).addClass("active").siblings(".choose").removeClass("active");
-        $(".user-defined").empty().append('自定义');
+
     });
 
     $(".user-defined").click(function () {
         $(".choose").removeClass("active");
         $(this).empty().append('<input class="defined_num" type="text">');
         $(".defined_num").focus();
-    });
+    })
 
     $(".to-ts").click(function () {
             $(".ts-mask").show();
@@ -350,18 +340,13 @@
             $(this).addClass("active");
             $(".ts-type").show(500);
         }
-    });
-    $(".ts-type .type").click(function () {
-        $(this).children(".icon").addClass("active");
-        $(this).siblings().children(".icon").removeClass("active");
+
     });
 
     $(".hf-icon").click(function () {
-        $(".pl-input").hide();
+        $(".article-pl-out").hide();
         $(".pl-text-input").show();
-        // $("body").scrollTop(0);
         $("#pl").focus();
-        // fixedTop();
         showMask();
     });
 
@@ -372,6 +357,7 @@
             $(this).addClass("active");
         }
     });
+
     $(".bq-icon").click(function () {
         if($(this).hasClass("active")){
             $(this).removeClass("active");
@@ -390,184 +376,105 @@
         $(".bq-icon").removeClass("active");
         $(".bq-box").hide();
     });
-
-
 </script>
 <script type="text/javascript">
 
-    var Bus = new Vue();
 
     var vm = new Vue({
 
         el: "#snedgift",
-        data(){
-            return{
-                gifts:[],
-                userID:"文章id",
-
-            }
+        data:{
+            gifts:[]
 
         },
-        mounted(){
-            this.$nextTick(function(){ Bus.$emit('user', this.userID);});
+        mounted:function(){
             window.addEventListener('scroll', this.handleScroll);
 
             var _self = this;
 
-            var sendGiftData = [
-                {
-                    id:1,
-                    name:"离离原上草",
-                    logo:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
-                    home_url:"<?=Web_Path?>template/mobile/my_page.html",
-                    gz:true
-                },
-                {
-                    id:2,
-                    name:"离离原上草",
-                    logo:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
-                    home_url:"<?=Web_Path?>template/mobile/my_page.html",
-                    gz:true
-                },
-                {
-                    id:3,
-                    name:"离离原上草",
-                    logo:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
-                    home_url:"<?=Web_Path?>template/mobile/my_page.html",
-                    gz:true
-                },
-                {
-                    id:4,
-                    name:"离离原上草",
-                    logo:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
-                    home_url:"<?=Web_Path?>template/mobile/my_page.html",
-                    gz:true
-                },
-                {
-                    id:5,
-                    name:"离离原上草",
-                    logo:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
-                    home_url:"<?=Web_Path?>template/mobile/my_page.html",
-                    gz:false
-                }];
             // 获取分类列表并设置外框宽度
-            // ajaxPost(CN_API['index_class'],{table:"vod"},function(data){
-            //     if(data.code==0){
-            //         this.items = data.msg;
-            //          var itemBoxWidth = this.items.length/5;
-            //          if(itemBoxWidth<1){
-            //          $("#itemsBox").css("width", "100%");
-            //           }else{
-            //          var boxWidth = (itemBoxWidth+1)*100%
-            //          $("#itemsBox").css("width", boxWidth);
-            // }
+            ajaxPost(CN_API['index_class'],"",function(data){
+                if(data.code==0){
+                    _self.gifts = data.msg;
+                    var itemBoxWidth = _self.gifts.length;
+                    if(itemBoxWidth/4<1){
+                        $("#snedgift").css("width", "100%");
+                    }else{
+                        var boxWidth = itemBoxWidth*0.91;
+                        $("#snedgift").css("width", boxWidth+"rem");
+                    }
+                }
 
-            //     }
-            this.gifts = sendGiftData;
-            var itemBoxWidth = this.gifts.length;
-            if(itemBoxWidth/4<1){
-                $("#snedgift").css("width", "100%");
-            }else{
-                var boxWidth = itemBoxWidth*0.91;
-                $("#snedgift").css("width", boxWidth+"rem");
-            }
+            })
         },
         methods:{
-            guanzhu:function (list,userid) {
+            guanzhu:function (list,userid,utype) {
+                if (utype == true) {
+                    var sign = 1;
+                }else{
+                    var sign = 0;
+                }
+                ajaxPost(CN_API['fans_into'],{uid:userid,sign:sign},function(data){
+                    if(data.code==0){
+                        list.gz = !list.gz;
+                    }else{
+                        alert(data.msg.msg);
+                        window.location.href = data.msg.url;
+                    }
+                })
 
-                list.gz = !list.gz;
+
             }
         }
+
 
     })
 
     var gift = new Vue({
 
         el: "#giftPage",
-        data(){
-            return{
-                gifts:[],
-                userID:"none",
-                isActive:"",
-                counts:[
-                    {
-                        number:1
-                    },
-                    {
-                        number:20
-                    },
-                    {
-                        number:100
-                    },
-                    {
-                        number:666
-                    }],
-                dsCount:"1",
-                giftID:"",
-                videoID:"",
-                zdy:false
-                // // zdyStr:"自定义"
-                // zdyStr:'<input class="defined_num" type="text">'
-            }
+        data:{
+            gifts:[],
+            userID:"none",
+            isActive:"",
+            counts:[
+                {
+                    number:1
+                },
+                {
+                    number:20
+                },
+                {
+                    number:100
+                },
+                {
+                    number:666
+                }],
+            dsCount:"1",
+            giftID:"",
+            videoID:"",
+            zdy:false
         },
-        mounted(){
+        mounted:function(){
             this.zdy = false;
             var _this = this;
-            Bus.$on('user',function(a){
-                _this.userID = a;
-                console.log(_this.userID);
-            });
 
             window.addEventListener('scroll', this.handleScroll);
 
-            var giftData = [
-                {
-                    id:1,
-                    name:"离离原上草",
-                    url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
-                    money:"50",
-                },
-                {
-                    id:2,
-                    name:"离离原上草",
-                    url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
-                    money:"500",
-                },
-                {
-                    id:3,
-                    name:"离离原上草",
-                    url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
-                    money:"501",
-                },
-                {
-                    id:4,
-                    name:"离离原上草",
-                    url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
-                    money:"502",
-                },
-                {
-                    id:5,
-                    name:"离离原上草",
-                    url:"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=212297457,1410173076&fm=200&gp=0.jpg",
-                    money:"503",
-                }];
-            // 获取分类列表并设置外框宽度
-            // ajaxPost(CN_API['index_class'],{table:"vod"},function(data){
-            //     if(data.code==0){
-            //         this.items = data.msg;
-            //          var itemBoxWidth = this.items.length/5;
-            //          if(itemBoxWidth<1){
-            //          $("#itemsBox").css("width", "100%");
-            //           }else{
-            //          var boxWidth = (itemBoxWidth+1)*100%
-            //          $("#itemsBox").css("width", boxWidth);
-            // }
 
-            //     }
-            for (var i  in giftData) {
-                giftData[i].isActive = false;
-            }
-            this.gifts = giftData;
+            // 获取礼物列表
+            ajaxPost(CN_API['gift_lists'],"",function(data){
+                if(data.code==0){
+                    var  giftData = data.msg;
+                    for (var i  in giftData) {
+                        giftData[i].isActive = false;
+                    }
+                    _this.gifts = giftData;
+                }
+
+            })
+
+
         },
         methods:{
             addActive:function(list,index){
@@ -584,19 +491,26 @@
             getUser:function(){
                 $(".pl-input").show().siblings(".pop-box").hide();
                 fixedBottom();
+                var videoID = $(".videoID").val();
+                alert(videoID+"/"+this.dsCount+"/"+this.giftID);
+                // ajaxPost(url,{vod:videoID,count:this.dsCount,gift:this.giftID},function(data){
+                // if(data.code==0){
+
+                // }
+                // })
+
             },
             hideMask:function(){
-                $(".pl-input").show().siblings(".pop-box").hide();
+                $(".article-pl-out").show().siblings(".pop-box").hide();
                 fixedBottom();
             },
             inputGift:function(event){
                 if($(".user-defined").hasClass("active")){
-                   return;
+                    return;
                 }else {
                     this.dsCount = "";
                     this.zdy = true;
                     $(".user-defined").addClass("active").siblings(".choose").removeClass("active");
-                    // $(".user-defined").html('<input class="defined_num" type="text" v-model.lazy="num">');
                 }
 
             },
@@ -610,5 +524,6 @@
 
     })
 </script>
+<script type="text/javascript" src="<?=$hits_link?>"></script>
 </body>
 </html>
